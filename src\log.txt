@@ -1,0 +1,1 @@
+2021-07-19 21:15:33 INFO  App:12 - Info: Hello world 
