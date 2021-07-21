@@ -41,7 +41,7 @@
 		update=checks to see if the db is needed to be updated and applies them
 		-->
 		<property name="hbm2ddl.auto">
-			validate
+			create
 		</property>
 		
 		<!--  Class Mappings -->
