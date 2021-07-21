@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+			<!-- Required Properties to Connect to DB -->
+		<property name="hibernate.connection.driver_class">
+			org.postgresql.Driver
+		</property>
+		
+		<property name="hibernate.dialect">
+			org.hibernate.dialect.PostgreSQLDialect
+		</property>
+		
+		<property name="hibernate.connection.url">
+			jdbc:postgresql://caorevaturedb.c39sfp4pzzjr.us-east-2.rds.amazonaws.com/postgres
+		</property>
+		
+		<property name="hibernate.connection.username">
+			cao
+		</property>
+		
+		<property name="hibernate.connection.password">
+			password
+		</property>
+	
+		<!-- Optional Properties -->
+		<!-- shows what hibernate is doing -->
+		<property name="show_sql">
+			true
+		</property>
+		
+	<!-- 	<property name="format_sql">
+			true
+		</property> -->
+		
+		<!-- can create update or do stuff to the tables automatically -->
+		<!-- 
+		create=drops the table and create new one; 
+		validate=validating db, good for production; 
+		update=checks to see if the db is needed to be updated and applies them
+		-->
+		<property name="hbm2ddl.auto">
+			validate
+		</property>
+		
+		<!--  Class Mappings -->
+		<mapping class="dev.mai.models.Employee" />
+		
+	</session-factory>
+</hibernate-configuration>
