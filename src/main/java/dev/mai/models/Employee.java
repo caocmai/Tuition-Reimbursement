@@ -1,6 +1,18 @@
 package dev.mai.models;
 
-import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 @Entity
 @Table(name="employees")
@@ -29,15 +41,26 @@ public class Employee {
 	@Column(name="is_ben_co")
 	private boolean isBenCo;
 
-	@JoinColumn(name="e_id", nullable=true)
-	private int superId;
+	@ManyToOne
+//	@JoinColumn(name="s_id", nullable=true)
+	private Employee supervisor;
+	
+	@OneToMany(mappedBy="supervisor")
+	private List<Employee> subordinates = new ArrayList<Employee>();
+	
+	@ManyToOne
+//	@JoinColumn(name="department", nullable=true)
+	private Department dept;
+	
+//	@OneToMany(mappedBy="dept")
+//	private List<Employee> deptEmps = new ArrayList<Employee>();
 
 	public Employee() {
 		super();
 	}
-	
+
 	public Employee(String title, String firstName, String lastName, int totalReimbursement, long resetDate,
-			boolean isBenCo, int superId) {
+			boolean isBenCo, Employee supervisor, List<Employee> subordinates, Department dept) {
 		super();
 		this.title = title;
 		this.firstName = firstName;
@@ -45,11 +68,14 @@ public class Employee {
 		this.totalReimbursement = totalReimbursement;
 		this.resetDate = resetDate;
 		this.isBenCo = isBenCo;
-		this.superId = superId;
+		this.supervisor = supervisor;
+		this.subordinates = subordinates;
+		this.dept = dept;
 	}
-	
+
+
 	public Employee(int id, String title, String firstName, String lastName, int totalReimbursement, long resetDate,
-			boolean isBenCo, int superId) {
+			boolean isBenCo, Employee supervisor, List<Employee> subordinates, Department dept) {
 		super();
 		this.id = id;
 		this.title = title;
@@ -58,8 +84,13 @@ public class Employee {
 		this.totalReimbursement = totalReimbursement;
 		this.resetDate = resetDate;
 		this.isBenCo = isBenCo;
-		this.superId = superId;
+		this.supervisor = supervisor;
+		this.subordinates = subordinates;
+		this.dept = dept;
 	}
+
+
+
 
 
 
@@ -77,6 +108,22 @@ public class Employee {
 
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	
+	public Employee getSupervisor() {
+		return supervisor;
+	}
+
+	public void setSupervisor(Employee supervisor) {
+		this.supervisor = supervisor;
+	}
+	
+	public List<Employee> getSubordinates() {
+		return subordinates;
+	}
+
+	public void setSubordinates(List<Employee> subordinates) {
+		this.subordinates = subordinates;
 	}
 
 }

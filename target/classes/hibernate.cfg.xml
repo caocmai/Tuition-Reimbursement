@@ -46,6 +46,7 @@
 		
 		<!--  Class Mappings -->
 		<mapping class="dev.mai.models.Employee" />
+		<mapping class="dev.mai.models.Department" />
 		
 	</session-factory>
 </hibernate-configuration>
