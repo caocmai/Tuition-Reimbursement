@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
+
 import dev.mai.models.Department;
 import dev.mai.util.HibernateUtil;
 
@@ -12,16 +14,16 @@ public class DepartmentRepoImpl implements DepartmentRepo {
 	@Override
 	public Department addDepartment(Department d) {
 		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
 
 		try {
-			sess.beginTransaction();
+			tx = sess.beginTransaction();
 			int id = (int)sess.save(d);
 			d.setId(id);
-			sess.getTransaction().commit();
-		
+			tx.commit();
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			sess.getTransaction().rollback(); // if something is wrong so get the transaction and rollback
+			tx.rollback();
 			d = null;
 		} finally {
 			sess.close();
@@ -53,12 +55,52 @@ public class DepartmentRepoImpl implements DepartmentRepo {
 			departments = sess.createQuery("FROM Department").list();
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			sess.getTransaction().rollback(); // if something is wrong so get the transaction and rollback
+			sess.getTransaction().rollback(); 
 		} finally {
 			sess.close();
 		}
 
 		return departments;
+	}
+
+	@Override
+	public Department updateDepartment(Department changeD) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.update(changeD);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		
+		return changeD;
+	}
+
+	@Override
+	public Department deleteDepartment(int id) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		Department d = sess.get(Department.class, id);
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.delete(d);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		return d;
 	}
 
 }

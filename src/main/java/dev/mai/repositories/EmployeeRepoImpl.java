@@ -6,7 +6,9 @@ import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 
+import dev.mai.models.Department;
 import dev.mai.models.Employee;
 import dev.mai.util.HibernateUtil;
 
@@ -17,9 +19,9 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		
 		Session sess = HibernateUtil.getSession();
 		Employee emp = null;
+		
 		try {
 			emp = sess.get(Employee.class, id);
-			
 		} catch (HibernateException e) {
 			e.printStackTrace();
 		} finally {
@@ -31,6 +33,7 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 	@Override
 	public Employee addEmployee(Employee emp) {
 		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
 		
 		Employee manager = new Employee("Jon");
 		Employee emp1 = new Employee("Emp1");
@@ -45,7 +48,7 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 //		manager.getSubordinates().add(emp2);
 
 		try {
-			sess.beginTransaction();
+			tx = sess.beginTransaction();
 			int id = (int)sess.save(emp);
 			emp.setId(id);
 			
@@ -54,11 +57,11 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			sess.save(emp2);
 		
 			
-			sess.getTransaction().commit();
+			tx.commit();
 		
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			sess.getTransaction().rollback(); // if something is wrong so get the transaction and rollback
+			tx.rollback();
 			emp = null;
 		} finally {
 			sess.close();
@@ -75,12 +78,51 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			employees = sess.createQuery("FROM Employee").list();
 		} catch (HibernateException e) {
 			e.printStackTrace();
-			sess.getTransaction().rollback(); // if something is wrong so get the transaction and rollback
+			sess.getTransaction().rollback();
 		} finally {
 			sess.close();
 		}
 
 		return employees;
+	}
+
+	@Override
+	public Employee updateEmployee(Employee changeE) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.update(changeE);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		return changeE;
+	}
+
+	@Override
+	public Employee deleteEmployee(int id) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		Employee emp = sess.get(Employee.class, id);
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.delete(emp);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		return emp;
 	}
 	
 

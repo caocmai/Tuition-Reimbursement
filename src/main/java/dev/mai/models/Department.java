@@ -36,6 +36,12 @@ public class Department {
 		super();
 	}
 	
+	public Department(String title) {
+		super();
+		this.title = title;
+	}
+
+	
 	public Department(String title, Employee head) {
 		super();
 		this.title = title;
