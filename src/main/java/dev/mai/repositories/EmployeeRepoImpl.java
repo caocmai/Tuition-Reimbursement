@@ -1,8 +1,8 @@
 package dev.mai.repositories;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
-
-import javax.persistence.EntityManager;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -38,8 +38,11 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		
 		emp1.setSupervisor(manager);
 		emp2.setSupervisor(manager);
-		manager.getSubordinates().add(emp1);
-		manager.getSubordinates().add(emp2);
+		
+		List<Employee> employees = new ArrayList<>(Arrays.asList(emp1, emp2));
+		manager.setSubordinates(employees);
+//		manager.getSubordinates().add(emp1);
+//		manager.getSubordinates().add(emp2);
 
 		try {
 			sess.beginTransaction();

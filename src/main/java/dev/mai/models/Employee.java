@@ -53,8 +53,11 @@ public class Employee {
 	private List<Employee> subordinates = new ArrayList<Employee>();
 	
 	@ManyToOne
-	@JoinColumn(name="department", nullable=true)
+	@JoinColumn(name="department_id", nullable=true)
 	private Department dept;
+	
+	@OneToMany(mappedBy="employee")
+	private List<Request> requests = new ArrayList<Request>();
 	
 	
 	public Employee() {
@@ -66,35 +69,20 @@ public class Employee {
 		this.title = title;
 	}
 
-	public Employee(String title, String firstName, String lastName, int totalReimbursement, long resetDate,
-			boolean isBenCo, Employee supervisor, List<Employee> subordinates, Department dept) {
+	public Employee(String title, String username, String password, String firstName, String lastName,
+			int totalReimbursement, long resetDate, boolean isBenCo, Department dept) {
 		super();
 		this.title = title;
+		this.username = username;
+		this.password = password;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.totalReimbursement = totalReimbursement;
 		this.resetDate = resetDate;
 		this.isBenCo = isBenCo;
-		this.supervisor = supervisor;
-		this.subordinates = subordinates;
 		this.dept = dept;
 	}
-
-
-	public Employee(int id, String title, String firstName, String lastName, int totalReimbursement, long resetDate,
-			boolean isBenCo, Employee supervisor, List<Employee> subordinates, Department dept) {
-		super();
-		this.id = id;
-		this.title = title;
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.totalReimbursement = totalReimbursement;
-		this.resetDate = resetDate;
-		this.isBenCo = isBenCo;
-		this.supervisor = supervisor;
-		this.subordinates = subordinates;
-		this.dept = dept;
-	}
+	
 
 	public int getId() {
 		return id;
@@ -191,6 +179,15 @@ public class Employee {
 	public void setDept(Department dept) {
 		this.dept = dept;
 	}
-	
 
+	public List<Request> getRequests() {
+		return requests;
+	}
+
+	public void setRequests(List<Request> requests) {
+		this.requests = requests;
+	}
+	
+	
+	
 }

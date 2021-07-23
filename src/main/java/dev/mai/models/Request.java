@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -19,6 +20,9 @@ public class Request {
 	@Column(name="r_id", updatable=false)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private int id;
+	
+	@ManyToOne
+	private Employee employee;
 	
 	@Column(name="start_request")
 	private long startRequest;
@@ -54,6 +58,25 @@ public class Request {
 	
 	@OneToMany(mappedBy="request")
 	private List<MoreInfoRequest> infoRequests;
+	
+	public Request() {
+		super();
+	}
+	
+	public Request(long startRequest, boolean urgent, Form form) {
+		super();
+		this.startRequest = startRequest;
+		this.urgent = urgent;
+		this.form = form;
+	}
+
+	public Request(int id, long startRequest, boolean urgent, Form form) {
+		super();
+		this.id = id;
+		this.startRequest = startRequest;
+		this.urgent = urgent;
+		this.form = form;
+	}
 
 	public int getId() {
 		return id;

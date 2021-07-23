@@ -20,11 +20,11 @@ public class MoreInfoRequest {
 	private int id;
 	
 	@OneToOne
-	@JoinColumn(name="from_employee")
+	@JoinColumn(name="from_employee_id")
 	private Employee fromEmpolyee;
 	
 	@OneToOne
-	@JoinColumn(name="to_employee")
+	@JoinColumn(name="to_employee_id")
 	private Employee toEmployee;
 	
 	private String description;
@@ -32,6 +32,33 @@ public class MoreInfoRequest {
 	
 	@ManyToOne
 	private Request request;
+
+	public MoreInfoRequest() {
+		super();
+	}
+	
+	public MoreInfoRequest(Employee fromEmpolyee, Employee toEmployee, String description, boolean fulfilled,
+			Request request) {
+		super();
+		this.fromEmpolyee = fromEmpolyee;
+		this.toEmployee = toEmployee;
+		this.description = description;
+		this.fulfilled = fulfilled;
+		this.request = request;
+	}
+
+	
+
+	public MoreInfoRequest(int id, Employee fromEmpolyee, Employee toEmployee, String description, boolean fulfilled,
+			Request request) {
+		super();
+		this.id = id;
+		this.fromEmpolyee = fromEmpolyee;
+		this.toEmployee = toEmployee;
+		this.description = description;
+		this.fulfilled = fulfilled;
+		this.request = request;
+	}
 
 	public int getId() {
 		return id;

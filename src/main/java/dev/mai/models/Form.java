@@ -30,13 +30,43 @@ public class Form {
 //	Certification 100%, Technical Training 90%, Other 30%. 
 	@Column(name="event_type")
 	private String eventType;
-	// tentatively as a string should be attachment
 	
+	// tentatively as a string should be attachment
 	@Column(name="supplement_info")
 	private String supplementInfo;
 	
 	@Column(name="time_off")
 	private long timeOff;
+	
+	public Form() {
+		super();
+	}
+
+	public Form(String location, String description, int cost, String gradingType, String eventType,
+			String supplementInfo, long timeOff) {
+		super();
+		this.location = location;
+		this.description = description;
+		this.cost = cost;
+		this.gradingType = gradingType;
+		this.eventType = eventType;
+		this.supplementInfo = supplementInfo;
+		this.timeOff = timeOff;
+	}
+
+	public Form(int id, String location, String description, int cost, String gradingType, String eventType,
+			String supplementInfo, long timeOff) {
+		super();
+		this.id = id;
+		this.location = location;
+		this.description = description;
+		this.cost = cost;
+		this.gradingType = gradingType;
+		this.eventType = eventType;
+		this.supplementInfo = supplementInfo;
+		this.timeOff = timeOff;
+	}
+
 
 	public int getId() {
 		return id;

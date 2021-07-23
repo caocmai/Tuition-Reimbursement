@@ -26,24 +26,21 @@ public class Department {
 	private String title;
 	
 	@OneToOne
-//	@JoinColumn(name="head_id", nullable=true)
+	@JoinColumn(name="head_id", nullable=true)
 	private Employee head;
 	
 	@OneToMany(mappedBy="dept")
 	private List<Employee> employees = new ArrayList<Employee>();
-	
 
 	public Department() {
 		super();
 	}
-
 	
 	public Department(String title, Employee head) {
 		super();
 		this.title = title;
 		this.head = head;
 	}
-
 
 	public Department(int id, String title, Employee head) {
 		super();
@@ -82,8 +79,12 @@ public class Department {
 		this.head = head;
 	}
 
-	
-	
-	
+	public List<Employee> getEmployees() {
+		return employees;
+	}
+
+	public void setEmployees(List<Employee> employees) {
+		this.employees = employees;
+	}
 
 }
