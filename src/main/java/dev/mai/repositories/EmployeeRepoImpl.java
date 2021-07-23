@@ -2,6 +2,8 @@ package dev.mai.repositories;
 
 import java.util.List;
 
+import javax.persistence.EntityManager;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 
@@ -29,11 +31,26 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 	@Override
 	public Employee addEmployee(Employee emp) {
 		Session sess = HibernateUtil.getSession();
+		
+		Employee manager = new Employee("Jon");
+		Employee emp1 = new Employee("Emp1");
+		Employee emp2 = new Employee("Emp2");
+		
+		emp1.setSupervisor(manager);
+		emp2.setSupervisor(manager);
+		manager.getSubordinates().add(emp1);
+		manager.getSubordinates().add(emp2);
 
 		try {
 			sess.beginTransaction();
 			int id = (int)sess.save(emp);
 			emp.setId(id);
+			
+			sess.save(manager);
+			sess.save(emp1);
+			sess.save(emp2);
+		
+			
 			sess.getTransaction().commit();
 		
 		} catch (HibernateException e) {

@@ -4,6 +4,7 @@ package dev.mai.app;
 
 import dev.mai.controllers.DepartmentController;
 import dev.mai.controllers.EmployeeController;
+import dev.mai.models.Employee;
 import dev.mai.repositories.DepartmentRepo;
 import dev.mai.repositories.DepartmentRepoImpl;
 import dev.mai.repositories.EmployeeRepo;
@@ -39,7 +40,10 @@ public class App {
 		DepartmentRepo dr = new DepartmentRepoImpl();
 		DepartmentService ds = new DepartmentServiceImpl(dr);
 		DepartmentController dc = new DepartmentController(ds);
-		er.getAllEmployee();
+		
+//		Employee e = new Employee("Joe");
+		er.addEmployee(new Employee("First"));
+//		er.getAllEmployee();
 		app.get("/employees/:id", ec.getEmployeeById);
 		app.post("/employees", ec.addEmployee);
 		app.get("/employees", ec.getAllEmployees);

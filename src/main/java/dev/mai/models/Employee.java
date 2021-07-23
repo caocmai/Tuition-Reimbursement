@@ -26,10 +26,14 @@ public class Employee {
 	@Column(name="title", nullable=false)
 	private String title;
 	
-	@Column(name="first_name", nullable=false)
+	private String username;
+	
+	private String password;
+	
+	@Column(name="first_name")
 	private String firstName;
 	
-	@Column(name="last_name", nullable=false)
+	@Column(name="last_name")
 	private String lastName;
 	
 	@Column(name="total_reimbursement", nullable=false, columnDefinition="integer default 25")
@@ -52,11 +56,14 @@ public class Employee {
 //	@JoinColumn(name="department", nullable=true)
 	private Department dept;
 	
-//	@OneToMany(mappedBy="dept")
-//	private List<Employee> deptEmps = new ArrayList<Employee>();
-
+	
 	public Employee() {
 		super();
+	}
+	
+	public Employee(String title) {
+		super();
+		this.title = title;
 	}
 
 	public Employee(String title, String firstName, String lastName, int totalReimbursement, long resetDate,
@@ -88,11 +95,6 @@ public class Employee {
 		this.subordinates = subordinates;
 		this.dept = dept;
 	}
-
-
-
-
-
 
 	public int getId() {
 		return id;

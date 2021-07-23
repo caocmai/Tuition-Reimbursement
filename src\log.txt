@@ -23989,3 +23989,1309 @@ org.postgresql.util.PSQLWarning: drop cascades to constraint fkmkeq49olabodcw5m6
 2021-07-21 11:20:49 TRACE LogicalConnectionManagedImpl:259 - Closing logical connection
 2021-07-21 11:20:49 TRACE LogicalConnectionManagedImpl:266 - Logical connection closed
 2021-07-21 11:21:17 DEBUG DriverManagerConnectionProviderImpl:284 - Connection pool now considered primed; min-size will be maintained
+2021-07-21 22:02:02 DEBUG logging:28 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2021-07-21 22:02:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cfg.beanvalidation.BeanValidationIntegrator].
+2021-07-21 22:02:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.secure.spi.JaccIntegrator].
+2021-07-21 22:02:02 DEBUG IntegratorServiceImpl:46 - Adding Integrator [org.hibernate.cache.internal.CollectionCacheInvalidator].
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jdbc] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [jta] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JDBCTransactionFactory] -> [org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorBuilderImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.JTATransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder] : [org.hibernate.transaction.CMTTransactionFactory] -> [org.hibernate.resource.transaction.backend.jta.internal.JtaTransactionCoordinatorBuilderImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [persistent] -> [org.hibernate.hql.spi.id.persistent.PersistentTableBulkIdStrategy]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [global_temporary] -> [org.hibernate.hql.spi.id.global.GlobalTemporaryTableBulkIdStrategy]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.hql.spi.id.MultiTableBulkIdStrategy] : [local_temporary] -> [org.hibernate.hql.spi.id.local.LocalTemporaryTableBulkIdStrategy]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [default] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-jpa] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [legacy-hbm] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.boot.model.naming.ImplicitNamingStrategy] : [component-path] -> [org.hibernate.boot.model.naming.ImplicitNamingStrategyComponentPathImpl]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [default] -> [org.hibernate.cache.internal.DefaultCacheKeysFactory]
+2021-07-21 22:02:02 TRACE StrategySelectorImpl:85 - Registering named strategy selector [org.hibernate.cache.spi.CacheKeysFactory] : [simple] -> [org.hibernate.cache.internal.SimpleCacheKeysFactory]
+2021-07-21 22:02:02 INFO  Version:44 - HHH000412: Hibernate ORM core version 5.5.3.Final
+2021-07-21 22:02:02 DEBUG Environment:199 - HHH000206: hibernate.properties not found
+2021-07-21 22:02:02 TRACE ClassLoaderServiceImpl:182 - trying via [new URL("hibernate.cfg.xml")]
+2021-07-21 22:02:02 TRACE ClassLoaderServiceImpl:193 - trying via [ClassLoader.getResourceAsStream("hibernate.cfg.xml")]
+2021-07-21 22:02:02 TRACE LocalXmlResourceResolver:35 - In resolveEntity(null, http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd, null, null)
+2021-07-21 22:02:02 DEBUG LocalXmlResourceResolver:63 - Interpreting public/system identifier : [null] - [http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd]
+2021-07-21 22:02:02 DEBUG LocalXmlResourceResolver:91 - Recognized hibernate-configuration identifier; attempting to resolve on classpath under org/hibernate/
+2021-07-21 22:02:02 DEBUG JaxbCfgProcessor:117 - cfg.xml document did not define namespaces; wrapping in custom event reader to introduce namespace information
+2021-07-21 22:02:02 DEBUG Configuration:742 - Building session factory using internal StandardServiceRegistryBuilder
+2021-07-21 22:02:02 DEBUG ServiceBinding:68 - Overriding existing service binding [org.hibernate.secure.spi.JaccService]
+2021-07-21 22:02:02 DEBUG Configuration:672 - Building session factory using provided StandardServiceRegistry
+2021-07-21 22:02:02 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.config.spi.ConfigurationService]
+2021-07-21 22:02:02 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.cache.spi.RegionFactory]
+2021-07-21 22:02:02 DEBUG RegionFactoryInitiator:118 - Cannot default RegionFactory based on registered strategies as `[]` RegionFactory strategies were registered
+2021-07-21 22:02:02 DEBUG RegionFactoryInitiator:49 - Cache region factory : org.hibernate.cache.internal.NoCachingRegionFactory
+2021-07-21 22:02:02 INFO  Version:56 - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration boolean -> org.hibernate.type.BooleanType@1972e513
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration boolean -> org.hibernate.type.BooleanType@1972e513
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Boolean -> org.hibernate.type.BooleanType@1972e513
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration numeric_boolean -> org.hibernate.type.NumericBooleanType@61c4eee0
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration true_false -> org.hibernate.type.TrueFalseType@548a24a
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration yes_no -> org.hibernate.type.YesNoType@3f4faf53
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration byte -> org.hibernate.type.ByteType@25be7b63
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration byte -> org.hibernate.type.ByteType@25be7b63
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Byte -> org.hibernate.type.ByteType@25be7b63
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration character -> org.hibernate.type.CharacterType@4a8355dd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration char -> org.hibernate.type.CharacterType@4a8355dd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Character -> org.hibernate.type.CharacterType@4a8355dd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration short -> org.hibernate.type.ShortType@72bc6553
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration short -> org.hibernate.type.ShortType@72bc6553
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Short -> org.hibernate.type.ShortType@72bc6553
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration integer -> org.hibernate.type.IntegerType@6c4906d3
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration int -> org.hibernate.type.IntegerType@6c4906d3
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Integer -> org.hibernate.type.IntegerType@6c4906d3
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration long -> org.hibernate.type.LongType@4d1bf319
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration long -> org.hibernate.type.LongType@4d1bf319
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Long -> org.hibernate.type.LongType@4d1bf319
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration float -> org.hibernate.type.FloatType@4007f65e
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration float -> org.hibernate.type.FloatType@4007f65e
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Float -> org.hibernate.type.FloatType@4007f65e
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration double -> org.hibernate.type.DoubleType@4201c465
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration double -> org.hibernate.type.DoubleType@4201c465
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Double -> org.hibernate.type.DoubleType@4201c465
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration big_decimal -> org.hibernate.type.BigDecimalType@2ab4bc72
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.math.BigDecimal -> org.hibernate.type.BigDecimalType@2ab4bc72
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration big_integer -> org.hibernate.type.BigIntegerType@43f02ef2
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.math.BigInteger -> org.hibernate.type.BigIntegerType@43f02ef2
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration string -> org.hibernate.type.StringType@5f8e8a9d
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.String -> org.hibernate.type.StringType@5f8e8a9d
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration nstring -> org.hibernate.type.StringNVarcharType@3cce5371
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration ncharacter -> org.hibernate.type.CharacterNCharType@15a34df2
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration url -> org.hibernate.type.UrlType@55cb6996
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.net.URL -> org.hibernate.type.UrlType@55cb6996
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration Duration -> org.hibernate.type.DurationType@26abb146
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.Duration -> org.hibernate.type.DurationType@26abb146
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration Instant -> org.hibernate.type.InstantType@c05fddc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.Instant -> org.hibernate.type.InstantType@c05fddc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration LocalDateTime -> org.hibernate.type.LocalDateTimeType@50378a4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.LocalDateTime -> org.hibernate.type.LocalDateTimeType@50378a4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration LocalDate -> org.hibernate.type.LocalDateType@7a6d7e92
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.LocalDate -> org.hibernate.type.LocalDateType@7a6d7e92
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration LocalTime -> org.hibernate.type.LocalTimeType@16150369
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.LocalTime -> org.hibernate.type.LocalTimeType@16150369
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@23f5b5dc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.OffsetDateTime -> org.hibernate.type.OffsetDateTimeType@23f5b5dc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration OffsetTime -> org.hibernate.type.OffsetTimeType@5db6b9cd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.OffsetTime -> org.hibernate.type.OffsetTimeType@5db6b9cd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7eecb5b8
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.time.ZonedDateTime -> org.hibernate.type.ZonedDateTimeType@7eecb5b8
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration date -> org.hibernate.type.DateType@71687585
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.Date -> org.hibernate.type.DateType@71687585
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration time -> org.hibernate.type.TimeType@6a4f1a55
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.Time -> org.hibernate.type.TimeType@6a4f1a55
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration timestamp -> org.hibernate.type.TimestampType@7d3e8655
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.Timestamp -> org.hibernate.type.TimestampType@7d3e8655
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.Date -> org.hibernate.type.TimestampType@7d3e8655
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration dbtimestamp -> org.hibernate.type.DbTimestampType@169bb4dd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration calendar -> org.hibernate.type.CalendarType@2d0399f4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.Calendar -> org.hibernate.type.CalendarType@2d0399f4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.GregorianCalendar -> org.hibernate.type.CalendarType@2d0399f4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration calendar_date -> org.hibernate.type.CalendarDateType@6cd24612
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration calendar_time -> org.hibernate.type.CalendarTimeType@f68f0dc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration locale -> org.hibernate.type.LocaleType@38145825
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.Locale -> org.hibernate.type.LocaleType@38145825
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration currency -> org.hibernate.type.CurrencyType@7dc19a70
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.Currency -> org.hibernate.type.CurrencyType@7dc19a70
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration timezone -> org.hibernate.type.TimeZoneType@798162bc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.TimeZone -> org.hibernate.type.TimeZoneType@798162bc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration class -> org.hibernate.type.ClassType@5d908d47
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Class -> org.hibernate.type.ClassType@5d908d47
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration uuid-binary -> org.hibernate.type.UUIDBinaryType@49c90a9c
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.UUID -> org.hibernate.type.UUIDBinaryType@49c90a9c
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration uuid-char -> org.hibernate.type.UUIDCharType@6e2aa843
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration binary -> org.hibernate.type.BinaryType@700fb871
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration byte[] -> org.hibernate.type.BinaryType@700fb871
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration [B -> org.hibernate.type.BinaryType@700fb871
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration wrapper-binary -> org.hibernate.type.WrapperBinaryType@565f390
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration Byte[] -> org.hibernate.type.WrapperBinaryType@565f390
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration [Ljava.lang.Byte; -> org.hibernate.type.WrapperBinaryType@565f390
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration row_version -> org.hibernate.type.RowVersionType@49b2a47d
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration image -> org.hibernate.type.ImageType@6d5620ce
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration characters -> org.hibernate.type.CharArrayType@4f49f6af
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration char[] -> org.hibernate.type.CharArrayType@4f49f6af
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration [C -> org.hibernate.type.CharArrayType@4f49f6af
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration wrapper-characters -> org.hibernate.type.CharacterArrayType@15d49048
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration [Ljava.lang.Character; -> org.hibernate.type.CharacterArrayType@15d49048
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration Character[] -> org.hibernate.type.CharacterArrayType@15d49048
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration text -> org.hibernate.type.TextType@13526e59
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration ntext -> org.hibernate.type.NTextType@3bcd05cb
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration blob -> org.hibernate.type.BlobType@5c86dbc5
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.Blob -> org.hibernate.type.BlobType@5c86dbc5
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration materialized_blob -> org.hibernate.type.MaterializedBlobType@1a5a4e19
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration clob -> org.hibernate.type.ClobType@2438dcd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.Clob -> org.hibernate.type.ClobType@2438dcd
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration nclob -> org.hibernate.type.NClobType@e3b3b2f
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.sql.NClob -> org.hibernate.type.NClobType@e3b3b2f
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration materialized_clob -> org.hibernate.type.MaterializedClobType@28194a50
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration materialized_nclob -> org.hibernate.type.MaterializedNClobType@5038d0b5
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration serializable -> org.hibernate.type.SerializableType@61710c6
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration object -> org.hibernate.type.ObjectType@7fd7a283
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration java.lang.Object -> org.hibernate.type.ObjectType@7fd7a283
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_date -> org.hibernate.type.AdaptedImmutableType@16612a51
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_time -> org.hibernate.type.AdaptedImmutableType@54e041a4
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_timestamp -> org.hibernate.type.AdaptedImmutableType@2c78324b
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_dbtimestamp -> org.hibernate.type.AdaptedImmutableType@79defdc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_calendar -> org.hibernate.type.AdaptedImmutableType@18317edc
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_calendar_date -> org.hibernate.type.AdaptedImmutableType@4e0ae11f
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_binary -> org.hibernate.type.AdaptedImmutableType@238d68ff
+2021-07-21 22:02:03 DEBUG BasicTypeRegistry:157 - Adding type registration imm_serializable -> org.hibernate.type.AdaptedImmutableType@4b86805d
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.boot.cfgxml.spi.CfgXmlAccessService]
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.id.factory.spi.MutableIdentifierGeneratorFactory]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid2] -> [org.hibernate.id.UUIDGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [guid] -> [org.hibernate.id.GUIDGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid] -> [org.hibernate.id.UUIDHexGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [uuid.hex] -> [org.hibernate.id.UUIDHexGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [assigned] -> [org.hibernate.id.Assigned]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [identity] -> [org.hibernate.id.IdentityGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [select] -> [org.hibernate.id.SelectGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [seqhilo] -> [org.hibernate.id.SequenceHiLoGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [increment] -> [org.hibernate.id.IncrementGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [foreign] -> [org.hibernate.id.ForeignGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [sequence-identity] -> [org.hibernate.id.SequenceIdentityGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-sequence] -> [org.hibernate.id.enhanced.SequenceStyleGenerator]
+2021-07-21 22:02:03 DEBUG DefaultIdentifierGeneratorFactory:81 - Registering IdentifierGenerator strategy [enhanced-table] -> [org.hibernate.id.enhanced.TableGenerator]
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jdbc.env.spi.JdbcEnvironment]
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectFactory]
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jdbc.dialect.spi.DialectResolver]
+2021-07-21 22:02:03 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jdbc.connections.spi.ConnectionProvider]
+2021-07-21 22:02:03 WARN  pooling:72 - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2021-07-21 22:02:03 INFO  pooling:115 - HHH10001005: using driver [org.postgresql.Driver] at URL [jdbc:postgresql://caorevaturedb.c39sfp4pzzjr.us-east-2.rds.amazonaws.com/postgres]
+2021-07-21 22:02:03 INFO  pooling:121 - HHH10001001: Connection properties: {user=cao, password=password}
+2021-07-21 22:02:03 INFO  pooling:129 - HHH10001003: Autocommit mode: false
+2021-07-21 22:02:03 DEBUG DriverManagerConnectionProviderImpl:384 - Initializing Connection pool with 1 Connections
+2021-07-21 22:02:03 INFO  DriverManagerConnectionProviderImpl:274 - HHH000115: Hibernate connection pool size: 20 (min=1)
+2021-07-21 22:02:04 DEBUG JdbcEnvironmentInitiator:72 - Database ->
+       name : PostgreSQL
+    version : 12.5
+      major : 12
+      minor : 5
+2021-07-21 22:02:04 DEBUG JdbcEnvironmentInitiator:83 - Driver ->
+       name : PostgreSQL JDBC Driver
+    version : 42.2.20
+      major : 42
+      minor : 2
+2021-07-21 22:02:04 DEBUG JdbcEnvironmentInitiator:389 - JDBC version : 4.2
+2021-07-21 22:02:04 INFO  Dialect:175 - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2021-07-21 22:02:04 DEBUG IdentifierHelperBuilder:114 - JDBC driver metadata reported database stores quoted identifiers in neither upper, lower nor mixed case
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [postgres]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [public]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jdbc.spi.JdbcServices]
+2021-07-21 22:02:04 DEBUG Namespace:51 - Created database namespace [logicalName=Name{catalog=null, schema=null}, physicalName=Name{catalog=null, schema=null}]
+2021-07-21 22:02:04 DEBUG BasicTypeRegistry:157 - Adding type registration pg-uuid -> org.hibernate.type.PostgresUUIDType@476b0ae6
+2021-07-21 22:02:04 DEBUG BasicTypeRegistry:157 - Adding type registration java.util.UUID -> org.hibernate.type.PostgresUUIDType@476b0ae6
+2021-07-21 22:02:04 DEBUG BasicTypeRegistry:160 - HHH000270: Type registration [java.util.UUID] overrides previous : org.hibernate.type.UUIDBinaryType@49c90a9c
+2021-07-21 22:02:04 DEBUG TypeConfiguration$Scope:149 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@a202ccb] to MetadataBuildingContext [org.hibernate.boot.internal.MetadataBuildingContextRootImpl@20f12539]
+2021-07-21 22:02:04 DEBUG AnnotationBinder:558 - Binding entity from annotated class: dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [DTYPE]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-07-21 22:02:04 DEBUG EntityBinder:431 - Import with entity name Employee
+2021-07-21 22:02:04 TRACE InFlightMetadataCollectorImpl:725 - Import: Employee -> dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE InFlightMetadataCollectorImpl:725 - Import: dev.mai.models.Employee -> dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 DEBUG EntityBinder:874 - Bind entity dev.mai.models.Employee on table employees
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.id
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=e_id, insertable=true, updatable=false, unique=false}
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [dev.mai.models.Employee] is safe
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:id]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for id
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property id
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading id with null
+2021-07-21 22:02:04 DEBUG BinderHelper:643 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(e_id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+2021-07-21 22:02:04 TRACE AnnotationBinder:2474 - Bind @Id on id
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.dept
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=dept, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property dept
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading dept with none
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.firstName
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [first_name]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [first_name]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=first_name, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property firstName with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:firstName]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for firstName
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [first_name]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property firstName
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading firstName with null
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.isBenCo
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [is_ben_co]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [is_ben_co]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=is_ben_co, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property isBenCo with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:isBenCo]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for isBenCo
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [is_ben_co]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property isBenCo
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading isBenCo with null
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.lastName
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [last_name]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [last_name]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=last_name, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property lastName with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:lastName]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for lastName
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [last_name]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property lastName
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading lastName with null
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.resetDate
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [reset_date]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [reset_date]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=reset_date, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property resetDate with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:resetDate]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for resetDate
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [reset_date]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property resetDate
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading resetDate with null
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='supervisor'}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [subordinates]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [subordinates]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=subordinates, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [element]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [element]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [subordinates_KEY]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=subordinates_KEY, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [subordinates_KEY]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='subordinates_KEY', referencedColumn='null', mappedBy='null'}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='supervisor'}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='supervisor'}
+2021-07-21 22:02:04 DEBUG CollectionBinder:449 - Collection role: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property subordinates
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading subordinates with none
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.supervisor
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='null'}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=supervisor, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property supervisor
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading supervisor with none
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.title
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=title, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property title with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:title]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for title
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property title
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading title with null
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Employee.totalReimbursement
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [total_reimbursement]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [total_reimbursement]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(employees), mappingColumn=total_reimbursement, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property totalReimbursement with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Employee:totalReimbursement]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for totalReimbursement
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [total_reimbursement]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property totalReimbursement
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading totalReimbursement with null
+2021-07-21 22:02:04 DEBUG AnnotationBinder:558 - Binding entity from annotated class: dev.mai.models.Department
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [DTYPE]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3DiscriminatorColumn{logicalColumnName'DTYPE', discriminatorTypeName='string'}
+2021-07-21 22:02:04 DEBUG EntityBinder:431 - Import with entity name Department
+2021-07-21 22:02:04 TRACE InFlightMetadataCollectorImpl:725 - Import: Department -> dev.mai.models.Department
+2021-07-21 22:02:04 TRACE InFlightMetadataCollectorImpl:725 - Import: dev.mai.models.Department -> dev.mai.models.Department
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [departments]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [departments]
+2021-07-21 22:02:04 DEBUG EntityBinder:874 - Bind entity dev.mai.models.Department on table departments
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Department.id
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=d_id, insertable=true, updatable=false, unique=false}
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [dev.mai.models.Department] is safe
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property id with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Department:id]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for id
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property id
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading id with null
+2021-07-21 22:02:04 DEBUG BinderHelper:643 - #makeIdGenerator(org.hibernate.mapping.SimpleValue([org.hibernate.mapping.Column(d_id)]), id, org.hibernate.id.enhanced.SequenceStyleGenerator, , ...)
+2021-07-21 22:02:04 TRACE AnnotationBinder:2474 - Bind @Id on id
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dept'}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=employees, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=null, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [element]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [element]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=element, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees_KEY]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=employees_KEY, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees_KEY]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='employees_KEY', referencedColumn='null', mappedBy='null'}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dept'}
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy='dept'}
+2021-07-21 22:02:04 DEBUG CollectionBinder:449 - Collection role: dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property employees
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading employees with none
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Department.head
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3JoinColumn{logicalColumnName='null', referencedColumn='null', mappedBy=''}
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=head, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 TRACE AnnotationBinder:3209 - Fetching head with JOIN
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property head
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading head with none
+2021-07-21 22:02:04 TRACE AnnotationBinder:1661 - Processing annotations of dev.mai.models.Department.title
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 DEBUG Ejb3Column:213 - Binding column: Ejb3Column{table=org.hibernate.mapping.Table(departments), mappingColumn=title, insertable=true, updatable=true, unique=false}
+2021-07-21 22:02:04 DEBUG PropertyBinder:175 - MetadataSourceProcessor property title with lazy=false
+2021-07-21 22:02:04 DEBUG AbstractPropertyHolder:94 - Attempting to locate auto-apply AttributeConverter for property [dev.mai.models.Department:title]
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:410 - building SimpleValue for title
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [title]
+2021-07-21 22:02:04 DEBUG PropertyBinder:266 - Building property title
+2021-07-21 22:02:04 TRACE PropertyBinder:329 - Cascading title with null
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for id
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for firstName
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for isBenCo
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for lastName
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for resetDate
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for title
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for totalReimbursement
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for id
+2021-07-21 22:02:04 DEBUG SimpleValueBinder:455 - Starting fillSimpleValue for title
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [departments]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [employees]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 DEBUG PrimaryKey:35 - Forcing column [e_id] to be non-null as it is part of the primary key for table [employees]
+2021-07-21 22:02:04 DEBUG PrimaryKey:35 - Forcing column [d_id] to be non-null as it is part of the primary key for table [departments]
+2021-07-21 22:02:04 DEBUG CollectionSecondPass:50 - Second pass for collection: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG CollectionBinder:903 - Binding a OneToMany: dev.mai.models.Employee.subordinates through a foreign key
+2021-07-21 22:02:04 DEBUG CollectionBinder:941 - Mapping collection: dev.mai.models.Employee.subordinates -> employees
+2021-07-21 22:02:04 DEBUG TableBinder:554 - Retrieving property dev.mai.models.Employee.supervisor
+2021-07-21 22:02:04 DEBUG CollectionSecondPass:67 - Mapped collection key: supervisor_e_id, one-to-many: dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG CollectionSecondPass:50 - Second pass for collection: dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG CollectionBinder:903 - Binding a OneToMany: dev.mai.models.Department.employees through a foreign key
+2021-07-21 22:02:04 DEBUG CollectionBinder:941 - Mapping collection: dev.mai.models.Department.employees -> employees
+2021-07-21 22:02:04 DEBUG TableBinder:554 - Retrieving property dev.mai.models.Employee.dept
+2021-07-21 22:02:04 DEBUG CollectionSecondPass:67 - Mapped collection key: dept_d_id, one-to-many: dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [FKrgsh7p9f6to1994rn4sg5j94a]
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Department
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [FKi9uoe8abvi1t6f2x7bi530ggi]
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [FKis4ungucfl1dskkwj3gwtg2kc]
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [head_e_id]
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Department
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [dept_d_id]
+2021-07-21 22:02:04 DEBUG InFlightMetadataCollectorImpl:1869 - Resolving reference to class: dev.mai.models.Employee
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [supervisor_e_id]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [null]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [null]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [hibernate_sequence]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [null]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [null]
+2021-07-21 22:02:04 TRACE NormalizingIdentifierHelperImpl:59 - Normalizing identifier quoting [hibernate_sequence]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.boot.spi.SessionFactoryBuilderService]
+2021-07-21 22:02:04 TRACE BatchFetchStyle:51 - Interpreting BatchFetchStyle from setting : null
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.resource.transaction.spi.TransactionCoordinatorBuilder]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.bytecode.spi.BytecodeProvider]
+2021-07-21 22:02:04 DEBUG SessionFactoryImpl:206 - Building session factory
+2021-07-21 22:02:04 DEBUG Settings:68 - SessionFactory name : null
+2021-07-21 22:02:04 DEBUG Settings:69 - Automatic flush during beforeCompletion(): enabled
+2021-07-21 22:02:04 DEBUG Settings:70 - Automatic session close at end of transaction: disabled
+2021-07-21 22:02:04 DEBUG Settings:72 - Statistics: disabled
+2021-07-21 22:02:04 DEBUG Settings:74 - Deleted entity synthetic identifier rollback: disabled
+2021-07-21 22:02:04 DEBUG Settings:75 - Default entity-mode: pojo
+2021-07-21 22:02:04 DEBUG Settings:76 - Check Nullability in Core (should be disabled when Bean Validation is on): enabled
+2021-07-21 22:02:04 DEBUG Settings:77 - Allow initialization of lazy state outside session : disabled
+2021-07-21 22:02:04 DEBUG Settings:79 - Using BatchFetchStyle : LEGACY
+2021-07-21 22:02:04 DEBUG Settings:80 - Default batch fetch size: -1
+2021-07-21 22:02:04 DEBUG Settings:81 - Maximum outer join fetch depth: null
+2021-07-21 22:02:04 DEBUG Settings:82 - Default null ordering: NONE
+2021-07-21 22:02:04 DEBUG Settings:83 - Order SQL updates by primary key: disabled
+2021-07-21 22:02:04 DEBUG Settings:84 - Order SQL inserts for batching: disabled
+2021-07-21 22:02:04 DEBUG Settings:86 - multi-tenancy strategy : NONE
+2021-07-21 22:02:04 DEBUG Settings:88 - JTA Track by Thread: enabled
+2021-07-21 22:02:04 DEBUG Settings:90 - Query language substitutions: {}
+2021-07-21 22:02:04 DEBUG Settings:91 - Named query checking : enabled
+2021-07-21 22:02:04 DEBUG Settings:93 - Second-level cache: disabled
+2021-07-21 22:02:04 DEBUG Settings:94 - Second-level query cache: disabled
+2021-07-21 22:02:04 DEBUG Settings:95 - Second-level query cache factory: null
+2021-07-21 22:02:04 DEBUG Settings:96 - Second-level cache region prefix: null
+2021-07-21 22:02:04 DEBUG Settings:97 - Optimize second-level cache for minimal puts: disabled
+2021-07-21 22:02:04 DEBUG Settings:98 - Structured second-level cache entries: disabled
+2021-07-21 22:02:04 DEBUG Settings:99 - Second-level cache direct-reference entries: disabled
+2021-07-21 22:02:04 DEBUG Settings:100 - Automatic eviction of collection cache: disabled
+2021-07-21 22:02:04 DEBUG Settings:102 - JDBC batch size: 15
+2021-07-21 22:02:04 DEBUG Settings:103 - JDBC batch updates for versioned data: enabled
+2021-07-21 22:02:04 DEBUG Settings:104 - Scrollable result sets: enabled
+2021-07-21 22:02:04 DEBUG Settings:105 - Wrap result sets: disabled
+2021-07-21 22:02:04 DEBUG Settings:106 - JDBC3 getGeneratedKeys(): enabled
+2021-07-21 22:02:04 DEBUG Settings:107 - JDBC result set fetch size: null
+2021-07-21 22:02:04 DEBUG Settings:108 - Connection release mode: AFTER_TRANSACTION
+2021-07-21 22:02:04 DEBUG Settings:109 - Generate SQL with comments: disabled
+2021-07-21 22:02:04 DEBUG Settings:111 - JPA compliance - query : disabled
+2021-07-21 22:02:04 DEBUG Settings:112 - JPA compliance - closed-handling : disabled
+2021-07-21 22:02:04 DEBUG Settings:113 - JPA compliance - lists : disabled
+2021-07-21 22:02:04 DEBUG Settings:114 - JPA compliance - transactions : disabled
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.service.spi.SessionFactoryServiceRegistryFactory]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.resource.beans.spi.ManagedBeanRegistry]
+2021-07-21 22:02:04 DEBUG SessionFactoryServiceRegistryImpl:92 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2021-07-21 22:02:04 DEBUG SessionFactoryServiceRegistryImpl:92 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.cache.spi.CacheImplementor]
+2021-07-21 22:02:04 DEBUG SessionFactoryImpl:268 - Session factory constructed with filter configurations : {}
+2021-07-21 22:02:04 DEBUG SessionFactoryImpl:269 - Instantiating session factory with properties: {gopherProxySet=false, awt.toolkit=sun.lwawt.macosx.LWCToolkit, file.encoding.pkg=sun.io, java.specification.version=1.8, sun.cpu.isalist=, sun.jnu.encoding=UTF-8, hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect, java.class.path=/Users/caomai/dev/Revature/Projects/TuitionReimbursement/target/classes:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.jupiter.api_5.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.jupiter.engine_5.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.jupiter.migrationsupport_5.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.jupiter.params_5.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.platform.commons_1.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.platform.engine_1.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.platform.launcher_1.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.platform.runner_1.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.platform.suite.api_1.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit.vintage.engine_5.7.1.v20210222-1948.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.opentest4j_1.2.0.v20190826-0900.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.apiguardian_1.1.0.v20190826-0900.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.junit_4.13.0.v20200204-1500.jar:/Applications/SpringToolSuite4.app/Contents/Eclipse/plugins/org.hamcrest.core_1.3.0.v20180420-1519.jar:/Users/caomai/.m2/repository/io/javalin/javalin/3.13.6/javalin-3.13.6.jar:/Users/caomai/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-server/9.4.39.v20210325/jetty-server-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-http/9.4.39.v20210325/jetty-http-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-util/9.4.39.v20210325/jetty-util-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-io/9.4.39.v20210325/jetty-io-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-webapp/9.4.39.v20210325/jetty-webapp-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-xml/9.4.39.v20210325/jetty-xml-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-servlet/9.4.39.v20210325/jetty-servlet-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-security/9.4.39.v20210325/jetty-security-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-util-ajax/9.4.39.v20210325/jetty-util-ajax-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/websocket/websocket-server/9.4.39.v20210325/websocket-server-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/websocket/websocket-common/9.4.39.v20210325/websocket-common-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/websocket/websocket-api/9.4.39.v20210325/websocket-api-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/websocket/websocket-client/9.4.39.v20210325/websocket-client-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/jetty-client/9.4.39.v20210325/jetty-client-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/eclipse/jetty/websocket/websocket-servlet/9.4.39.v20210325/websocket-servlet-9.4.39.v20210325.jar:/Users/caomai/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk8/1.3.71/kotlin-stdlib-jdk8-1.3.71.jar:/Users/caomai/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib/1.3.71/kotlin-stdlib-1.3.71.jar:/Users/caomai/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-common/1.3.71/kotlin-stdlib-common-1.3.71.jar:/Users/caomai/.m2/repository/org/jetbrains/annotations/13.0/annotations-13.0.jar:/Users/caomai/.m2/repository/org/jetbrains/kotlin/kotlin-stdlib-jdk7/1.3.71/kotlin-stdlib-jdk7-1.3.71.jar:/Users/caomai/.m2/repository/org/slf4j/slf4j-simple/1.7.30/slf4j-simple-1.7.30.jar:/Users/caomai/.m2/repository/com/google/code/gson/gson/2.8.6/gson-2.8.6.jar:/Users/caomai/.m2/repository/org/postgresql/postgresql/42.2.20/postgresql-42.2.20.jar:/Users/caomai/.m2/repository/org/checkerframework/checker-qual/3.5.0/checker-qual-3.5.0.jar:/Users/caomai/.m2/repository/org/hibernate/hibernate-core/5.5.3.Final/hibernate-core-5.5.3.Final.jar:/Users/caomai/.m2/repository/org/jboss/logging/jboss-logging/3.4.2.Final/jboss-logging-3.4.2.Final.jar:/Users/caomai/.m2/repository/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar:/Users/caomai/.m2/repository/org/javassist/javassist/3.27.0-GA/javassist-3.27.0-GA.jar:/Users/caomai/.m2/repository/net/bytebuddy/byte-buddy/1.10.22/byte-buddy-1.10.22.jar:/Users/caomai/.m2/repository/antlr/antlr/2.7.7/antlr-2.7.7.jar:/Users/caomai/.m2/repository/org/jboss/spec/javax/transaction/jboss-transaction-api_1.2_spec/1.1.1.Final/jboss-transaction-api_1.2_spec-1.1.1.Final.jar:/Users/caomai/.m2/repository/org/jboss/jandex/2.2.3.Final/jandex-2.2.3.Final.jar:/Users/caomai/.m2/repository/com/fasterxml/classmate/1.5.1/classmate-1.5.1.jar:/Users/caomai/.m2/repository/javax/activation/javax.activation-api/1.2.0/javax.activation-api-1.2.0.jar:/Users/caomai/.m2/repository/org/hibernate/common/hibernate-commons-annotations/5.1.2.Final/hibernate-commons-annotations-5.1.2.Final.jar:/Users/caomai/.m2/repository/javax/xml/bind/jaxb-api/2.3.1/jaxb-api-2.3.1.jar:/Users/caomai/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.1/jaxb-runtime-2.3.1.jar:/Users/caomai/.m2/repository/org/glassfish/jaxb/txw2/2.3.1/txw2-2.3.1.jar:/Users/caomai/.m2/repository/com/sun/istack/istack-commons-runtime/3.0.7/istack-commons-runtime-3.0.7.jar:/Users/caomai/.m2/repository/org/jvnet/staxex/stax-ex/1.8/stax-ex-1.8.jar:/Users/caomai/.m2/repository/com/sun/xml/fastinfoset/FastInfoset/1.2.15/FastInfoset-1.2.15.jar:/Users/caomai/.m2/repository/org/hibernate/hibernate-entitymanager/5.5.3.Final/hibernate-entitymanager-5.5.3.Final.jar:/Users/caomai/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar, java.vm.vendor=Oracle Corporation, sun.arch.data.model=64, hbm2ddl.auto=create, java.vendor.url=http://java.oracle.com/, user.timezone=America/Los_Angeles, os.name=Mac OS X, java.vm.specification.version=1.8, user.country=US, sun.java.launcher=SUN_STANDARD, sun.boot.library.path=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib, sun.java.command=dev.mai.app.App, http.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, sun.cpu.endian=little, user.home=/Users/caomai, user.language=en, java.specification.vendor=Oracle Corporation, java.home=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home, file.separator=/, line.separator=
+, java.vm.specification.vendor=Oracle Corporation, java.specification.name=Java Platform API Specification, java.awt.graphicsenv=sun.awt.CGraphicsEnvironment, sun.boot.class.path=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/resources.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/rt.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/sunrsasign.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jsse.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jce.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/charsets.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/jfr.jar:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/classes, hibernate.hbm2ddl.auto=create, sun.management.compiler=HotSpot 64-Bit Tiered Compilers, ftp.nonProxyHosts=local|*.local|169.254/16|*.169.254/16, java.runtime.version=1.8.0_291-b10, user.name=caomai, path.separator=:, hibernate.connection.username=****, os.version=10.16, java.endorsed.dirs=/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/endorsed, java.runtime.name=Java(TM) SE Runtime Environment, hibernate.connection.url=jdbc:postgresql://caorevaturedb.c39sfp4pzzjr.us-east-2.rds.amazonaws.com/postgres, file.encoding=UTF-8, java.vm.name=Java HotSpot(TM) 64-Bit Server VM, hibernate.show_sql=true, show_sql=true, hibernate.connection.driver_class=org.postgresql.Driver, java.vendor.url.bug=http://bugreport.sun.com/bugreport/, java.io.tmpdir=/var/folders/jc/b9j94s791q98p1bxs_gz6yk80000gn/T/, java.version=1.8.0_291, user.dir=/Users/caomai/dev/Revature/Projects/TuitionReimbursement, os.arch=x86_64, java.vm.specification.name=Java Virtual Machine Specification, hibernate.connection.password=****, java.awt.printerjob=sun.lwawt.macosx.CPrinterJob, sun.os.patch.level=unknown, hibernate.boot.CfgXmlAccessService.key=org.hibernate.boot.cfgxml.spi.LoadedConfig@28a2a3e7, java.library.path=/Users/caomai/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:., java.vm.info=mixed mode, java.vendor=Oracle Corporation, java.vm.version=25.291-b10, hibernate.bytecode.use_reflection_optimizer=false, java.ext.dirs=/Users/caomai/Library/Java/Extensions:/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/lib/ext:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java, sun.io.unicode.encoding=UnicodeBig, java.class.version=52.0, socksNonProxyHosts=local|*.local|169.254/16|*.169.254/16}
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.query.spi.NativeQueryInterpreter]
+2021-07-21 22:02:04 DEBUG JaccIntegrator:80 - Skipping JACC integration as it was not enabled
+2021-07-21 22:02:04 DEBUG SessionFactoryImpl:309 - Instantiated session factory
+2021-07-21 22:02:04 DEBUG TypeConfiguration$Scope:154 - Scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration@a202ccb] to SessionFactoryImpl [org.hibernate.internal.SessionFactoryImpl@33d05366]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.persister.spi.PersisterFactory]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.persister.spi.PersisterClassResolver]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.property.access.spi.PropertyAccessStrategyResolver]
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Department#head` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Department#head` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [dev.mai.models.Department] is safe
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : dev.mai.models.Department
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.bytecode.spi.ProxyFactoryFactory]
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Department#head` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Department#head` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [head.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [employees], existing type = [org.hibernate.type.BagType(dev.mai.models.Department.employees)], incoming type = [org.hibernate.type.BagType(dev.mai.models.Department.employees)]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [head], existing type = [org.hibernate.type.ManyToOneType(dev.mai.models.Employee)], incoming type = [org.hibernate.type.ManyToOneType(dev.mai.models.Employee)]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [head.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [head.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [title], existing type = [org.hibernate.type.StringType@5f8e8a9d], incoming type = [org.hibernate.type.StringType@5f8e8a9d]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#dept` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#dept` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#supervisor` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#supervisor` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:60 - Not known whether passed class name [dev.mai.models.Employee] is safe
+2021-07-21 22:02:04 DEBUG ClassLoaderAccessImpl:62 - No temp ClassLoader provided; using live ClassLoader for loading potentially unsafe class : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#dept` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#supervisor` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#dept` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 DEBUG interceptor:46 - To-one property `dev.mai.models.Employee#supervisor` was mapped with LAZY + NO_PROXY but the class was not enhanced
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [dept.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [supervisor.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [dept], existing type = [org.hibernate.type.ManyToOneType(dev.mai.models.Department)], incoming type = [org.hibernate.type.ManyToOneType(dev.mai.models.Department)]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [dept.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [dept.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [firstName], existing type = [org.hibernate.type.StringType@5f8e8a9d], incoming type = [org.hibernate.type.StringType@5f8e8a9d]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [isBenCo], existing type = [org.hibernate.type.BooleanType@1972e513], incoming type = [org.hibernate.type.BooleanType@1972e513]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [lastName], existing type = [org.hibernate.type.StringType@5f8e8a9d], incoming type = [org.hibernate.type.StringType@5f8e8a9d]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [resetDate], existing type = [org.hibernate.type.LongType@4d1bf319], incoming type = [org.hibernate.type.LongType@4d1bf319]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [subordinates], existing type = [org.hibernate.type.BagType(dev.mai.models.Employee.subordinates)], incoming type = [org.hibernate.type.BagType(dev.mai.models.Employee.subordinates)]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [supervisor], existing type = [org.hibernate.type.ManyToOneType(dev.mai.models.Employee)], incoming type = [org.hibernate.type.ManyToOneType(dev.mai.models.Employee)]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [supervisor.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [supervisor.id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [title], existing type = [org.hibernate.type.StringType@5f8e8a9d], incoming type = [org.hibernate.type.StringType@5f8e8a9d]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [totalReimbursement], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 TRACE AbstractPropertyMapping:129 - Skipping duplicate registration of path [id], existing type = [org.hibernate.type.IntegerType@6c4906d3], incoming type = [org.hibernate.type.IntegerType@6c4906d3]
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:692 - Static SQL for collection: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:694 -  Row insert: update employees set supervisor_e_id=? where e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:697 -  Row update: update employees set  where e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:700 -  Row delete: update employees set supervisor_e_id=null where supervisor_e_id=? and e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:703 -  One-shot delete: update employees set supervisor_e_id=null where supervisor_e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:692 - Static SQL for collection: dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:694 -  Row insert: update employees set dept_d_id=? where e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:697 -  Row update: update employees set  where e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:700 -  Row delete: update employees set dept_d_id=null where dept_d_id=? and e_id=?
+2021-07-21 22:02:04 DEBUG AbstractCollectionPersister:703 -  One-shot delete: update employees set dept_d_id=null where dept_d_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4000 - Static SQL for entity: dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4005 -  Version select: select d_id from departments where d_id =?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4008 -  Snapshot select: select department_.d_id, department_.head_e_id as head_e_i3_0_, department_.title as title2_0_ from departments department_ where department_.d_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into departments (head_e_id, title, d_id) values (?, ?, ?)
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Update 0: update departments set head_e_id=?, title=? where d_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from departments where d_id=?
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:172 -  Starting root entity : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@320494b6]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@51e0301d
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .. Registering AssociationKey : AssociationKey(table=departments, columns={d_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@51e0301d
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >> Starting entity identifier : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : employees
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=employees, type=java.util.Collection(dev.mai.models.Department.employees) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@29c5ee1d]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@63ec445c]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=employees, type=java.util.Collection(dev.mai.models.Department.employees) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@7a344b65]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5bdd5689
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .... Registering AssociationKey : AssociationKey(table=departments, columns={head_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5bdd5689
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.dept
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2788d0fe]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@73ab3aac
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - ...... Registering AssociationKey : AssociationKey(table=employees, columns={dept_d_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@73ab3aac
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>>>> Starting entity identifier : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : head.dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.dept.head
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : head.dept.head
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.dept.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@73ab3aac
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.subordinates
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@4c03a37]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:6> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2e140e59]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:7> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@49a71302]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5cd61783
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - ...... Registering AssociationKey : AssociationKey(table=employees, columns={supervisor_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5cd61783
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : head.supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : head.supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : head.supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.supervisor.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5cd61783
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : head.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@5bdd5689
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@51e0301d
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:208 -  Finished root entity : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2021-07-21 22:02:04 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2021-07-21 22:02:04 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=dev.mai.models.Department)
+    - Returns
+       - EntityReturnImpl(entity=dev.mai.models.Department, querySpaceUid=<gen:0>, path=dev.mai.models.Department)
+          - CollectionAttributeFetchImpl(collection=dev.mai.models.Department.employees, querySpaceUid=<gen:1>, path=dev.mai.models.Department.employees)
+             - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:2>, path=dev.mai.models.Department.employees.<elements>)
+          - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:3>, path=dev.mai.models.Department.head)
+             - EntityAttributeFetchImpl(entity=dev.mai.models.Department, querySpaceUid=<gen:4>, path=dev.mai.models.Department.head.dept)
+             - CollectionAttributeFetchImpl(collection=dev.mai.models.Employee.subordinates, querySpaceUid=<gen:5>, path=dev.mai.models.Department.head.subordinates)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:6>, path=dev.mai.models.Department.head.subordinates.<elements>)
+             - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:7>, path=dev.mai.models.Department.head.supervisor)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=dev.mai.models.Department)
+          - SQL table alias mapping - department0_
+          - alias suffix - 0_
+          - suffixed key columns - {d_id1_0_0_}
+          - JOIN (JoinDefinedByMetadata(head)) : <gen:0> -> <gen:3>
+             - EntityQuerySpaceImpl(uid=<gen:3>, entity=dev.mai.models.Employee)
+                - SQL table alias mapping - employee1_
+                - alias suffix - 1_
+                - suffixed key columns - {e_id1_1_1_}
+                - JOIN (JoinDefinedByMetadata(dept)) : <gen:3> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=dev.mai.models.Department)
+                      - SQL table alias mapping - department2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {d_id1_0_2_}
+                - JOIN (JoinDefinedByMetadata(supervisor)) : <gen:3> -> <gen:7>
+                   - EntityQuerySpaceImpl(uid=<gen:7>, entity=dev.mai.models.Employee)
+                      - SQL table alias mapping - employee3_
+                      - alias suffix - 3_
+                      - suffixed key columns - {e_id1_1_3_}
+
+2021-07-21 22:02:04 DEBUG EntityLoader:129 - Static select for entity dev.mai.models.Department [NONE]: select department0_.d_id as d_id1_0_0_, department0_.head_e_id as head_e_i3_0_0_, department0_.title as title2_0_0_, employee1_.e_id as e_id1_1_1_, employee1_.dept_d_id as dept_d_i8_1_1_, employee1_.first_name as first_na2_1_1_, employee1_.is_ben_co as is_ben_c3_1_1_, employee1_.last_name as last_nam4_1_1_, employee1_.reset_date as reset_da5_1_1_, employee1_.supervisor_e_id as supervis9_1_1_, employee1_.title as title6_1_1_, employee1_.total_reimbursement as total_re7_1_1_, department2_.d_id as d_id1_0_2_, department2_.head_e_id as head_e_i3_0_2_, department2_.title as title2_0_2_, employee3_.e_id as e_id1_1_3_, employee3_.dept_d_id as dept_d_i8_1_3_, employee3_.first_name as first_na2_1_3_, employee3_.is_ben_co as is_ben_c3_1_3_, employee3_.last_name as last_nam4_1_3_, employee3_.reset_date as reset_da5_1_3_, employee3_.supervisor_e_id as supervis9_1_3_, employee3_.title as title6_1_3_, employee3_.total_reimbursement as total_re7_1_3_ from departments department0_ left outer join employees employee1_ on department0_.head_e_id=employee1_.e_id left outer join departments department2_ on employee1_.dept_d_id=department2_.d_id left outer join employees employee3_ on employee1_.supervisor_e_id=employee3_.e_id where department0_.d_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4000 - Static SQL for entity: dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4005 -  Version select: select e_id from employees where e_id =?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:4008 -  Snapshot select: select employee_.e_id, employee_.dept_d_id as dept_d_i8_1_, employee_.first_name as first_na2_1_, employee_.is_ben_co as is_ben_c3_1_, employee_.last_name as last_nam4_1_, employee_.reset_date as reset_da5_1_, employee_.supervisor_e_id as supervis9_1_, employee_.title as title6_1_, employee_.total_reimbursement as total_re7_1_ from employees employee_ where employee_.e_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Insert 0: insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Update 0: update employees set dept_d_id=?, first_name=?, is_ben_co=?, last_name=?, reset_date=?, supervisor_e_id=?, title=?, total_reimbursement=? where e_id=?
+2021-07-21 22:02:04 DEBUG AbstractEntityPersister:394 -  Delete 0: delete from employees where e_id=?
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:172 -  Starting root entity : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@6b760460]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@796065aa
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .. Registering AssociationKey : AssociationKey(table=employees, columns={e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@796065aa
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@28a6301f]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2c306a57
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .... Registering AssociationKey : AssociationKey(table=employees, columns={dept_d_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2c306a57
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>> Starting entity identifier : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@773e2eb5]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@d8948cd
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - ...... Registering AssociationKey : AssociationKey(table=departments, columns={head_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@d8948cd
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.subordinates
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@1436a7ab]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3b7b05a8]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:5> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@3d36dff4]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@7abe27bf
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - ........ Registering AssociationKey : AssociationKey(table=employees, columns={supervisor_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@7abe27bf
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>>>>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@7abe27bf
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@d8948cd
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2c306a57
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityReturnImpl@796065aa
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:208 -  Finished root entity : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2021-07-21 22:02:04 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2021-07-21 22:02:04 DEBUG LoadPlanTreePrinter:55 - LoadPlan(entity=dev.mai.models.Employee)
+    - Returns
+       - EntityReturnImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:0>, path=dev.mai.models.Employee)
+          - EntityAttributeFetchImpl(entity=dev.mai.models.Department, querySpaceUid=<gen:1>, path=dev.mai.models.Employee.dept)
+             - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:2>, path=dev.mai.models.Employee.dept.head)
+                - CollectionAttributeFetchImpl(collection=dev.mai.models.Employee.subordinates, querySpaceUid=<gen:3>, path=dev.mai.models.Employee.dept.head.subordinates)
+                   - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:4>, path=dev.mai.models.Employee.dept.head.subordinates.<elements>)
+                - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:5>, path=dev.mai.models.Employee.dept.head.supervisor)
+    - QuerySpaces
+       - EntityQuerySpaceImpl(uid=<gen:0>, entity=dev.mai.models.Employee)
+          - SQL table alias mapping - employee0_
+          - alias suffix - 0_
+          - suffixed key columns - {e_id1_1_0_}
+          - JOIN (JoinDefinedByMetadata(dept)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=dev.mai.models.Department)
+                - SQL table alias mapping - department1_
+                - alias suffix - 1_
+                - suffixed key columns - {d_id1_0_1_}
+                - JOIN (JoinDefinedByMetadata(head)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=dev.mai.models.Employee)
+                      - SQL table alias mapping - employee2_
+                      - alias suffix - 2_
+                      - suffixed key columns - {e_id1_1_2_}
+                      - JOIN (JoinDefinedByMetadata(supervisor)) : <gen:2> -> <gen:5>
+                         - EntityQuerySpaceImpl(uid=<gen:5>, entity=dev.mai.models.Employee)
+                            - SQL table alias mapping - employee3_
+                            - alias suffix - 3_
+                            - suffixed key columns - {e_id1_1_3_}
+
+2021-07-21 22:02:04 DEBUG EntityLoader:129 - Static select for entity dev.mai.models.Employee [NONE]: select employee0_.e_id as e_id1_1_0_, employee0_.dept_d_id as dept_d_i8_1_0_, employee0_.first_name as first_na2_1_0_, employee0_.is_ben_co as is_ben_c3_1_0_, employee0_.last_name as last_nam4_1_0_, employee0_.reset_date as reset_da5_1_0_, employee0_.supervisor_e_id as supervis9_1_0_, employee0_.title as title6_1_0_, employee0_.total_reimbursement as total_re7_1_0_, department1_.d_id as d_id1_0_1_, department1_.head_e_id as head_e_i3_0_1_, department1_.title as title2_0_1_, employee2_.e_id as e_id1_1_2_, employee2_.dept_d_id as dept_d_i8_1_2_, employee2_.first_name as first_na2_1_2_, employee2_.is_ben_co as is_ben_c3_1_2_, employee2_.last_name as last_nam4_1_2_, employee2_.reset_date as reset_da5_1_2_, employee2_.supervisor_e_id as supervis9_1_2_, employee2_.title as title6_1_2_, employee2_.total_reimbursement as total_re7_1_2_, employee3_.e_id as e_id1_1_3_, employee3_.dept_d_id as dept_d_i8_1_3_, employee3_.first_name as first_na2_1_3_, employee3_.is_ben_co as is_ben_c3_1_3_, employee3_.last_name as last_nam4_1_3_, employee3_.reset_date as reset_da5_1_3_, employee3_.supervisor_e_id as supervis9_1_3_, employee3_.title as title6_1_3_, employee3_.total_reimbursement as total_re7_1_3_ from employees employee0_ left outer join departments department1_ on employee0_.dept_d_id=department1_.d_id left outer join employees employee2_ on department1_.head_e_id=employee2_.e_id left outer join employees employee3_ on employee2_.supervisor_e_id=employee3_.e_id where employee0_.e_id=?
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:341 -  Starting root collection : dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@14e2e1c3]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2b4786dd]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:316 - Pushing collection reference to stack : org.hibernate.loader.plan.build.internal.returns.CollectionReturnImpl@f202d6d
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 -  Registering AssociationKey : AssociationKey(table=employees, columns={supervisor_e_id}) -> null
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:454 -  Starting collection element graph : dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.CollectionFetchableElementEntityGraph@aac3f4e
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@1f38957]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2df3c564
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .... Registering AssociationKey : AssociationKey(table=employees, columns={dept_d_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2df3c564
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>> Starting entity identifier : dev.mai.models.Department
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.employees
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@2715644a]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@4c2869a9
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - ...... Registering AssociationKey : AssociationKey(table=departments, columns={head_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@4c2869a9
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept.head.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.head.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@4c2869a9
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=head, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2df3c564
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=dept, type=dev.mai.models.Department [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.CollectionFetchableElementEntityGraph@aac3f4e
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:501 -  Finished collection element graph : dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:323 - Popped collection reference from stack : org.hibernate.loader.plan.build.internal.returns.CollectionReturnImpl@f202d6d
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:379 -  Finished root collection : dev.mai.models.Employee.subordinates
+2021-07-21 22:02:04 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2021-07-21 22:02:04 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2021-07-21 22:02:04 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=dev.mai.models.Employee.subordinates)
+    - Returns
+       - CollectionReturnImpl(collection=dev.mai.models.Employee.subordinates, querySpaceUid=<gen:0>, path=[dev.mai.models.Employee.subordinates])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:1>, path=[dev.mai.models.Employee.subordinates].<elements>)
+             - EntityAttributeFetchImpl(entity=dev.mai.models.Department, querySpaceUid=<gen:2>, path=[dev.mai.models.Employee.subordinates].<elements>.dept)
+                - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:3>, path=[dev.mai.models.Employee.subordinates].<elements>.dept.head)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=dev.mai.models.Employee.subordinates)
+          - SQL table alias mapping - subordinat0_
+          - alias suffix - 0_
+          - suffixed key columns - {supervis9_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - e_id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=dev.mai.models.Employee)
+                - SQL table alias mapping - subordinat0_
+                - alias suffix - 1_
+                - suffixed key columns - {e_id1_1_1_}
+                - JOIN (JoinDefinedByMetadata(dept)) : <gen:1> -> <gen:2>
+                   - EntityQuerySpaceImpl(uid=<gen:2>, entity=dev.mai.models.Department)
+                      - SQL table alias mapping - department1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {d_id1_0_2_}
+                      - JOIN (JoinDefinedByMetadata(head)) : <gen:2> -> <gen:3>
+                         - EntityQuerySpaceImpl(uid=<gen:3>, entity=dev.mai.models.Employee)
+                            - SQL table alias mapping - employee2_
+                            - alias suffix - 3_
+                            - suffixed key columns - {e_id1_1_3_}
+
+2021-07-21 22:02:04 DEBUG CollectionLoader:83 - Static select for collection dev.mai.models.Employee.subordinates: select subordinat0_.supervisor_e_id as supervis9_1_0_, subordinat0_.e_id as e_id1_1_0_, subordinat0_.e_id as e_id1_1_1_, subordinat0_.dept_d_id as dept_d_i8_1_1_, subordinat0_.first_name as first_na2_1_1_, subordinat0_.is_ben_co as is_ben_c3_1_1_, subordinat0_.last_name as last_nam4_1_1_, subordinat0_.reset_date as reset_da5_1_1_, subordinat0_.supervisor_e_id as supervis9_1_1_, subordinat0_.title as title6_1_1_, subordinat0_.total_reimbursement as total_re7_1_1_, department1_.d_id as d_id1_0_2_, department1_.head_e_id as head_e_i3_0_2_, department1_.title as title2_0_2_, employee2_.e_id as e_id1_1_3_, employee2_.dept_d_id as dept_d_i8_1_3_, employee2_.first_name as first_na2_1_3_, employee2_.is_ben_co as is_ben_c3_1_3_, employee2_.last_name as last_nam4_1_3_, employee2_.reset_date as reset_da5_1_3_, employee2_.supervisor_e_id as supervis9_1_3_, employee2_.title as title6_1_3_, employee2_.total_reimbursement as total_re7_1_3_ from employees subordinat0_ left outer join departments department1_ on subordinat0_.dept_d_id=department1_.d_id left outer join employees employee2_ on department1_.head_e_id=employee2_.e_id where subordinat0_.supervisor_e_id=?
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:341 -  Starting root collection : dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:0> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@64aad6db]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:1> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@ae7950d]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:316 - Pushing collection reference to stack : org.hibernate.loader.plan.build.internal.returns.CollectionReturnImpl@60d1b21f
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 -  Registering AssociationKey : AssociationKey(table=employees, columns={dept_d_id}) -> null
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:454 -  Starting collection element graph : dev.mai.models.Department.employees
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.CollectionFetchableElementEntityGraph@66c83fc8
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : subordinates
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:2> -> org.hibernate.loader.plan.build.internal.spaces.CollectionQuerySpaceImpl@546621c4]
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:3> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@621f89b8]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=subordinates, type=java.util.Collection(dev.mai.models.Employee.subordinates) [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG QuerySpacesImpl:174 - Adding QuerySpace : uid = <gen:4> -> org.hibernate.loader.plan.build.internal.spaces.EntityQuerySpaceImpl@f339eae]
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:113 - Pushing fetch source to stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2822c6ff
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:648 - .... Registering AssociationKey : AssociationKey(table=employees, columns={supervisor_e_id}) -> org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2822c6ff
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:239 - >>>> Starting entity identifier : dev.mai.models.Employee
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : supervisor.dept
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.firstName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=firstName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.isBenCo
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=isBenCo, type=boolean [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.lastName
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=lastName, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.resetDate
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=resetDate, type=long [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : supervisor.subordinates
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:154 - Property path deemed to be circular : supervisor.supervisor
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : supervisor.totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >>>> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - <<<< Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.EntityAttributeFetchImpl@2822c6ff
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=supervisor, type=dev.mai.models.Employee [non-identifier,association])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : title
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=title, type=string [non-identifier])
+2021-07-21 22:02:04 DEBUG MetamodelGraphWalker:146 - Visiting attribute path : totalReimbursement
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:547 - >> Starting attribute Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:628 - << Finishing up attribute : Attribute(name=totalReimbursement, type=integer [non-identifier])
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:120 - Popped fetch owner from stack : org.hibernate.loader.plan.build.internal.returns.CollectionFetchableElementEntityGraph@66c83fc8
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:501 -  Finished collection element graph : dev.mai.models.Department.employees
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:323 - Popped collection reference from stack : org.hibernate.loader.plan.build.internal.returns.CollectionReturnImpl@60d1b21f
+2021-07-21 22:02:04 TRACE AbstractLoadPlanBuildingAssociationVisitationStrategy:379 -  Finished root collection : dev.mai.models.Department.employees
+2021-07-21 22:02:04 DEBUG FetchStyleLoadPlanBuildingAssociationVisitationStrategy:160 - Building LoadPlan...
+2021-07-21 22:02:04 DEBUG LoadQueryJoinAndFetchProcessor:102 - processing queryspace <gen:0>
+2021-07-21 22:02:04 DEBUG LoadPlanTreePrinter:55 - LoadPlan(collection=dev.mai.models.Department.employees)
+    - Returns
+       - CollectionReturnImpl(collection=dev.mai.models.Department.employees, querySpaceUid=<gen:0>, path=[dev.mai.models.Department.employees])
+          - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:1>, path=[dev.mai.models.Department.employees].<elements>)
+             - CollectionAttributeFetchImpl(collection=dev.mai.models.Employee.subordinates, querySpaceUid=<gen:2>, path=[dev.mai.models.Department.employees].<elements>.subordinates)
+                - (collection element) CollectionFetchableElementEntityGraph(entity=dev.mai.models.Employee, querySpaceUid=<gen:3>, path=[dev.mai.models.Department.employees].<elements>.subordinates.<elements>)
+             - EntityAttributeFetchImpl(entity=dev.mai.models.Employee, querySpaceUid=<gen:4>, path=[dev.mai.models.Department.employees].<elements>.supervisor)
+    - QuerySpaces
+       - CollectionQuerySpaceImpl(uid=<gen:0>, collection=dev.mai.models.Department.employees)
+          - SQL table alias mapping - employees0_
+          - alias suffix - 0_
+          - suffixed key columns - {dept_d_i8_1_0_}
+          - entity-element alias suffix - 1_
+          - 1_entity-element suffixed key columns - e_id1_1_1_
+          - JOIN (JoinDefinedByMetadata(elements)) : <gen:0> -> <gen:1>
+             - EntityQuerySpaceImpl(uid=<gen:1>, entity=dev.mai.models.Employee)
+                - SQL table alias mapping - employees0_
+                - alias suffix - 1_
+                - suffixed key columns - {e_id1_1_1_}
+                - JOIN (JoinDefinedByMetadata(supervisor)) : <gen:1> -> <gen:4>
+                   - EntityQuerySpaceImpl(uid=<gen:4>, entity=dev.mai.models.Employee)
+                      - SQL table alias mapping - employee1_
+                      - alias suffix - 2_
+                      - suffixed key columns - {e_id1_1_2_}
+
+2021-07-21 22:02:04 DEBUG CollectionLoader:83 - Static select for collection dev.mai.models.Department.employees: select employees0_.dept_d_id as dept_d_i8_1_0_, employees0_.e_id as e_id1_1_0_, employees0_.e_id as e_id1_1_1_, employees0_.dept_d_id as dept_d_i8_1_1_, employees0_.first_name as first_na2_1_1_, employees0_.is_ben_co as is_ben_c3_1_1_, employees0_.last_name as last_nam4_1_1_, employees0_.reset_date as reset_da5_1_1_, employees0_.supervisor_e_id as supervis9_1_1_, employees0_.title as title6_1_1_, employees0_.total_reimbursement as total_re7_1_1_, employee1_.e_id as e_id1_1_2_, employee1_.dept_d_id as dept_d_i8_1_2_, employee1_.first_name as first_na2_1_2_, employee1_.is_ben_co as is_ben_c3_1_2_, employee1_.last_name as last_nam4_1_2_, employee1_.reset_date as reset_da5_1_2_, employee1_.supervisor_e_id as supervis9_1_2_, employee1_.title as title6_1_2_, employee1_.total_reimbursement as total_re7_1_2_ from employees employees0_ left outer join employees employee1_ on employees0_.supervisor_e_id=employee1_.e_id where employees0_.dept_d_id=?
+2021-07-21 22:02:04 TRACE MetadataContext:230 - Wrapping up metadata context...
+2021-07-21 22:02:04 TRACE MetadataContext:242 - Starting entity [dev.mai.models.Department]
+2021-07-21 22:02:04 TRACE AttributeFactory:179 - Building identifier attribute [Department.id]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [id]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private int dev.mai.models.Department.id]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=integer, class=org.hibernate.type.IntegerType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Department.employees]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [employees]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.util.List dev.mai.models.Department.employees]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=java.util.Collection(dev.mai.models.Department.employees), class=org.hibernate.type.BagType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Department.head]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [head]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private dev.mai.models.Employee dev.mai.models.Department.head]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=dev.mai.models.Employee, class=org.hibernate.type.ManyToOneType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Department.title]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [title]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.lang.String dev.mai.models.Department.title]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2021-07-21 22:02:04 TRACE MetadataContext:277 - Completed entity [dev.mai.models.Department]
+2021-07-21 22:02:04 TRACE MetadataContext:242 - Starting entity [dev.mai.models.Employee]
+2021-07-21 22:02:04 TRACE AttributeFactory:179 - Building identifier attribute [Employee.id]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [id]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private int dev.mai.models.Employee.id]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=integer, class=org.hibernate.type.IntegerType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.dept]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [dept]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private dev.mai.models.Department dev.mai.models.Employee.dept]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=dev.mai.models.Department, class=org.hibernate.type.ManyToOneType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.firstName]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [firstName]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.lang.String dev.mai.models.Employee.firstName]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.isBenCo]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [isBenCo]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private boolean dev.mai.models.Employee.isBenCo]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=boolean, class=org.hibernate.type.BooleanType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.lastName]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [lastName]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.lang.String dev.mai.models.Employee.lastName]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.resetDate]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [resetDate]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private long dev.mai.models.Employee.resetDate]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=long, class=org.hibernate.type.LongType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.subordinates]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [subordinates]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.util.List dev.mai.models.Employee.subordinates]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=java.util.Collection(dev.mai.models.Employee.subordinates), class=org.hibernate.type.BagType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.supervisor]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [supervisor]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private dev.mai.models.Employee dev.mai.models.Employee.supervisor]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=dev.mai.models.Employee, class=org.hibernate.type.ManyToOneType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.title]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [title]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private java.lang.String dev.mai.models.Employee.title]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=string, class=org.hibernate.type.StringType]
+2021-07-21 22:02:04 TRACE AttributeFactory:90 - Building attribute [Employee.totalReimbursement]
+2021-07-21 22:02:04 TRACE AttributeFactory:492 - Starting attribute metadata determination [totalReimbursement]
+2021-07-21 22:02:04 TRACE AttributeFactory:497 -     Determined member [private int dev.mai.models.Employee.totalReimbursement]
+2021-07-21 22:02:04 TRACE AttributeFactory:501 -     Determined type [name=integer, class=org.hibernate.type.IntegerType]
+2021-07-21 22:02:04 TRACE MetadataContext:277 - Completed entity [dev.mai.models.Employee]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.tool.schema.spi.SchemaManagementTool]
+2021-07-21 22:02:04 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.tool.hbm2ddl.ImportSqlCommandExtractor]
+2021-07-21 22:02:04 DEBUG SQL:144 - alter table departments drop constraint FKrgsh7p9f6to1994rn4sg5j94a
+2021-07-21 22:02:04 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@44de94c3] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-21 22:02:05 DEBUG SQL:144 - alter table employees drop constraint FKi9uoe8abvi1t6f2x7bi530ggi
+2021-07-21 22:02:05 DEBUG SQL:144 - alter table employees drop constraint FKis4ungucfl1dskkwj3gwtg2kc
+2021-07-21 22:02:05 DEBUG SQL:144 - drop table if exists departments cascade
+2021-07-21 22:02:05 DEBUG SQL:144 - drop table if exists employees cascade
+2021-07-21 22:02:05 DEBUG SQL:144 - drop sequence if exists hibernate_sequence
+2021-07-21 22:02:05 DEBUG SQL:144 - create sequence hibernate_sequence start 1 increment 1
+2021-07-21 22:02:05 INFO  access:48 - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1f387978] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+2021-07-21 22:02:05 DEBUG SQL:144 - create table departments (d_id int4 not null, title varchar(255) not null, head_e_id int4, primary key (d_id))
+2021-07-21 22:02:05 DEBUG SQL:144 - create table employees (e_id int4 not null, first_name varchar(255), is_ben_co boolean, last_name varchar(255), reset_date bigint default 250000 not null, title varchar(255) not null, total_reimbursement integer default 25 not null, dept_d_id int4, supervisor_e_id int4, primary key (e_id))
+2021-07-21 22:02:05 DEBUG SQL:144 - alter table departments add constraint FKrgsh7p9f6to1994rn4sg5j94a foreign key (head_e_id) references employees
+2021-07-21 22:02:05 DEBUG SQL:144 - alter table employees add constraint FKi9uoe8abvi1t6f2x7bi530ggi foreign key (dept_d_id) references departments
+2021-07-21 22:02:05 DEBUG SQL:144 - alter table employees add constraint FKis4ungucfl1dskkwj3gwtg2kc foreign key (supervisor_e_id) references employees
+2021-07-21 22:02:05 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.transaction.jta.platform.spi.JtaPlatform]
+2021-07-21 22:02:05 DEBUG JtaPlatformInitiator:43 - No JtaPlatform was specified, checking resolver
+2021-07-21 22:02:05 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.transaction.jta.platform.spi.JtaPlatformResolver]
+2021-07-21 22:02:05 DEBUG JtaPlatformResolverInitiator:33 - No JtaPlatformResolver was specified, using default [org.hibernate.engine.transaction.jta.platform.internal.StandardJtaPlatformResolver]
+2021-07-21 22:02:05 DEBUG StandardJtaPlatformResolver:137 - Could not resolve JtaPlatform, using default [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-21 22:02:05 INFO  JtaPlatformInitiator:52 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-21 22:02:05 DEBUG NamedQueryRepository:153 - Checking 0 named HQL queries
+2021-07-21 22:02:05 DEBUG NamedQueryRepository:167 - Checking 0 named SQL queries
+2021-07-21 22:02:05 DEBUG SessionFactoryServiceRegistryImpl:92 - EventListenerRegistry access via ServiceRegistry is deprecated.  Use `sessionFactory.getEventEngine().getListenerRegistry()` instead
+2021-07-21 22:02:05 TRACE TypeConfiguration$Scope:202 - Handling #sessionFactoryCreated from [org.hibernate.internal.SessionFactoryImpl@33d05366] for TypeConfiguration
+2021-07-21 22:02:05 DEBUG SessionFactoryRegistry:51 - Initializing SessionFactoryRegistry : org.hibernate.internal.SessionFactoryRegistry@45d6ef73
+2021-07-21 22:02:05 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.engine.jndi.spi.JndiService]
+2021-07-21 22:02:05 DEBUG SessionFactoryRegistry:73 - Registering SessionFactory: 2a14edd0-3b66-468d-aaa6-af55509cb700 (<unnamed>)
+2021-07-21 22:02:05 DEBUG SessionFactoryRegistry:80 - Not binding SessionFactory to JNDI, no JNDI name configured
+2021-07-21 22:02:05 TRACE SessionFactoryImpl$SessionBuilderImpl:1305 - Opening Hibernate Session.  tenant=null
+2021-07-21 22:02:05 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.stat.spi.StatisticsImplementor]
+2021-07-21 22:02:05 DEBUG StatisticsInitiator:101 - Statistics initialized [enabled=false]
+2021-07-21 22:02:05 TRACE AbstractServiceRegistryImpl:233 - Initializing service [role=org.hibernate.jmx.spi.JmxService]
+2021-07-21 22:02:05 TRACE SessionImpl:280 - Opened Session [db7dd820-3297-4883-ba79-0fb5f89eecb2] at timestamp: 1626930125911
+2021-07-21 22:02:05 DEBUG TransactionImpl:53 - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+2021-07-21 22:02:05 DEBUG TransactionImpl:81 - begin
+2021-07-21 22:02:05 TRACE AbstractLogicalConnectionImplementor:71 - Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+2021-07-21 22:02:05 TRACE AbstractLogicalConnectionImplementor:73 - Transaction begun via JDBC Connection.setAutoCommit(false)
+2021-07-21 22:02:05 TRACE JdbcResourceLocalTransactionCoordinatorImpl:177 - ResourceLocalTransactionCoordinatorImpl#afterBeginCallback
+2021-07-21 22:02:05 TRACE DefaultSaveOrUpdateEventListener:165 - Saving transient instance
+2021-07-21 22:02:05 DEBUG SQL:144 - select nextval ('hibernate_sequence')
+2021-07-21 22:02:05 TRACE ResourceRegistryStandardImpl:83 - Registering statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:214 - Registering result set [org.postgresql.jdbc.PgResultSet@4ad3d266]
+2021-07-21 22:02:06 DEBUG SequenceStructure:101 - Sequence value obtained: 1
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:118 - Releasing result set [org.postgresql.jdbc.PgResultSet@4ad3d266]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:164 - Closing result set [org.postgresql.jdbc.PgResultSet@4ad3d266]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 DEBUG AbstractSaveEventListener:128 - Generated identifier: 1, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2021-07-21 22:02:06 TRACE AbstractSaveEventListener:167 - Saving [dev.mai.models.Employee#1]
+2021-07-21 22:02:06 TRACE WrapVisitor:121 - Wrapped collection in role: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:06 TRACE ActionQueue:249 - Adding an EntityInsertAction for [dev.mai.models.Employee] object
+2021-07-21 22:02:06 TRACE ActionQueue:262 - Adding insert with no non-nullable, transient entities: [EntityInsertAction[dev.mai.models.Employee#1]]
+2021-07-21 22:02:06 TRACE ActionQueue:285 - Adding resolved non-early insert action.
+2021-07-21 22:02:06 TRACE DefaultSaveOrUpdateEventListener:165 - Saving transient instance
+2021-07-21 22:02:06 DEBUG SQL:144 - select nextval ('hibernate_sequence')
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:214 - Registering result set [org.postgresql.jdbc.PgResultSet@6a282fdd]
+2021-07-21 22:02:06 DEBUG SequenceStructure:101 - Sequence value obtained: 2
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:118 - Releasing result set [org.postgresql.jdbc.PgResultSet@6a282fdd]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:164 - Closing result set [org.postgresql.jdbc.PgResultSet@6a282fdd]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 DEBUG AbstractSaveEventListener:128 - Generated identifier: 2, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2021-07-21 22:02:06 TRACE AbstractSaveEventListener:167 - Saving [dev.mai.models.Employee#2]
+2021-07-21 22:02:06 TRACE WrapVisitor:121 - Wrapped collection in role: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:06 TRACE ActionQueue:249 - Adding an EntityInsertAction for [dev.mai.models.Employee] object
+2021-07-21 22:02:06 TRACE ActionQueue:262 - Adding insert with no non-nullable, transient entities: [EntityInsertAction[dev.mai.models.Employee#2]]
+2021-07-21 22:02:06 TRACE ActionQueue:285 - Adding resolved non-early insert action.
+2021-07-21 22:02:06 TRACE DefaultSaveOrUpdateEventListener:165 - Saving transient instance
+2021-07-21 22:02:06 DEBUG SQL:144 - select nextval ('hibernate_sequence')
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:214 - Registering result set [org.postgresql.jdbc.PgResultSet@10c2064a]
+2021-07-21 22:02:06 DEBUG SequenceStructure:101 - Sequence value obtained: 3
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:118 - Releasing result set [org.postgresql.jdbc.PgResultSet@10c2064a]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:164 - Closing result set [org.postgresql.jdbc.PgResultSet@10c2064a]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 DEBUG AbstractSaveEventListener:128 - Generated identifier: 3, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2021-07-21 22:02:06 TRACE AbstractSaveEventListener:167 - Saving [dev.mai.models.Employee#3]
+2021-07-21 22:02:06 TRACE WrapVisitor:121 - Wrapped collection in role: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:06 TRACE ActionQueue:249 - Adding an EntityInsertAction for [dev.mai.models.Employee] object
+2021-07-21 22:02:06 TRACE ActionQueue:262 - Adding insert with no non-nullable, transient entities: [EntityInsertAction[dev.mai.models.Employee#3]]
+2021-07-21 22:02:06 TRACE ActionQueue:285 - Adding resolved non-early insert action.
+2021-07-21 22:02:06 TRACE DefaultSaveOrUpdateEventListener:165 - Saving transient instance
+2021-07-21 22:02:06 DEBUG SQL:144 - select nextval ('hibernate_sequence')
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:214 - Registering result set [org.postgresql.jdbc.PgResultSet@5432c277]
+2021-07-21 22:02:06 DEBUG SequenceStructure:101 - Sequence value obtained: 4
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:118 - Releasing result set [org.postgresql.jdbc.PgResultSet@5432c277]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:164 - Closing result set [org.postgresql.jdbc.PgResultSet@5432c277]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 DEBUG ResourceRegistryStandardImpl:106 - HHH000387: ResultSet's statement was not registered
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [select nextval ('hibernate_sequence')]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 DEBUG AbstractSaveEventListener:128 - Generated identifier: 4, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+2021-07-21 22:02:06 TRACE AbstractSaveEventListener:167 - Saving [dev.mai.models.Employee#4]
+2021-07-21 22:02:06 TRACE WrapVisitor:121 - Wrapped collection in role: dev.mai.models.Employee.subordinates
+2021-07-21 22:02:06 TRACE ActionQueue:249 - Adding an EntityInsertAction for [dev.mai.models.Employee] object
+2021-07-21 22:02:06 TRACE ActionQueue:262 - Adding insert with no non-nullable, transient entities: [EntityInsertAction[dev.mai.models.Employee#4]]
+2021-07-21 22:02:06 TRACE ActionQueue:285 - Adding resolved non-early insert action.
+2021-07-21 22:02:06 DEBUG TransactionImpl:98 - committing
+2021-07-21 22:02:06 TRACE JdbcResourceLocalTransactionCoordinatorImpl:181 - ResourceLocalTransactionCoordinatorImpl#beforeCompletionCallback
+2021-07-21 22:02:06 TRACE SessionImpl:2408 - SessionImpl#beforeTransactionCompletion()
+2021-07-21 22:02:06 TRACE SessionImpl:481 - Automatically flushing session
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:75 - Flushing session
+2021-07-21 22:02:06 DEBUG AbstractFlushingEventListener:140 - Processing flush-time cascades
+2021-07-21 22:02:06 DEBUG AbstractFlushingEventListener:193 - Dirty checking collections
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:206 - Flushing entities and processing referenced collections
+2021-07-21 22:02:06 DEBUG Collections:196 - Collection found: [dev.mai.models.Employee.subordinates#1], was: [<unreferenced>] (initialized)
+2021-07-21 22:02:06 DEBUG Collections:196 - Collection found: [dev.mai.models.Employee.subordinates#2], was: [<unreferenced>] (initialized)
+2021-07-21 22:02:06 DEBUG Collections:196 - Collection found: [dev.mai.models.Employee.subordinates#3], was: [<unreferenced>] (initialized)
+2021-07-21 22:02:06 DEBUG Collections:196 - Collection found: [dev.mai.models.Employee.subordinates#4], was: [<unreferenced>] (initialized)
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:244 - Processing unreferenced collections
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:257 - Scheduling collection removes/(re)creates/updates
+2021-07-21 22:02:06 DEBUG AbstractFlushingEventListener:114 - Flushed: 4 insertions, 0 updates, 0 deletions to 4 objects
+2021-07-21 22:02:06 DEBUG AbstractFlushingEventListener:121 - Flushed: 4 (re)creations, 0 updates, 0 removals to 4 collections
+2021-07-21 22:02:06 DEBUG EntityPrinter:110 - Listing entities:
+2021-07-21 22:02:06 DEBUG EntityPrinter:117 - dev.mai.models.Employee{isBenCo=false, firstName=null, lastName=null, resetDate=0, totalReimbursement=0, id=4, dept=null, title=Emp2, subordinates=[], supervisor=dev.mai.models.Employee#2}
+2021-07-21 22:02:06 DEBUG EntityPrinter:117 - dev.mai.models.Employee{isBenCo=false, firstName=null, lastName=null, resetDate=0, totalReimbursement=0, id=3, dept=null, title=Emp1, subordinates=[], supervisor=dev.mai.models.Employee#2}
+2021-07-21 22:02:06 DEBUG EntityPrinter:117 - dev.mai.models.Employee{isBenCo=false, firstName=null, lastName=null, resetDate=0, totalReimbursement=0, id=2, dept=null, title=Jon, subordinates=[dev.mai.models.Employee#3, dev.mai.models.Employee#4], supervisor=null}
+2021-07-21 22:02:06 DEBUG EntityPrinter:117 - dev.mai.models.Employee{isBenCo=false, firstName=null, lastName=null, resetDate=0, totalReimbursement=0, id=1, dept=null, title=First, subordinates=[], supervisor=null}
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:329 - Executing flush
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3326 - Inserting entity: [dev.mai.models.Employee#1]
+2021-07-21 22:02:06 DEBUG SQL:144 - insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3065 - Dehydrating entity: [dev.mai.models.Employee#1]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [1] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [2] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [3] as [BOOLEAN] - [false]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [4] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [5] as [BIGINT] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [6] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [7] as [VARCHAR] - [First]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [8] as [INTEGER] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [9] as [INTEGER] - [1]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, NULL, 'First', 0, 1)]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, NULL, 'First', 0, 1)]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3326 - Inserting entity: [dev.mai.models.Employee#2]
+2021-07-21 22:02:06 DEBUG SQL:144 - insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3065 - Dehydrating entity: [dev.mai.models.Employee#2]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [1] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [2] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [3] as [BOOLEAN] - [false]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [4] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [5] as [BIGINT] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [6] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [7] as [VARCHAR] - [Jon]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [8] as [INTEGER] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [9] as [INTEGER] - [2]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, NULL, 'Jon', 0, 2)]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, NULL, 'Jon', 0, 2)]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3326 - Inserting entity: [dev.mai.models.Employee#3]
+2021-07-21 22:02:06 DEBUG SQL:144 - insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3065 - Dehydrating entity: [dev.mai.models.Employee#3]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [1] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [2] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [3] as [BOOLEAN] - [false]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [4] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [5] as [BIGINT] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [6] as [INTEGER] - [2]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [7] as [VARCHAR] - [Emp1]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [8] as [INTEGER] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [9] as [INTEGER] - [3]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, 2, 'Emp1', 0, 3)]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, 2, 'Emp1', 0, 3)]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3326 - Inserting entity: [dev.mai.models.Employee#4]
+2021-07-21 22:02:06 DEBUG SQL:144 - insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:83 - Registering statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (?, ?, ?, ?, ?, ?, ?, ?, ?)]
+2021-07-21 22:02:06 TRACE AbstractEntityPersister:3065 - Dehydrating entity: [dev.mai.models.Employee#4]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [1] as [INTEGER] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [2] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [3] as [BOOLEAN] - [false]
+2021-07-21 22:02:06 TRACE BasicBinder:52 - binding parameter [4] as [VARCHAR] - [null]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [5] as [BIGINT] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [6] as [INTEGER] - [2]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [7] as [VARCHAR] - [Emp2]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [8] as [INTEGER] - [0]
+2021-07-21 22:02:06 TRACE BasicBinder:64 - binding parameter [9] as [INTEGER] - [4]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:97 - Releasing statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, 2, 'Emp2', 0, 4)]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:180 - Closing prepared statement [insert into employees (dept_d_id, first_name, is_ben_co, last_name, reset_date, supervisor_e_id, title, total_reimbursement, e_id) values (NULL, NULL, 'FALSE', NULL, 0, 2, 'Emp2', 0, 4)]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:255 - Starting after statement execution processing [AFTER_TRANSACTION]
+2021-07-21 22:02:06 TRACE AbstractFlushingEventListener:364 - Post flush
+2021-07-21 22:02:06 TRACE AbstractLogicalConnectionImplementor:53 - LogicalConnection#beforeTransactionCompletion
+2021-07-21 22:02:06 TRACE SynchronizationRegistryStandardImpl:55 - SynchronizationRegistryStandardImpl.notifySynchronizationsBeforeTransactionCompletion
+2021-07-21 22:02:06 TRACE AbstractLogicalConnectionImplementor:85 - Preparing to commit transaction via JDBC Connection.commit()
+2021-07-21 22:02:06 TRACE AbstractLogicalConnectionImplementor:88 - Transaction committed via JDBC Connection.commit()
+2021-07-21 22:02:06 TRACE AbstractLogicalConnectionImplementor:58 - LogicalConnection#afterTransaction
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:323 - Releasing JDBC resources
+2021-07-21 22:02:06 DEBUG LogicalConnectionManagedImpl:174 - Initiating JDBC connection release from afterTransaction
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:323 - Releasing JDBC resources
+2021-07-21 22:02:06 TRACE JdbcResourceLocalTransactionCoordinatorImpl:199 - ResourceLocalTransactionCoordinatorImpl#afterCompletionCallback(true)
+2021-07-21 22:02:06 TRACE SynchronizationRegistryStandardImpl:159 - SynchronizationRegistryStandardImpl.notifySynchronizationsAfterTransactionCompletion(3)
+2021-07-21 22:02:06 TRACE AbstractLogicalConnectionImplementor:58 - LogicalConnection#afterTransaction
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:323 - Releasing JDBC resources
+2021-07-21 22:02:06 DEBUG LogicalConnectionManagedImpl:174 - Initiating JDBC connection release from afterTransaction
+2021-07-21 22:02:06 TRACE SessionImpl:2423 - SessionImpl#afterTransactionCompletion(successful=true, delayed=false)
+2021-07-21 22:02:06 TRACE SessionImpl:396 - Closing session [db7dd820-3297-4883-ba79-0fb5f89eecb2]
+2021-07-21 22:02:06 TRACE JdbcCoordinatorImpl:166 - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@387bf2d9]
+2021-07-21 22:02:06 TRACE ResourceRegistryStandardImpl:323 - Releasing JDBC resources
+2021-07-21 22:02:06 TRACE LogicalConnectionManagedImpl:259 - Closing logical connection
+2021-07-21 22:02:06 TRACE LogicalConnectionManagedImpl:266 - Logical connection closed
+2021-07-21 22:02:34 DEBUG DriverManagerConnectionProviderImpl:284 - Connection pool now considered primed; min-size will be maintained
