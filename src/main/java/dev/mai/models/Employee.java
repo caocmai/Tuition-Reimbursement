@@ -46,14 +46,14 @@ public class Employee {
 	private boolean isBenCo;
 
 	@ManyToOne
-//	@JoinColumn(name="s_id", nullable=true)
+	@JoinColumn(name="s_id", nullable=true)
 	private Employee supervisor;
 	
 	@OneToMany(mappedBy="supervisor")
 	private List<Employee> subordinates = new ArrayList<Employee>();
 	
 	@ManyToOne
-//	@JoinColumn(name="department", nullable=true)
+	@JoinColumn(name="department", nullable=true)
 	private Department dept;
 	
 	
@@ -111,7 +111,63 @@ public class Employee {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public int getTotalReimbursement() {
+		return totalReimbursement;
+	}
+
+	public void setTotalReimbursement(int totalReimbursement) {
+		this.totalReimbursement = totalReimbursement;
+	}
+
+	public long getResetDate() {
+		return resetDate;
+	}
+
+	public void setResetDate(long resetDate) {
+		this.resetDate = resetDate;
+	}
+
+	public boolean isBenCo() {
+		return isBenCo;
+	}
+
+	public void setBenCo(boolean isBenCo) {
+		this.isBenCo = isBenCo;
+	}
+
 	public Employee getSupervisor() {
 		return supervisor;
 	}
@@ -119,7 +175,7 @@ public class Employee {
 	public void setSupervisor(Employee supervisor) {
 		this.supervisor = supervisor;
 	}
-	
+
 	public List<Employee> getSubordinates() {
 		return subordinates;
 	}
@@ -127,5 +183,14 @@ public class Employee {
 	public void setSubordinates(List<Employee> subordinates) {
 		this.subordinates = subordinates;
 	}
+
+	public Department getDept() {
+		return dept;
+	}
+
+	public void setDept(Department dept) {
+		this.dept = dept;
+	}
+	
 
 }
