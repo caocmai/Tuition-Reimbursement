@@ -42,7 +42,7 @@ public class App {
 		DepartmentController dc = new DepartmentController(ds);
 		
 //		Employee e = new Employee("Joe");
-		er.addEmployee(new Employee("First"));
+//		er.addEmployee(new Employee("First"));
 //		er.getAllEmployee();
 		app.get("/employees/:id", ec.getEmployeeById);
 		app.post("/employees", ec.addEmployee);

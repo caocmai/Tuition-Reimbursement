@@ -35,15 +35,17 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		Session sess = HibernateUtil.getSession();
 		Transaction tx = null;
 		
-		Employee manager = new Employee("Jon");
-		Employee emp1 = new Employee("Emp1");
-		Employee emp2 = new Employee("Emp2");
+//		Employee manager = new Employee("Jon");
+//		Employee emp1 = new Employee("Emp1");
+//		Employee emp2 = new Employee("Emp2");
+//		
+//		emp1.setSupervisor(manager);
+//		emp2.setSupervisor(manager);
 		
-		emp1.setSupervisor(manager);
-		emp2.setSupervisor(manager);
+//		List<Employee> employees = new ArrayList<>(Arrays.asList(emp1, emp2));
+//		manager.setSubordinates(employees);
 		
-		List<Employee> employees = new ArrayList<>(Arrays.asList(emp1, emp2));
-		manager.setSubordinates(employees);
+		// can set it one by one or as a list
 //		manager.getSubordinates().add(emp1);
 //		manager.getSubordinates().add(emp2);
 
@@ -52,10 +54,10 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			int id = (int)sess.save(emp);
 			emp.setId(id);
 			
-			sess.save(manager);
-			sess.save(emp1);
-			sess.save(emp2);
-		
+//			sess.save(manager);
+//			sess.save(emp1);
+//			sess.save(emp2);
+//		
 			
 			tx.commit();
 		
