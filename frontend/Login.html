@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Login</title>
+</head>
+<body>
+
+    <div class="container">
+        <div id="form">
+        <h1>LOG IN</h1>
+        <div class="form-group row">
+            <label for="username" class="col-sm-2 col-form-label">Username</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="username" placeholder="Username">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="password" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="password" placeholder="Password">
+            </div>
+          </div>
+
+          <div class="col-auto my-1">
+
+            <button onclick="login()" type="button" class="btn btn-primary">Login</button>
+           
+          </div>
+
+          <p id="success"></p>
+
+        </div>
+
+        <div id="welcome">
+            <h1 id="message"></h1>
+            <div id="button">
+
+            </div>
+            
+
+        </div>
+
+    </div>
+    
+</body>
+
+<script>
+    var emp = null;
+
+    function login() {
+        let username = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+
+        let xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+
+                 emp = (JSON.parse(this.responseText))
+                if (emp) {
+                    document.getElementById("success").innerHTML = "Form successfuly Added"
+                    document.getElementById("form").innerHTML = "";
+
+                    document.getElementById("message").innerHTML = "Welcome " + emp.firstName  + " Role: " + emp.title;
+
+                    const content = `
+                    <a href="AddForm.html"> 
+                        <button type="button" class="btn btn-primary">Start Request</button>
+                    </a> 
+
+                    <button onclick="getRequests()" type="button" class="btn btn-primary">List Requests</button>
+
+                    `
+                    var button = document.getElementById("button");
+
+                    button.innerHTML += content;
+                } else {
+                    document.getElementById("success").innerHTML = "Form was NOT Added to DB"
+                }
+            }
+        }
+
+        let url = "http://localhost:7000/employees/login"
+        xhttp.open("POST", url, true)
+
+        xhttp.setRequestHeader('Content-Type', "application/json");
+
+        // these variables need to be the same as the Java Model
+        let login = {
+            username: username,
+            password: password
+      
+        }
+        // The optional argument in the send() method allows us to provide a body for our request
+        xhttp.send(JSON.stringify(login));
+    }
+
+    function getRequests() {
+        console.log(emp)
+
+
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 & this.status == 200) {
+                console.log(this.responseText)
+                let actor = JSON.parse(this.responseText)
+                populateResult(actor);
+                // console.log(actor);
+                // let info = `
+                //     <h3>ID: ${actor.id}
+                //     <h2>Name: ${actor.name}
+                //     <h2>Age: ${actor.age}
+                //     <h2>Worth: ${actor.worth}
+                // `
+
+                // document.getElementById("result").innerHTML = info;
+            }
+        };
+
+        let url = `http://localhost:7000/employees/requests`
+        // let url = "http://localhost:7000/actors" + id
+        xhr.open("GET", url, true);
+        xhr.send();
+        
+    }
+</script>
+</html>

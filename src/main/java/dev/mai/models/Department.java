@@ -13,6 +13,8 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="departments")
 public class Department {
@@ -30,6 +32,7 @@ public class Department {
 	private Employee head;
 	
 	@OneToMany(mappedBy="dept")
+	@JsonManagedReference
 	private List<Employee> employees = new ArrayList<Employee>();
 
 	public Department() {
@@ -92,5 +95,12 @@ public class Department {
 	public void setEmployees(List<Employee> employees) {
 		this.employees = employees;
 	}
+
+	@Override
+	public String toString() {
+		return "Department [id=" + id + ", title=" + title + ", head=" + head + ", employees=" + employees + "]";
+	}
+	
+	
 
 }

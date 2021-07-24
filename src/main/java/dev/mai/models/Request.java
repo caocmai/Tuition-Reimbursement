@@ -13,6 +13,12 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 @Entity
 @Table(name="requests")
 public class Request {
@@ -23,6 +29,7 @@ public class Request {
 	private int id;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
+	@JsonBackReference
 	private Employee employee;
 	
 	@Column(name="start_request")
@@ -58,6 +65,8 @@ public class Request {
 	private Form form;
 	
 	@OneToMany(mappedBy="request", fetch=FetchType.EAGER)
+	@Fetch(value = FetchMode.SUBSELECT)
+	@JsonManagedReference
 	private List<MoreInfoRequest> infoRequests;
 	
 	public Request() {
@@ -70,13 +79,22 @@ public class Request {
 		this.urgent = urgent;
 		this.form = form;
 	}
+	
+	public Request(long startRequest, boolean urgent, Form form, Employee emp) {
+		super();
+		this.startRequest = startRequest;
+		this.urgent = urgent;
+		this.form = form;
+		this.employee = emp;
+	}
 
-	public Request(int id, long startRequest, boolean urgent, Form form) {
+	public Request(int id, long startRequest, boolean urgent, Form form, Employee emp) {
 		super();
 		this.id = id;
 		this.startRequest = startRequest;
 		this.urgent = urgent;
 		this.form = form;
+		this.employee = emp;
 	}
 
 	public int getId() {
@@ -190,6 +208,19 @@ public class Request {
 	public void setInfoRequests(List<MoreInfoRequest> infoRequests) {
 		this.infoRequests = infoRequests;
 	}
+	
+	
+
+	@Override
+	public String toString() {
+		return "Request [id=" + id + ", employee=" + employee + ", startRequest=" + startRequest + ", urgent=" + urgent
+				+ ", superAppve=" + superAppve + ", deptAppve=" + deptAppve + ", benCoAppve=" + benCoAppve + ", grade="
+				+ grade + ", benCoAppveFinal=" + benCoAppveFinal + ", amountAppve=" + amountAppve
+				+ ", amountAboveReason=" + amountAboveReason + ", denial=" + denial + ", denialReason=" + denialReason
+				+ ", form=" + form + ", infoRequests=" + infoRequests + "]";
+	}
+	
+	
 	
 	
 	

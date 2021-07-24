@@ -131,6 +131,13 @@ public class Form {
 	public void setTimeOff(long timeOff) {
 		this.timeOff = timeOff;
 	}
+
+	@Override
+	public String toString() {
+		return "Form [id=" + id + ", location=" + location + ", description=" + description + ", cost=" + cost
+				+ ", gradingType=" + gradingType + ", eventType=" + eventType + ", supplementInfo=" + supplementInfo
+				+ ", timeOff=" + timeOff + "]";
+	}
 	
 	
 	

@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,12 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.Fetch;
+import org.hibernate.annotations.FetchMode;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="employees")
@@ -48,14 +55,19 @@ public class Employee {
 	@JoinColumn(name="s_id", nullable=true)
 	private Employee supervisor;
 	
-	@OneToMany(mappedBy="supervisor")
+	@OneToMany(mappedBy="supervisor", fetch=FetchType.EAGER)
+	@Fetch(value = FetchMode.SUBSELECT)
+//	@JsonManagedReference
 	private List<Employee> subordinates = new ArrayList<Employee>();
 	
 	@ManyToOne
-	@JoinColumn(name="department_id", nullable=true)
+//	@JoinColumn(name="department_id", nullable=true)
+//	@JsonBackReference
 	private Department dept;
 	
-	@OneToMany(mappedBy="employee")
+	@OneToMany(mappedBy="employee", fetch=FetchType.EAGER)
+//	@Fetch(value = FetchMode.SUBSELECT)
+//	@JsonManagedReference
 	private List<Request> requests = new ArrayList<Request>();
 	
 	
@@ -69,7 +81,7 @@ public class Employee {
 	}
 
 	public Employee(String title, String username, String password, String firstName, String lastName,
-			int totalReimbursement, long resetDate, boolean isBenCo, Department dept) {
+			int totalReimbursement, long resetDate, boolean isBenCo) {
 		super();
 		this.title = title;
 		this.username = username;
@@ -79,7 +91,6 @@ public class Employee {
 		this.totalReimbursement = totalReimbursement;
 		this.resetDate = resetDate;
 		this.isBenCo = isBenCo;
-		this.dept = dept;
 	}
 	
 
@@ -155,6 +166,7 @@ public class Employee {
 		this.isBenCo = isBenCo;
 	}
 
+//	@JsonBackReference
 	public Employee getSupervisor() {
 		return supervisor;
 	}
@@ -163,6 +175,7 @@ public class Employee {
 		this.supervisor = supervisor;
 	}
 
+//	@JsonManagedReference
 	public List<Employee> getSubordinates() {
 		return subordinates;
 	}
@@ -186,5 +199,23 @@ public class Employee {
 	public void setRequests(List<Request> requests) {
 		this.requests = requests;
 	}
+
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", title=" + title + ", username=" + username + ", password=" + password
+				+ ", firstName=" + firstName + ", lastName=" + lastName + ", totalReimbursement=" + totalReimbursement
+				+ ", resetDate=" + resetDate + ", isBenCo=" + isBenCo + ", supervisor=" + supervisor + ", dept=" + dept
+				+ "]";
+	}
+
+	
+
+	
+	
+	
+	
+
+	
+	
 	
 }

@@ -22,15 +22,15 @@ public class FormRepoImplTest {
 	
 	@Test
 	public void canAddForm() {
-		Form e = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
-		fr.addForm(e);
+		Form f = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
+		fr.addForm(f);
 		assertNotNull(fr.getForm(1));
 	}
 
 	@Test
 	public void canGetForm() {
-		Form e = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
-		fr.addForm(e);
+		Form f = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
+		fr.addForm(f);
 		assertNotNull(fr.getForm(1));
 		assertEquals("Dallas", fr.getForm(1).getLocation());
 	}

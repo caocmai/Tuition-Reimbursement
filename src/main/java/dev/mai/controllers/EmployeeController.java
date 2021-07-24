@@ -5,7 +5,11 @@ import java.util.List;
 import com.google.gson.Gson;
 
 import dev.mai.models.Employee;
+import dev.mai.models.Form;
+import dev.mai.models.Login;
+import dev.mai.models.Request;
 import dev.mai.services.EmployeeService;
+import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
 
@@ -49,6 +53,37 @@ public class EmployeeController {
 			ctx.status(400);
 		}
 	};
+
+	public Handler addForm = (ctx) -> {
+		Form f = gson.fromJson(ctx.body(), Form.class);
+		es.addForm(f);
+		
+//		if (employees != null) {
+//			ctx.result(gson.toJson(employees));
+//		} else {
+//			ctx.status(400);
+//		}
+		
+		returnedContext(ctx, f);
+	};
+
+	public Handler employeeLogin = (ctx) -> {
+		Login login = gson.fromJson(ctx.body(), Login.class);
+//		System.out.println(login);
+		
+		Employee e = es.getEmloyeeByLogin(login.getUsername(), login.getPassword());
+		returnedContext(ctx, e);
+		
+	};
+
+	public Handler getRequests = (ctx) -> {
+		Employee e = gson.fromJson(ctx.body(), Employee.class);
+		List<Request> request = es.getAllRequests(e);
+		
+		returnedContext(ctx, request);
+		
+	};
+	
 	
 	private int checkInt(String input) {
 		if (input.matches("^-?[0-9]+")) {
@@ -58,6 +93,18 @@ public class EmployeeController {
 		}
 		
 	}
+
+	private void returnedContext(Context ctx, Object o) {
+		if (o != null) {
+			ctx.result(gson.toJson(o));
+		} else {
+			ctx.result("{}");
+			ctx.status(400);
+		}
+	}
+	
+	
+	
 	
 	
 

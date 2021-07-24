@@ -106,7 +106,15 @@ public class MoreInfoRequest {
 
 	public void setRequest(Request request) {
 		this.request = request;
+	}
+
+	@Override
+	public String toString() {
+		return "MoreInfoRequest [id=" + id + ", fromEmpolyee=" + fromEmpolyee + ", toEmployee=" + toEmployee
+				+ ", description=" + description + ", fulfilled=" + fulfilled + ", request=" + request + "]";
 	} 
+	
+	
 	
 	
 

@@ -1,15 +1,19 @@
 package dev.mai.repositories;
 
-import java.util.ArrayList;
-import java.util.Arrays;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.List;
 
+import org.hibernate.Hibernate;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.NativeQuery;
+import org.hibernate.query.Query;
 
-import dev.mai.models.Department;
 import dev.mai.models.Employee;
+import dev.mai.models.Form;
+import dev.mai.models.Request;
 import dev.mai.util.HibernateUtil;
 
 public class EmployeeRepoImpl implements EmployeeRepo {
@@ -48,21 +52,45 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		// can set it one by one or as a list
 //		manager.getSubordinates().add(emp1);
 //		manager.getSubordinates().add(emp2);
+		
+		Employee e = new Employee("HR", "user", "pass", "John", "Doe", 343, 234234, false);
+		Employee man = new Employee("MA", "user", "pass", "John", "Doe", 343, 234234, false);
+		Employee e3 = new Employee("test", "user", "pass", "John", "Doe", 343, 234234, false);
+
+		e.setSupervisor(man);
+		e3.setSupervisor(man);
+		
+		man.getSubordinates().add(e);
+		man.getSubordinates().add(e3);
+		
+//		es.addEmployee(e);
+//		es.addEmployee(man);
+//		es.addEmployee(e3);
+
+		
 
 		try {
 			tx = sess.beginTransaction();
 			int id = (int)sess.save(emp);
 			emp.setId(id);
 			
-//			sess.save(manager);
-//			sess.save(emp1);
-//			sess.save(emp2);
+			sess.save(man);
+			sess.save(e);
+			sess.save(e3);
 //		
 			
 			tx.commit();
+			
+			Form f = new Form("Dalas", "learn react", 234, "Pass/fail", "Class", "None", 57676576);
+			FormRepoImpl fr = new FormRepoImpl();
+			fr.addForm(f);
+			
+			Request r = new Request(0, false, f, e);
+			RequestRepoImpl rp = new RequestRepoImpl();
+			rp.addRequest(r);
 		
-		} catch (HibernateException e) {
-			e.printStackTrace();
+		} catch (HibernateException er) {
+			er.printStackTrace();
 			tx.rollback();
 			emp = null;
 		} finally {
@@ -125,6 +153,67 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			sess.close();
 		}
 		return emp;
+	}
+
+	@Override
+	public Employee getEmployByLogin(String username, String password) {
+		Employee employee = null; 
+		Session sess = HibernateUtil.getSession();
+		try {
+			Query q = sess.createQuery("FROM Employee E WHERE E.username=:username AND E.password=:password");
+			q.setParameter("username", username);
+			q.setParameter("password", password);
+			employee = (Employee) q.uniqueResult();
+			System.out.println(employee);
+//			employee = (Employee) sess.createQuery().uniqueResult();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			sess.getTransaction().rollback();
+		} finally {
+			sess.close();
+		}
+
+		return employee;
+	}
+
+	@Override
+	public List<Request> getEmployeeRequests(Employee emp) {
+		List<Request> requests = null;
+		Session sess = HibernateUtil.getSession();
+		
+		
+		String sql = "FROM Request R WHERE R.employee_e_id=?";
+		
+		
+		
+//		Session sess = HibernateUtil.getSession()
+//		Connection con = sess.connection();
+//		PreparedStatement pstmt = con.prepareStatement(sql);
+
+		
+		try {
+//			Query q = sess.createQuery("FROM Request R WHERE R.employee=:emp");
+//			q.setParameter("emp", emp);
+//			requests =  q.list();
+			
+//			PreparedStatement ps = conn.prepareStatement(sql);
+			Query spSQLQuery = sess.createSQLQuery("SELECT * FROM requests r WHERE r.employee_e_id=:id");
+			spSQLQuery.setParameter("id", 1);
+			
+			requests = spSQLQuery.list();
+			
+			for (Object r : requests) {
+				System.out.println(r.toString());
+			}
+	
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			sess.getTransaction().rollback();
+		} finally {
+			sess.close();
+		}
+		
+		return requests;
 	}
 	
 
