@@ -53,12 +53,12 @@ public class Employee {
 
 	@ManyToOne
 	@JoinColumn(name="s_id", nullable=true)
-	private Employee supervisor;
+	private transient Employee supervisor;
 	
 	@OneToMany(mappedBy="supervisor", fetch=FetchType.EAGER)
 	@Fetch(value = FetchMode.SUBSELECT)
 //	@JsonManagedReference
-	private List<Employee> subordinates = new ArrayList<Employee>();
+	private transient List<Employee> subordinates = new ArrayList<Employee>();
 	
 	@ManyToOne
 //	@JoinColumn(name="department_id", nullable=true)
@@ -68,7 +68,7 @@ public class Employee {
 	@OneToMany(mappedBy="employee", fetch=FetchType.EAGER)
 //	@Fetch(value = FetchMode.SUBSELECT)
 //	@JsonManagedReference
-	private List<Request> requests = new ArrayList<Request>();
+	private transient List<Request> requests = new ArrayList<Request>();
 	
 	
 	public Employee() {
@@ -200,6 +200,13 @@ public class Employee {
 		this.requests = requests;
 	}
 
+//	@Override
+//	public String toString() {
+//		return "Employee [id=" + id + ", title=" + title + ", username=" + username + ", password=" + password
+//				+ ", firstName=" + firstName + ", lastName=" + lastName + ", totalReimbursement=" + totalReimbursement
+//				+ ", resetDate=" + resetDate + ", isBenCo=" + isBenCo + "]";
+//	}
+
 	@Override
 	public String toString() {
 		return "Employee [id=" + id + ", title=" + title + ", username=" + username + ", password=" + password
@@ -207,15 +214,9 @@ public class Employee {
 				+ ", resetDate=" + resetDate + ", isBenCo=" + isBenCo + ", supervisor=" + supervisor + ", dept=" + dept
 				+ "]";
 	}
-
-	
-
-	
-	
 	
 	
 
-	
-	
-	
+
+
 }

@@ -38,10 +38,13 @@ public class Form {
 	@Column(name="time_off")
 	private long timeOff;
 	
+	@Column(name="start_date")
+	private long startDate;
+	
 	public Form() {
 		super();
 	}
-
+	
 	public Form(String location, String description, int cost, String gradingType, String eventType,
 			String supplementInfo, long timeOff) {
 		super();
@@ -54,8 +57,21 @@ public class Form {
 		this.timeOff = timeOff;
 	}
 
+	public Form(String location, String description, int cost, String gradingType, String eventType,
+			String supplementInfo, long timeOff, long startDate) {
+		super();
+		this.location = location;
+		this.description = description;
+		this.cost = cost;
+		this.gradingType = gradingType;
+		this.eventType = eventType;
+		this.supplementInfo = supplementInfo;
+		this.timeOff = timeOff;
+		this.startDate = startDate;
+	}
+
 	public Form(int id, String location, String description, int cost, String gradingType, String eventType,
-			String supplementInfo, long timeOff) {
+			String supplementInfo, long timeOff, long startDate) {
 		super();
 		this.id = id;
 		this.location = location;
@@ -65,6 +81,7 @@ public class Form {
 		this.eventType = eventType;
 		this.supplementInfo = supplementInfo;
 		this.timeOff = timeOff;
+		this.startDate = startDate;
 	}
 
 
@@ -130,6 +147,14 @@ public class Form {
 
 	public void setTimeOff(long timeOff) {
 		this.timeOff = timeOff;
+	}
+	
+	public long getStartDate() {
+		return startDate;
+	}
+
+	public void setStartDate(long startDate) {
+		this.startDate = startDate;
 	}
 
 	@Override

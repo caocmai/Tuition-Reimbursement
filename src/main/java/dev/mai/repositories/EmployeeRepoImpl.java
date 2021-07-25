@@ -54,8 +54,8 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 //		manager.getSubordinates().add(emp2);
 		
 		Employee e = new Employee("HR", "user", "pass", "John", "Doe", 343, 234234, false);
-		Employee man = new Employee("MA", "user", "pass", "John", "Doe", 343, 234234, false);
-		Employee e3 = new Employee("test", "user", "pass", "John", "Doe", 343, 234234, false);
+		Employee man = new Employee("MA", "home", "pass", "John", "Doe", 343, 234234, false);
+		Employee e3 = new Employee("test", "many", "pass", "John", "Doe", 343, 234234, false);
 
 		e.setSupervisor(man);
 		e3.setSupervisor(man);
@@ -81,13 +81,13 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			
 			tx.commit();
 			
-			Form f = new Form("Dalas", "learn react", 234, "Pass/fail", "Class", "None", 57676576);
-			FormRepoImpl fr = new FormRepoImpl();
-			fr.addForm(f);
-			
-			Request r = new Request(0, false, f, e);
-			RequestRepoImpl rp = new RequestRepoImpl();
-			rp.addRequest(r);
+//			Form f = new Form("Dalas", "learn react", 234, "Pass/fail", "Class", "None", 57676576);
+//			FormRepoImpl fr = new FormRepoImpl();
+//			fr.addForm(f);
+//			
+//			Request r = new Request(0, false, f, e);
+//			RequestRepoImpl rp = new RequestRepoImpl();
+//			rp.addRequest(r);
 		
 		} catch (HibernateException er) {
 			er.printStackTrace();
@@ -163,7 +163,7 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			Query q = sess.createQuery("FROM Employee E WHERE E.username=:username AND E.password=:password");
 			q.setParameter("username", username);
 			q.setParameter("password", password);
-			employee = (Employee) q.uniqueResult();
+			employee = (Employee)q.uniqueResult();
 			System.out.println(employee);
 //			employee = (Employee) sess.createQuery().uniqueResult();
 		} catch (HibernateException e) {

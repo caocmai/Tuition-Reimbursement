@@ -65,7 +65,7 @@
                     document.getElementById("success").innerHTML = "Form successfuly Added"
                     document.getElementById("form").innerHTML = "";
 
-                    document.getElementById("message").innerHTML = "Welcome " + emp.firstName  + " Role: " + emp.title;
+                    document.getElementById("message").innerHTML = "Welcome " + emp.firstName  + "<br> Role: " + emp.title;
 
                     const content = `
                     <a href="AddForm.html"> 
@@ -78,9 +78,11 @@
                     var button = document.getElementById("button");
 
                     button.innerHTML += content;
-                } else {
-                    document.getElementById("success").innerHTML = "Form was NOT Added to DB"
+                    console.log(emp)
                 }
+
+            } else {
+                document.getElementById("success").innerHTML = "No User of such credentials"
             }
         }
 

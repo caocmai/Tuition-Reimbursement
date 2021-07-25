@@ -67,9 +67,16 @@
           </div>
 
           <div class="form-group row">
-            <label for="timeOff" class="col-sm-2 col-form-label">Time Needed</label>
+            <label for="startTime" class="col-sm-2 col-form-label">Event Start Date</label>
             <div class="col-sm-10">
-              <input type="date" class="form-control" id="timeOff" placeholder="Time Needed">
+              <input type="date" class="form-control" id="startTime" placeholder="">
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="endTime" class="col-sm-2 col-form-label">Event End Date</label>
+            <div class="col-sm-10">
+              <input type="date" class="form-control" id="endTime" placeholder="">
             </div>
           </div>
     
@@ -88,6 +95,8 @@
 
 <script>
 
+    var firstFormAdded = false;
+
     function addForm() {
         let location = document.getElementById("location").value;
         let description = document.getElementById("description").value;
@@ -95,18 +104,26 @@
         let gradingType = document.getElementById("gradingType").value;
         let eventType = document.getElementById("eventType").value;
         let attachment = document.getElementById("attachment").value;
-        let futureTime = document.getElementById("timeOff").valueAsNumber;
+        let startTime = document.getElementById("startTime").valueAsNumber;
+        let endTime = document.getElementById("endTime").valueAsNumber;
 
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
-
                 if (JSON.parse(this.responseText)) {
-                    document.getElementById("success").innerHTML = "Form successfuly Added"
+                    let content = document.getElementById("success").value
+                    console.log(content)
+                    if (firstFormAdded) {
+                      document.getElementById("success").innerHTML = "A new Request was successfully Added"
+                    } else {
+                      document.getElementById("success").innerHTML = "A Request was successfuly Added"
+                    }
                 } else {
                     document.getElementById("success").innerHTML = "Form was NOT Added to DB"
 
                 }
+
+                firstFormAdded = true;
             }
         }
 
@@ -114,9 +131,8 @@
         xhttp.open("POST", url, true)
 
         xhttp.setRequestHeader('Content-Type', "application/json");
-        let currentTime = new Date()
-        let timeOff = (futureTime - currentTime.valueOf())
-        console.log(currentTime, timeOff)
+        // let currentTime = new Date()
+        let timeOff = (endTime - startTime);
         // these variables need to be the same as the Java Model
         let form = {
             location: location,
@@ -124,7 +140,8 @@
             eventType: eventType,
             supplementInfo: attachment,
             gradingType: gradingType,
-            timeOff: timeOff
+            timeOff: timeOff,
+            startDate: startTime
         }
 
         // The optional argument in the send() method allows us to provide a body for our request

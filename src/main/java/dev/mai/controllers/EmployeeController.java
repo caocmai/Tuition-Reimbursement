@@ -17,6 +17,7 @@ public class EmployeeController {
 	Gson gson = new Gson();
 	
 	private EmployeeService es;
+	private Employee loginEmp;
 
 	
 	public EmployeeController(EmployeeService es) {
@@ -56,7 +57,11 @@ public class EmployeeController {
 
 	public Handler addForm = (ctx) -> {
 		Form f = gson.fromJson(ctx.body(), Form.class);
-		es.addForm(f);
+		es.addForm(f, this.loginEmp);
+		
+		
+		
+//		Request r = new Request(this.loginEmp,  );
 		
 //		if (employees != null) {
 //			ctx.result(gson.toJson(employees));
@@ -69,9 +74,14 @@ public class EmployeeController {
 
 	public Handler employeeLogin = (ctx) -> {
 		Login login = gson.fromJson(ctx.body(), Login.class);
-//		System.out.println(login);
+		System.out.println("*****LOGIN" + login);
 		
 		Employee e = es.getEmloyeeByLogin(login.getUsername(), login.getPassword());
+		System.out.println(e);
+		
+		this.loginEmp = e;
+		
+		
 		returnedContext(ctx, e);
 		
 	};
@@ -102,7 +112,6 @@ public class EmployeeController {
 			ctx.status(400);
 		}
 	}
-	
 	
 	
 	

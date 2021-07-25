@@ -66,10 +66,9 @@ public class App {
 //		}
 		er.addEmployee(new Employee("Hi"));
 		
-		
-		app.post("/employees/requests/form", ec.addForm);
-		app.get("employees/requests", ec.getRequests);
 		app.post("/employees/login", ec.employeeLogin);
+		app.post("/employees/requests/form", ec.addForm);
+		app.get("/employees/requests", ec.getRequests);
 		app.get("/employees/:id", ec.getEmployeeById);
 		
 		app.post("/employees", ec.addEmployee);
@@ -83,9 +82,9 @@ public class App {
 //		Employee e1 = es.getEmloyeeByLogin("user", "pass");
 //		System.out.println(e1.getLastName());
 		
-		Employee ee = es.getEmployee(3);
-		System.out.println(ee.getTitle());
-		System.out.println(ee.getRequests());
+//		Employee ee = es.getEmployee(3);
+//		System.out.println(ee.getTitle());
+//		System.out.println(ee.getRequests());
 		
 //		List<Request> rq = ee.getRequests();
 		

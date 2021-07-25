@@ -11,7 +11,7 @@ public interface EmployeeService {
 	public Employee getEmployee(int id);
 	public Employee addEmployee(Employee e);
 	public List<Employee> getAllEmployees();
-	public Form addForm(Form f);
+	public Form addForm(Form f, Employee e);
 	
 	public Employee getEmloyeeByLogin(String username, String password);
 	public List<Request> getAllRequests(Employee e);

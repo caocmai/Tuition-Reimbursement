@@ -35,8 +35,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 	}
 
 	@Override
-	public Form addForm(Form f) {
-		f = fr.addForm(f);
+	public Form addForm(Form f, Employee e) {
+		f = fr.addForm(f, e);
 		return f;
 	}
 
