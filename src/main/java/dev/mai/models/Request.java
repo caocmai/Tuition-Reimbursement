@@ -1,5 +1,6 @@
 package dev.mai.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -8,16 +9,11 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import org.hibernate.annotations.Fetch;
-import org.hibernate.annotations.FetchMode;
-
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="requests")
@@ -29,11 +25,11 @@ public class Request {
 	private int id;
 	
 	@ManyToOne(fetch=FetchType.EAGER)
-	@JsonBackReference
 	private Employee employee;
 	
 	@Column(name="start_request")
 	private long startRequest;
+	
 	private boolean urgent;
 	
 	@Column(name="super_appve")
@@ -64,10 +60,15 @@ public class Request {
 	@OneToOne(fetch=FetchType.EAGER)
 	private Form form;
 	
-	@OneToMany(mappedBy="request", fetch=FetchType.EAGER)
-	@Fetch(value = FetchMode.SUBSELECT)
-	@JsonManagedReference
-	private List<MoreInfoRequest> infoRequests;
+	@Column(name="more_info_needed")
+	private boolean needMoreInfo;
+	
+	@Column(name="more_info_id")
+	private int moreInfoId;
+	
+	@OneToMany(fetch = FetchType.EAGER)
+	@JoinColumn(name="more_info_request")
+	private List<MoreInfoRequest> moreInfoRequests = new ArrayList<>();
 	
 	public Request() {
 		super();
@@ -201,17 +202,38 @@ public class Request {
 		this.form = form;
 	}
 
-	public List<MoreInfoRequest> getInfoRequests() {
-		return infoRequests;
+	public boolean isNeedMoreInfo() {
+		return needMoreInfo;
 	}
 
-	public void setInfoRequests(List<MoreInfoRequest> infoRequests) {
-		this.infoRequests = infoRequests;
+	public void setNeedMoreInfo(boolean needMoreInfo) {
+		this.needMoreInfo = needMoreInfo;
+	}
+
+	public int getMoreInfoId() {
+		return moreInfoId;
+	}
+
+	public void setMoreInfoId(int moreInfoId) {
+		this.moreInfoId = moreInfoId;
+	}
+
+	public Employee getEmployee() {
+		return employee;
+	}
+
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 	
-	
-	
-	
+
+	public List<MoreInfoRequest> getMoreInfoRequests() {
+		return moreInfoRequests;
+	}
+
+	public void setMoreInfoRequests(List<MoreInfoRequest> moreInfoRequests) {
+		this.moreInfoRequests = moreInfoRequests;
+	}
 
 	@Override
 	public String toString() {
@@ -219,7 +241,7 @@ public class Request {
 				+ ", superAppve=" + superAppve + ", deptAppve=" + deptAppve + ", benCoAppve=" + benCoAppve + ", grade="
 				+ grade + ", benCoAppveFinal=" + benCoAppveFinal + ", amountAppve=" + amountAppve
 				+ ", amountAboveReason=" + amountAboveReason + ", denial=" + denial + ", denialReason=" + denialReason
-				+ ", form=" + form + ", infoRequests=" + infoRequests + "]";
+				+ ", form=" + form + ", moreInfoId=" + moreInfoId + "]";
 	}
 	
 	

@@ -10,6 +10,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -29,6 +31,7 @@ public class Employee {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private int id;
 	
+//  "Supervisor" ||  "BenCo" || "DeptHead"
 	@Column(name="title", nullable=false)
 	private String title;
 	
@@ -50,25 +53,20 @@ public class Employee {
 	
 	@Column(name="is_ben_co")
 	private boolean isBenCo;
-
-	@ManyToOne
-	@JoinColumn(name="s_id", nullable=true)
-	private transient Employee supervisor;
 	
-	@OneToMany(mappedBy="supervisor", fetch=FetchType.EAGER)
-	@Fetch(value = FetchMode.SUBSELECT)
-//	@JsonManagedReference
-	private transient List<Employee> subordinates = new ArrayList<Employee>();
+	@Column(name="super_id")
+	private int supervisorId;
 	
-	@ManyToOne
-//	@JoinColumn(name="department_id", nullable=true)
-//	@JsonBackReference
-	private Department dept;
+	@Column(name="dept_id")
+	private int deptId;
 	
-	@OneToMany(mappedBy="employee", fetch=FetchType.EAGER)
+//	@OneToMany(fetch=FetchType.EAGER)
+//	@JoinTable(name="employee_request", joinColumns=@JoinColumn(name="e_id"), inverseJoinColumns=@JoinColumn(name="r_id"))
 //	@Fetch(value = FetchMode.SUBSELECT)
-//	@JsonManagedReference
-	private transient List<Request> requests = new ArrayList<Request>();
+//	@JoinTable(name="emp_requests",
+//    joinColumns={@JoinColumn(name="e_id")},
+//    inverseJoinColumns={@JoinColumn(name="r_id")})
+//	private List<Request> requests = new ArrayList<Request>();
 	
 	
 	public Employee() {
@@ -167,38 +165,40 @@ public class Employee {
 	}
 
 //	@JsonBackReference
-	public Employee getSupervisor() {
-		return supervisor;
+	public int getSupervisorId() {
+		return supervisorId;
 	}
 
-	public void setSupervisor(Employee supervisor) {
-		this.supervisor = supervisor;
+	public void setSupervisorId(int supervisorId) {
+		this.supervisorId = supervisorId;
 	}
 
 //	@JsonManagedReference
-	public List<Employee> getSubordinates() {
-		return subordinates;
+//	public List<Employee> getSubordinates() {
+//		return subordinates;
+//	}
+//
+//	public void setSubordinates(List<Employee> subordinates) {
+//		this.subordinates = subordinates;
+//	}
+
+	
+
+//	public List<Request> getRequests() {
+//		return requests;
+//	}
+
+	public int getDeptId() {
+		return deptId;
 	}
 
-	public void setSubordinates(List<Employee> subordinates) {
-		this.subordinates = subordinates;
+	public void setDeptId(int deptId) {
+		this.deptId = deptId;
 	}
 
-	public Department getDept() {
-		return dept;
-	}
-
-	public void setDept(Department dept) {
-		this.dept = dept;
-	}
-
-	public List<Request> getRequests() {
-		return requests;
-	}
-
-	public void setRequests(List<Request> requests) {
-		this.requests = requests;
-	}
+//	public void setRequests(List<Request> requests) {
+//		this.requests = requests;
+//	}
 
 //	@Override
 //	public String toString() {
@@ -211,7 +211,7 @@ public class Employee {
 	public String toString() {
 		return "Employee [id=" + id + ", title=" + title + ", username=" + username + ", password=" + password
 				+ ", firstName=" + firstName + ", lastName=" + lastName + ", totalReimbursement=" + totalReimbursement
-				+ ", resetDate=" + resetDate + ", isBenCo=" + isBenCo + ", supervisor=" + supervisor + ", dept=" + dept
+				+ ", resetDate=" + resetDate + ", isBenCo=" + isBenCo + ", supervisorId=" + supervisorId + ", deptId=" + deptId
 				+ "]";
 	}
 	

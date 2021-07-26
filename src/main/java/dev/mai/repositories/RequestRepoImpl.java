@@ -5,6 +5,9 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+
+import dev.mai.models.Employee;
 import dev.mai.models.Request;
 import dev.mai.util.HibernateUtil;
 
@@ -100,5 +103,29 @@ public class RequestRepoImpl implements RequestRepo{
 		}
 		return r;
 	}
+
+	@Override
+	public List<Request> getPendingRequests(Employee e) {
+		List<Request> requests = null;
+		Session sess = HibernateUtil.getSession();
+		
+		try {
+			Query q = sess.createQuery("FROM Request R WHERE R.employee.id=:emp AND R.benCoAppveFinal=false");
+			q.setParameter("emp", e.getId());
+
+			requests =  q.list();
+			
+	
+		} catch (HibernateException er) {
+			er.printStackTrace();
+			sess.getTransaction().rollback();
+		} finally {
+			sess.close();
+		}
+		
+		return requests;
+	}
+	
+	
 
 }

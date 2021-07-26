@@ -39,11 +39,10 @@
         <div id="welcome">
             <h1 id="message"></h1>
             <div id="button">
-
             </div>
-            
-
         </div>
+
+        
 
     </div>
     
@@ -61,24 +60,43 @@
             if (this.readyState == 4 && this.status == 200) {
 
                  emp = (JSON.parse(this.responseText))
+                 localStorage.setItem("title", emp.title);
                 if (emp) {
-                    document.getElementById("success").innerHTML = "Form successfuly Added"
                     document.getElementById("form").innerHTML = "";
 
                     document.getElementById("message").innerHTML = "Welcome " + emp.firstName  + "<br> Role: " + emp.title;
 
-                    const content = `
+                    var content = `
                     <a href="AddForm.html"> 
                         <button type="button" class="btn btn-primary">Start Request</button>
                     </a> 
 
-                    <button onclick="getRequests()" type="button" class="btn btn-primary">List Requests</button>
+                    <a href="Request.html"> 
+                        <button type="button" class="btn btn-primary">View My Request</button>
+                    </a> 
+
+                    <a href="NeedGradeRequest.html"> 
+                        <button type="button" class="btn btn-primary">Provide Grades</button>
+                    </a> 
 
                     `
-                    var button = document.getElementById("button");
 
-                    button.innerHTML += content;
-                    console.log(emp)
+                    if (emp.title != "Associate") {
+                        content += `
+                        <a href="ApproveRequest.html"> 
+                            <button type="button" class="btn btn-primary">View Requests To Approve</button>
+                        </a> 
+                        `
+                    }
+
+
+                    var buttons = document.getElementById("button");
+                    buttons.innerHTML += content;
+                    // console.log(emp)
+                    window.onload = function() {
+
+                    
+}
                 }
 
             } else {
@@ -101,33 +119,7 @@
         xhttp.send(JSON.stringify(login));
     }
 
-    function getRequests() {
-        console.log(emp)
+    
 
-
-        let xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (this.readyState == 4 & this.status == 200) {
-                console.log(this.responseText)
-                let actor = JSON.parse(this.responseText)
-                populateResult(actor);
-                // console.log(actor);
-                // let info = `
-                //     <h3>ID: ${actor.id}
-                //     <h2>Name: ${actor.name}
-                //     <h2>Age: ${actor.age}
-                //     <h2>Worth: ${actor.worth}
-                // `
-
-                // document.getElementById("result").innerHTML = info;
-            }
-        };
-
-        let url = `http://localhost:7000/employees/requests`
-        // let url = "http://localhost:7000/actors" + id
-        xhr.open("GET", url, true);
-        xhr.send();
-        
-    }
 </script>
 </html>

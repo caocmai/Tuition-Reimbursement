@@ -1,6 +1,7 @@
 package dev.mai.repositories;
 
 import java.util.Date;
+import java.util.List;
 
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
@@ -36,6 +37,11 @@ public class FormRepoImpl implements FormRepo {
 			break;
 		}
 		
+		int eventCost = calEventCost(f.getEventType(), f.getCost());
+		int totalCost = calcTotalApproveAmount(e);
+		int fundsLeft = 1000 - (e.getTotalReimbursement() + totalCost); 
+		
+		
 		Session sess = HibernateUtil.getSession();
 		Transaction tx = null;
 
@@ -48,6 +54,12 @@ public class FormRepoImpl implements FormRepo {
 			r.setSuperAppve(supAppve);
 			r.setDeptAppve(deptAppve);
 			r.setBenCoAppve(benCoAppv);
+			
+			if (eventCost >= fundsLeft) {
+				r.setAmountAppve(fundsLeft);				
+			} else {
+				r.setAmountAppve(eventCost);
+			}
 			
 			sess.save(r);
 			
@@ -76,6 +88,45 @@ public class FormRepoImpl implements FormRepo {
 			sess.close();
 		}
 		return f;
+	}
+	
+	private int calcTotalApproveAmount(Employee e) {
+		RequestRepoImpl rr = new RequestRepoImpl();
+		List<Request> requests = rr.getPendingRequests(e);
+		
+		int cost = 0;
+		
+		for (Request r : requests) {
+			System.out.println(r);
+			cost += r.getAmountAppve(); 
+		}
+		
+		return cost;
+	}
+	
+	
+	private int calEventCost(String eventType, int cost) {
+		int eventReimbursement = 0;
+		
+		if (eventType.equalsIgnoreCase("UniversityCourses")) {
+			eventReimbursement = (int) (cost * .80);
+		} else if (eventType.equalsIgnoreCase("Seminars")) {
+			eventReimbursement = (int) (cost * .60);
+		} else if (eventType.equalsIgnoreCase("CertificationPreparationClasses")) {
+			eventReimbursement = (int) (cost * .75);
+
+		} else if (eventType.equalsIgnoreCase("Certification")) {
+			eventReimbursement = (int) (cost * 1.00);
+
+		} else if (eventType.equalsIgnoreCase("TechnicalTraining")) {
+			eventReimbursement = (int) (cost * .90);
+
+		} else if (eventType.equalsIgnoreCase("Other")) {
+			eventReimbursement = (int) (cost * .30);
+
+		}
+		
+		return eventReimbursement;
 	}
 
 }

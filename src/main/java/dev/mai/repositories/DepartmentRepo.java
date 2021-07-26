@@ -3,6 +3,7 @@ package dev.mai.repositories;
 import java.util.List;
 
 import dev.mai.models.Department;
+import dev.mai.models.Employee;
 
 public interface DepartmentRepo {
 	
@@ -11,6 +12,7 @@ public interface DepartmentRepo {
 	public List<Department> getAllDepartment();
 	public Department updateDepartment(Department changeD);
 	public Department deleteDepartment(int id);
+	public Department getDepartmentByHead(Employee head);
 
 	
 }

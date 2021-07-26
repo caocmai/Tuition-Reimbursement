@@ -3,6 +3,7 @@ package dev.mai.services;
 import java.util.List;
 
 import dev.mai.models.Department;
+import dev.mai.models.Employee;
 import dev.mai.repositories.DepartmentRepo;
 
 public class DepartmentServiceImpl implements DepartmentService {
@@ -12,7 +13,6 @@ public class DepartmentServiceImpl implements DepartmentService {
 	public DepartmentServiceImpl(DepartmentRepo dr) {
 		this.dr = dr;
 	}
-
 
 	@Override
 	public Department getDepartment(int id) {
@@ -27,6 +27,11 @@ public class DepartmentServiceImpl implements DepartmentService {
 	@Override
 	public List<Department> getAllDepartments() {
 		return dr.getAllDepartment();
+	}
+
+	@Override
+	public Department getDepartmentByHead(Employee head) {
+		return dr.getDepartmentByHead(head);
 	}
 
 }

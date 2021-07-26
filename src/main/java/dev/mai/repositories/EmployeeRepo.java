@@ -14,6 +14,9 @@ public interface EmployeeRepo {
 	public Employee deleteEmployee(int id);
 	public Employee getEmployByLogin(String username, String password);
 	public List<Request> getEmployeeRequests(Employee e);
+	
+	public List<Request> getPendingRequestFromSuper(Employee superEmp);
+	public List<Request> getPendingAppRequests(Employee loginEmp);
 
 
 

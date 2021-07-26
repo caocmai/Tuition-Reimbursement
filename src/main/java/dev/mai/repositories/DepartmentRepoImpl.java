@@ -5,8 +5,11 @@ import java.util.List;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.query.Query;
 
 import dev.mai.models.Department;
+import dev.mai.models.Employee;
+import dev.mai.models.Request;
 import dev.mai.util.HibernateUtil;
 
 public class DepartmentRepoImpl implements DepartmentRepo {
@@ -101,6 +104,26 @@ public class DepartmentRepoImpl implements DepartmentRepo {
 			sess.close();
 		}
 		return d;
+	}
+
+	@Override
+	public Department getDepartmentByHead(Employee head) {
+		Department dept = null;
+		Session sess = HibernateUtil.getSession();
+		
+		try {
+			Query q = sess.createQuery("FROM Department D WHERE D.head.id=:emp");
+			q.setParameter("emp", head.getId());
+			dept = (Department) q.uniqueResult();
+	
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			sess.getTransaction().rollback();
+		} finally {
+			sess.close();
+		}
+		
+		return dept;
 	}
 
 }

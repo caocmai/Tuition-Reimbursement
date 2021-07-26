@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Requests</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Requests</h1>
+
+    <button onclick="getRequests()" type="button" class="btn btn-primary">View Requests</button>
+
+    <div id="result">
+        <table class="table">
+
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Location</th>
+                <th scope="col">Event Type</th>
+                <th scope="col">Super Approval</th>
+                <th scope="col">Dept Approval</th>
+                <th scope="col">BenCo Approval</th>
+                <th scope="col">Grade</th>
+                <th scope="col">Amount Requested</th>
+                <th scope="col">Amount Approved</th>
+              </tr>
+            </thead>
+
+            <tbody id="tableRow">
+
+            </tbody>
+          </table>
+
+
+          <p id="success"></p>
+
+    </div>
+
+ 
+
+</div>
+    
+</body>
+
+<script>
+
+function getRequests() {
+
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if (this.readyState == 4 & this.status == 200) {
+                // console.log(this.response)
+                let requests = JSON.parse(this.responseText)
+                console.log(requests);
+
+                if (this.responseText == "[]" || this.responseText == "{}") {
+                    document.getElementById("success").innerHTML = "No Requests to list"
+
+                }
+
+                const tableRow = document.getElementById("tableRow")
+                tableRow.innerHTML = "";
+                let count = 1;
+
+                // <th scope="col">Super Approval</th>
+                // <th scope="col">Dept Approval</th>
+                // <th scope="col">BenCo Approval</th>
+                // <th scope="col">Location</th>
+                // <th scope="col">Event Type</th>
+                // <th scope="col">Amount Request</th>
+                // <th scope="col">Amount Approve</th>
+
+                requests.forEach(res => {
+
+                    const content = `
+                        <tr>
+                            <th scope="row">${count}</th>
+                            <td>${res.form.location}</td>
+                            <td>${res.form.eventType}</td>
+                            <td>${res.superAppve}</td>
+                            <td>${res.deptAppve}</td>
+                            <td>${res.benCoAppve}</td>
+                            <td>${res.grade}</td>
+                            <td>${res.form.cost}</td>
+                            <td>${res.amountAppve}</td>
+                        </tr>
+
+                    `
+                    tableRow.innerHTML += content;
+                    count += 1;
+                })
+            }
+        };
+
+        let url = `http://localhost:7000/employees/requests`
+        xhr.open("GET", url, true);
+        xhr.send();
+        
+    }
+
+
+    function getApprovedRequests() {
+
+    let xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 & this.status == 200) {
+            // console.log(this.response)
+            let requests = JSON.parse(this.responseText)
+            console.log(requests);
+
+            if (this.responseText == "[]" || this.responseText == "{}") {
+                document.getElementById("success").innerHTML = "No Requests to list"
+
+            }
+
+            const tableRow = document.getElementById("tableRow")
+            tableRow.innerHTML = "";
+            let count = 1;
+
+            // <th scope="col">Super Approval</th>
+            // <th scope="col">Dept Approval</th>
+            // <th scope="col">BenCo Approval</th>
+            // <th scope="col">Location</th>
+            // <th scope="col">Event Type</th>
+            // <th scope="col">Amount Request</th>
+            // <th scope="col">Amount Approve</th>
+
+            requests.forEach(res => {
+
+                const content = `
+                    <tr>
+                        <th scope="row">${count}</th>
+                        <td>${res.form.location}</td>
+                        <td>${res.form.eventType}</td>
+                        <td>${res.superAppve}</td>
+                        <td>${res.deptAppve}</td>
+                        <td>${res.benCoAppve}</td>
+                        <td>${res.form.cost}</td>
+                        <td>${res.amountAppve}</td>
+                    </tr>
+
+                `
+                tableRow.innerHTML += content;
+                count += 1;
+            })
+        }
+    };
+
+    let url = `http://localhost:7000/employees/requests`
+    xhr.open("GET", url, true);
+    xhr.send();
+
+}
+
+</script>
+</html>

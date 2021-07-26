@@ -40,9 +40,7 @@
 		validate=validating db, good for production; 
 		update=checks to see if the db is needed to be updated and applies them
 		-->
-		<property name="hbm2ddl.auto">
-			create
-		</property>
+		<property name="hbm2ddl.auto">validate</property>
 		
 		<!--  Class Mappings -->
 		<mapping class="dev.mai.models.Employee" />

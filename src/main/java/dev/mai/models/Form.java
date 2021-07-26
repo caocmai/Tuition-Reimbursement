@@ -9,7 +9,6 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="forms")
-
 public class Form {
 //	private long date;
 //	private long time;

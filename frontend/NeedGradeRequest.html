@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Provide Grade Requests</title>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Requests</h1>
+
+    <button onclick="addGradeRequests()" type="button" class="btn btn-primary">View Requests</button>
+
+    <div id="result">
+        <table class="table">
+
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Urgent</th>
+                <th scope="col">BenCo Approval</th>
+                <th scope="col">Final Approval</th>
+                <th scope="col">Location</th>
+                <th scope="col">Event Type</th>
+                <th scope="col">Grade Type</th>
+                <th scope="col">Cost</th>
+                <th scope="col">Input Grade</th>
+
+              </tr>
+            </thead>
+
+            <tbody id="tableRow">
+
+            </tbody>
+          </table>
+
+
+          <p id="success"></p>
+
+    </div>
+
+</div>
+    
+</body>
+
+<script>
+
+function addGradeRequests() {
+
+    let xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 & this.status == 200) {
+                    console.log(this.responseText)
+                    if (this.responseText == "{}" || this.responseText == "[]") {
+                        document.getElementById("success").innerHTML = "No pending approved requests to add grades"
+                    }
+                    // console.log(this.response)
+                    let requests = JSON.parse(this.responseText)
+                    console.log(requests);
+
+    
+                    const tableRow = document.getElementById("tableRow")
+                    tableRow.innerHTML = "";
+                    let count = 1;
+    
+                //     <th scope="col">#</th>
+                // <th scope="col">Urgent</th>
+                // <th scope="col">BenCo Approval</th>
+                // <th scope="col">Final Approval</th>
+                // <th scope="col">Location</th>
+                // <th scope="col">Event Type</th>
+                // <th scope="col">Input Grade</th>
+    
+                    requests.forEach(res => {
+    
+                        const content = `
+                            <tr>
+                                <th scope="row">${count}</th>
+                                <td>${res.urgent}</td>
+                                <td>${res.benCoAppve}</td>
+                                <td>${res.benCoAppveFinal}</td>
+                                <td>${res.form.location}</td>
+                                <td>${res.form.eventType}</td>
+                                <td>${res.form.gradingType}</td>
+                                <td>${res.form.cost}</td>
+                                <td><input id="inputGrade${res.id}" type='text' /></td>
+                                <td><button onclick="addGrade(${res.id})" type="button" class="btn btn-primary">Send</button></td>
+                            </tr>
+    
+                        `
+                        tableRow.innerHTML += content;
+                        count += 1;
+                    })
+                }
+
+                if (this.readyState == 4 & this.status != 200) {
+                    document.getElementById("success").innerHTML = "No pending requests to approve"
+                }
+            };
+    
+            let url = `http://localhost:7000/employees/requests/pending/grade`
+            xhr.open("GET", url, true);
+            xhr.send();
+}
+
+function addGrade(id) {
+    let gradeVal = document.getElementById("inputGrade"+id).value
+
+    let xhr = new XMLHttpRequest();
+
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 & this.status == 200) {
+            document.getElementById("success").innerHTML = "Grade added"
+        }
+    }
+
+    let url = "http://localhost:7000/employees/requests/pending/grade"
+
+    xhr.open("POST", url, true)
+
+    xhr.setRequestHeader('Content-Type', "application/json");
+
+    // these variables need to be the same as the Java Model
+    let GradeRequest = {
+        id: id,
+        grade: gradeVal
+    }
+
+    xhr.send(JSON.stringify(GradeRequest));
+}
+</script>
+</html>

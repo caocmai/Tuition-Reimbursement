@@ -1,19 +1,11 @@
 package dev.mai.models;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 @Entity
 @Table(name="departments")
@@ -27,14 +19,9 @@ public class Department {
 	@Column(name="title", nullable=false)
 	private String title;
 	
-	@OneToOne
-	@JoinColumn(name="head_id", nullable=true)
-	private Employee head;
+	@Column(name="head_id")
+	private int headEmpId;
 	
-	@OneToMany(mappedBy="dept")
-	@JsonManagedReference
-	private List<Employee> employees = new ArrayList<Employee>();
-
 	public Department() {
 		super();
 	}
@@ -45,17 +32,17 @@ public class Department {
 	}
 
 	
-	public Department(String title, Employee head) {
+	public Department(String title, int headEmpId) {
 		super();
 		this.title = title;
-		this.head = head;
+		this.headEmpId = headEmpId;
 	}
 
-	public Department(int id, String title, Employee head) {
+	public Department(int id, String title, int headEmpId) {
 		super();
 		this.id = id;
 		this.title = title;
-		this.head = head;
+		this.headEmpId = headEmpId;
 	}
 
 
@@ -79,28 +66,29 @@ public class Department {
 	}
 
 
-	public Employee getHead() {
-		return head;
+	public int getHeadEmpId() {
+		return headEmpId;
 	}
 
 
-	public void setHead(Employee head) {
-		this.head = head;
-	}
-
-	public List<Employee> getEmployees() {
-		return employees;
-	}
-
-	public void setEmployees(List<Employee> employees) {
-		this.employees = employees;
+	public void setHeadEmpId(int headEmpId) {
+		this.headEmpId = headEmpId;
 	}
 
 	@Override
 	public String toString() {
-		return "Department [id=" + id + ", title=" + title + ", head=" + head + ", employees=" + employees + "]";
+		return "Department [id=" + id + ", title=" + title + ", headEmpId=" + headEmpId + "]";
 	}
-	
+
+//	public List<Employee> getEmployees() {
+//		return employees;
+//	}
+//
+//	public void setEmployees(List<Employee> employees) {
+//		this.employees = employees;
+//	}
+
+
 	
 
 }

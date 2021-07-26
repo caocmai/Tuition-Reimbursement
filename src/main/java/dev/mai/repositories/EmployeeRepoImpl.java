@@ -57,11 +57,11 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		Employee man = new Employee("MA", "home", "pass", "John", "Doe", 343, 234234, false);
 		Employee e3 = new Employee("test", "many", "pass", "John", "Doe", 343, 234234, false);
 
-		e.setSupervisor(man);
-		e3.setSupervisor(man);
+//		e.setSupervisorId(man.getId());
+//		e3.setSupervisorId(man.getId());
 		
-		man.getSubordinates().add(e);
-		man.getSubordinates().add(e3);
+//		man.getSubordinates().add(e);
+//		man.getSubordinates().add(e3);
 		
 //		es.addEmployee(e);
 //		es.addEmployee(man);
@@ -74,9 +74,9 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			int id = (int)sess.save(emp);
 			emp.setId(id);
 			
-			sess.save(man);
-			sess.save(e);
-			sess.save(e3);
+//			sess.save(man);
+//			sess.save(e);
+//			sess.save(e3);
 //		
 			
 			tx.commit();
@@ -163,7 +163,7 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 			Query q = sess.createQuery("FROM Employee E WHERE E.username=:username AND E.password=:password");
 			q.setParameter("username", username);
 			q.setParameter("password", password);
-			employee = (Employee)q.uniqueResult();
+			employee = (Employee)q.setMaxResults(1).uniqueResult();
 			System.out.println(employee);
 //			employee = (Employee) sess.createQuery().uniqueResult();
 		} catch (HibernateException e) {
@@ -182,7 +182,7 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		Session sess = HibernateUtil.getSession();
 		
 		
-		String sql = "FROM Request R WHERE R.employee_e_id=?";
+//		String sql = "FROM Request R WHERE R.employee_e_id=?";
 		
 		
 		
@@ -192,19 +192,64 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 
 		
 		try {
+			Query q = sess.createQuery("FROM Request R WHERE R.employee.id=:emp");
+			q.setParameter("emp", emp.getId());
+			requests =  q.list();
+			
+//			System.out.println(requests + "\n\n\n\n\n\n");
+//			PreparedStatement ps = conn.prepareStatement(sql);
+			
+			
+//			Query spSQLQuery = sess.createSQLQuery("SELECT * FROM requests r WHERE r.employee_e_id=:id");
+//			spSQLQuery.setParameter("id", 1);
+//			
+//			requests = spSQLQuery.list();
+
+	
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			sess.getTransaction().rollback();
+		} finally {
+			sess.close();
+		}
+		
+		return requests;
+	}
+
+	//not using
+	@Override
+	public List<Request> getPendingRequestFromSuper(Employee superEmp) {
+		
+		List<Request> requests = null;
+//		Session sess = HibernateUtil.getSession();
+//		try {
 //			Query q = sess.createQuery("FROM Request R WHERE R.employee=:emp");
 //			q.setParameter("emp", emp);
 //			requests =  q.list();
-			
-//			PreparedStatement ps = conn.prepareStatement(sql);
-			Query spSQLQuery = sess.createSQLQuery("SELECT * FROM requests r WHERE r.employee_e_id=:id");
-			spSQLQuery.setParameter("id", 1);
-			
-			requests = spSQLQuery.list();
-			
-			for (Object r : requests) {
-				System.out.println(r.toString());
-			}
+//
+//		} catch (HibernateException e) {
+//			e.printStackTrace();
+//			sess.getTransaction().rollback();
+//		} finally {
+//			sess.close();
+//		}
+//		
+		return requests;
+		
+	}
+
+	@Override
+	public List<Request> getPendingAppRequests(Employee loginEmp) {
+		List<Request> requests = null;
+		Session sess = HibernateUtil.getSession();
+		
+		try {
+			Query q = sess.createQuery("FROM Request R WHERE R.employee.id=:emp AND R.benCoAppve=true AND R.grade=:grade");
+			q.setParameter("emp", loginEmp.getId());
+			q.setParameter("grade", null);
+
+			requests =  q.list();
+			System.out.println(requests);
 	
 		} catch (HibernateException e) {
 			e.printStackTrace();
