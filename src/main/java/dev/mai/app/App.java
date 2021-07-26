@@ -169,12 +169,12 @@ public class App {
 		
 //		mrp.deleteMoreInfoRequest(17);
 		
-		new Timer().scheduleAtFixedRate(new TimerTask(){
-		    @Override
-		    public void run(){
-		    	ec.autoUpdateRequests();
-		    }
-		},0,3600000);
+//		new Timer().scheduleAtFixedRate(new TimerTask(){
+//		    @Override
+//		    public void run(){
+//		    	ec.autoUpdateRequests();
+//		    }
+//		},0,3600000);
 		
 		app.post("/employees/login", ec.employeeLogin);
 		app.post("/employees/requests/form", ec.addForm);
