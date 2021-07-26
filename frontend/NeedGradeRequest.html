@@ -15,7 +15,7 @@
     <button onclick="addGradeRequests()" type="button" class="btn btn-primary">View Requests</button>
 
     <div id="result">
-        <table class="table">
+        <table class="table table-hover">
 
             <thead>
               <tr>
@@ -51,59 +51,59 @@
 function addGradeRequests() {
 
     let xhr = new XMLHttpRequest();
-            xhr.onreadystatechange = function() {
-                if (this.readyState == 4 & this.status == 200) {
-                    console.log(this.responseText)
-                    if (this.responseText == "{}" || this.responseText == "[]") {
-                        document.getElementById("success").innerHTML = "No pending approved requests to add grades"
-                    }
-                    // console.log(this.response)
-                    let requests = JSON.parse(this.responseText)
-                    console.log(requests);
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 & this.status == 200) {
+            console.log(this.responseText)
+            if (this.responseText == "{}" || this.responseText == "[]") {
+                document.getElementById("success").innerHTML = "No pending approved requests to add grades"
+            }
+            // console.log(this.response)
+            let requests = JSON.parse(this.responseText)
+            console.log(requests);
 
-    
-                    const tableRow = document.getElementById("tableRow")
-                    tableRow.innerHTML = "";
-                    let count = 1;
-    
-                //     <th scope="col">#</th>
-                // <th scope="col">Urgent</th>
-                // <th scope="col">BenCo Approval</th>
-                // <th scope="col">Final Approval</th>
-                // <th scope="col">Location</th>
-                // <th scope="col">Event Type</th>
-                // <th scope="col">Input Grade</th>
-    
-                    requests.forEach(res => {
-    
-                        const content = `
-                            <tr>
-                                <th scope="row">${count}</th>
-                                <td>${res.urgent}</td>
-                                <td>${res.benCoAppve}</td>
-                                <td>${res.benCoAppveFinal}</td>
-                                <td>${res.form.location}</td>
-                                <td>${res.form.eventType}</td>
-                                <td>${res.form.gradingType}</td>
-                                <td>${res.form.cost}</td>
-                                <td><input id="inputGrade${res.id}" type='text' /></td>
-                                <td><button onclick="addGrade(${res.id})" type="button" class="btn btn-primary">Send</button></td>
-                            </tr>
-    
-                        `
-                        tableRow.innerHTML += content;
-                        count += 1;
-                    })
-                }
 
-                if (this.readyState == 4 & this.status != 200) {
-                    document.getElementById("success").innerHTML = "No pending requests to approve"
-                }
-            };
-    
-            let url = `http://localhost:7000/employees/requests/pending/grade`
-            xhr.open("GET", url, true);
-            xhr.send();
+            const tableRow = document.getElementById("tableRow")
+            tableRow.innerHTML = "";
+            let count = 1;
+
+        //     <th scope="col">#</th>
+        // <th scope="col">Urgent</th>
+        // <th scope="col">BenCo Approval</th>
+        // <th scope="col">Final Approval</th>
+        // <th scope="col">Location</th>
+        // <th scope="col">Event Type</th>
+        // <th scope="col">Input Grade</th>
+
+            requests.forEach(res => {
+
+                const content = `
+                    <tr>
+                        <th scope="row">${count}</th>
+                        <td>${res.urgent}</td>
+                        <td>${res.benCoAppve}</td>
+                        <td>${res.benCoAppveFinal}</td>
+                        <td>${res.form.location}</td>
+                        <td>${res.form.eventType}</td>
+                        <td>${res.form.gradingType}</td>
+                        <td>${res.form.cost}</td>
+                        <td><input id="inputGrade${res.id}" type='text' /></td>
+                        <td><button onclick="addGrade(${res.id})" type="button" class="btn btn-primary">Send</button></td>
+                    </tr>
+
+                `
+                tableRow.innerHTML += content;
+                count += 1;
+            })
+        }
+
+        if (this.readyState == 4 & this.status != 200) {
+            document.getElementById("success").innerHTML = "No pending requests to approve"
+        }
+    };
+
+    let url = `http://localhost:7000/employees/requests/pending/grade`
+    xhr.open("GET", url, true);
+    xhr.send();
 }
 
 function addGrade(id) {

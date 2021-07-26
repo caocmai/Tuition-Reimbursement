@@ -63,6 +63,7 @@ public class Request {
 	@Column(name="more_info_needed")
 	private boolean needMoreInfo;
 	
+	// currently not using!
 	@Column(name="more_info_id")
 	private int moreInfoId;
 	

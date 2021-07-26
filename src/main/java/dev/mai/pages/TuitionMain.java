@@ -20,6 +20,11 @@ public class TuitionMain {
 	@FindBy(id="startRequest")
 	public WebElement request;
 	
+	@FindBy(id="myRequestBtn")
+	public WebElement myRequestBtn;
+	
+	@FindBy(id="getRequests")
+	public WebElement getRequests;
 	
 	
 	@FindBy(id="location")

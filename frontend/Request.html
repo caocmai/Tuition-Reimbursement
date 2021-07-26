@@ -12,10 +12,10 @@
     <div class="container">
         <h1>My Requests</h1>
 
-    <button onclick="getRequests()" type="button" class="btn btn-primary">View Requests</button>
+    <button id="getRequests" onclick="getRequests()" type="button" class="btn btn-primary">View Requests</button>
 
     <div id="result">
-        <table class="table">
+        <table class="table table-hover">
 
             <thead>
               <tr>
@@ -28,6 +28,8 @@
                 <th scope="col">Grade</th>
                 <th scope="col">Amount Requested</th>
                 <th scope="col">Amount Approved</th>
+                <th scope="col">Done</th>
+
               </tr>
             </thead>
 
@@ -88,6 +90,9 @@ function getRequests() {
                             <td>${res.grade}</td>
                             <td>${res.form.cost}</td>
                             <td>${res.amountAppve}</td>
+                            <td>${res.benCoAppveFinal}</td>
+
+
                         </tr>
 
                     `

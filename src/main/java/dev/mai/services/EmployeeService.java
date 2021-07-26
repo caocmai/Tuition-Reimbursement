@@ -26,5 +26,7 @@ public interface EmployeeService {
 	public Request updateRequestGrade(int requestId, String grade);
 	public Request approveAbove(int requestId, int amount, String reason);
 	public void autoUpdateRequests();
+	public Request getARequest(int id);
+	public Request addMoreInfo(int requestId, int fromId, int toId, String reason);
 
 }

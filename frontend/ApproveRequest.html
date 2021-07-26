@@ -16,7 +16,7 @@
     <button onclick="getPendingRequests()" type="button" class="btn btn-primary">View Pending Requests</button>
 
     <div id="result">
-        <table class="table">
+        <table class="table table-hover">
 
             <thead>
               <tr>
@@ -31,6 +31,8 @@
                 <th scope="col">Amount Requested</th>
                 <th scope="col">Amount Approved</th>
                 <th scope="col">Approve</th>
+                <th scope="col">MoreInfo</th>
+
 
               </tr>
             </thead>
@@ -52,11 +54,7 @@
         let emp = localStorage.getItem("title");
         console.log(emp)
     function getPendingRequests() {
-
-        
         // console.log(emp.title);
-
-    
             let xhr = new XMLHttpRequest();
             xhr.onreadystatechange = function() {
                 if (this.readyState == 4 & this.status == 200) {
@@ -105,16 +103,38 @@
                             <input id="inputAmount${res.id}" type='number'/>
                             <label> Reason </label>
                             <input id="inputReason${res.id}" type='text' value="reason for increase"/>
-                            <button onclick="approveRequest(${res.id})" type="button" class="btn btn-primary">Approve</button></td>
-                            
+                            <button onclick="approveRequest(${res.id})" type="button" class="btn btn-primary">Approve</button>
+\
                             `
+
+                            if (!res.needMoreInfo && emp != "Approver") {
+                                content += `
+                                <a href="RequestMoreInfo.html"> 
+                                <button onclick="saveRequestId(${res.id})"  type="button" class="btn btn-secondary">MoreInfo</button>
+                            </a> 
+                                `
+                            }
                         } else {
+
+                            
                             content += `
+                            
                             <td><button onclick="approveRequest(${res.id})" type="button" class="btn btn-primary">Approve</button></td>
 
-                        </tr>
+                           
             
                             `
+
+                            if (!res.needMoreInfo && emp != "Approver") {
+                                content += `
+                                <td>
+                                <a href="RequestMoreInfo.html"> 
+                                <button type="button" onclick="saveRequestId(${res.id})" class="btn btn-secondary">MoreInfo</button>
+                                </a>     
+                                </td>
+                            </tr>
+                                `
+                            }
                         }
 
                         tableRow.innerHTML += content;
@@ -172,6 +192,11 @@
 
             }
 
+        }
+
+        function saveRequestId(id) {
+            localStorage.setItem("requestId", id);
+            console.log(id)
         }
     
     </script>

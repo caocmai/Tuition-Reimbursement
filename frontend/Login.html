@@ -61,6 +61,8 @@
 
                  emp = (JSON.parse(this.responseText))
                  localStorage.setItem("title", emp.title);
+                 localStorage.setItem("userId", emp.id);
+
                 if (emp) {
                     document.getElementById("form").innerHTML = "";
 
@@ -72,7 +74,7 @@
                     </a> 
 
                     <a href="Request.html"> 
-                        <button type="button" class="btn btn-primary">View My Request</button>
+                        <button id="myRequestBtn" type="button" class="btn btn-primary">View My Request</button>
                     </a> 
 
                     <a href="NeedGradeRequest.html"> 

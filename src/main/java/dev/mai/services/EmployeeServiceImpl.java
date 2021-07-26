@@ -7,12 +7,14 @@ import java.util.List;
 import dev.mai.models.Department;
 import dev.mai.models.Employee;
 import dev.mai.models.Form;
+import dev.mai.models.MoreInfoRequest;
 import dev.mai.models.Request;
 import dev.mai.repositories.DepartmentRepo;
 import dev.mai.repositories.DepartmentRepoImpl;
 import dev.mai.repositories.EmployeeRepo;
 import dev.mai.repositories.FormRepo;
 import dev.mai.repositories.FormRepoImpl;
+import dev.mai.repositories.MoreInfoRequestImpl;
 import dev.mai.repositories.RequestRepo;
 import dev.mai.repositories.RequestRepoImpl;
 
@@ -70,7 +72,7 @@ public class EmployeeServiceImpl implements EmployeeService{
 			
 			if (!r.isBenCoAppveFinal() && r.getEmployee().getId() != loginEmp.getId()) {
 				if (loginEmp.getTitle().equalsIgnoreCase("Approver")) {
-					System.out.println("approv");
+//					System.out.println("approv");
 					if (r.isSuperAppve() && r.isDeptAppve() && r.isBenCoAppve() && r.getGrade() != null) {
 						pendingRequests.add(r);
 					}
@@ -79,13 +81,13 @@ public class EmployeeServiceImpl implements EmployeeService{
 						pendingRequests.add(r);
 					}
 				} else if (loginEmp.getTitle().equalsIgnoreCase("Supervisor")) {
-					System.out.println("super");
+//					System.out.println("super");
 
 					if (!r.isSuperAppve() && r.getEmployee().getSupervisorId() == loginEmp.getId()){
 						pendingRequests.add(r);
 					}
 				} else if (loginEmp.getTitle().equalsIgnoreCase("DeptHead")) {
-					System.out.println("Dep");
+//					System.out.println("Dep");
 
 					if ((r.isSuperAppve() && !r.isDeptAppve()) && (r.getEmployee().getDeptId() == loginEmp.getDeptId())){
 						pendingRequests.add(r);
@@ -298,6 +300,33 @@ public class EmployeeServiceImpl implements EmployeeService{
 				r.setDeptAppve(true);
 			}
 		}
+	}
+
+	@Override
+	public Request getARequest(int id) {
+		
+		return rr.getRequest(id);
+	}
+
+	@Override
+	public Request addMoreInfo(int requestId, int fromId, int toId, String reason) {
+		Request r = rr.getRequest(requestId);
+		
+		Employee fromE = er.getEmployee(fromId);
+		Employee toE = er.getEmployee(toId);
+		
+		MoreInfoRequest miq = new MoreInfoRequest(fromE, toE, reason, false);
+		
+		MoreInfoRequestImpl mr = new MoreInfoRequestImpl();
+		
+		miq = mr.addMoreInfoRequest(miq);
+		r.setNeedMoreInfo(true);
+		r.getMoreInfoRequests().add(miq);
+		
+		rr.updateRequest(r);
+		
+		
+		return r;
 	}
 
 }

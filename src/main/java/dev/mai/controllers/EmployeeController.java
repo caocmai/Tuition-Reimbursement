@@ -8,6 +8,7 @@ import dev.mai.models.Employee;
 import dev.mai.models.Form;
 import dev.mai.models.GetJsonId;
 import dev.mai.models.GradeRequest;
+import dev.mai.models.JsonMoreInfo;
 import dev.mai.models.Login;
 import dev.mai.models.Request;
 import dev.mai.services.EmployeeService;
@@ -150,7 +151,7 @@ public class EmployeeController {
 		
 		int requestId = checkInt(jsonObject.getId());
 		
-		if (!jsonObject.getReason().equalsIgnoreCase("reason for increase")) {
+		if (jsonObject.getReason() != null && !jsonObject.getReason().equalsIgnoreCase("reason for increase")) {
 			int amount = checkInt(jsonObject.getAmount());
 			es.approveAbove(requestId, amount, jsonObject.getReason());
 
@@ -196,6 +197,27 @@ public class EmployeeController {
 		int requestId = checkInt(gr.getId());
 		
 		es.updateRequestGrade(requestId, gr.getGrade());
+	};
+
+	public Handler getRequestById = (ctx) -> {
+		String clientId = ctx.pathParam("id");
+		int id = checkInt(clientId);
+		Request r = es.getARequest(id);
+		System.out.println(r);
+		returnedContext(ctx, r);
+		
+	};
+
+	public Handler addMoreInfo = (ctx) -> {
+		JsonMoreInfo mi = gson.fromJson(ctx.body(), JsonMoreInfo.class);
+		
+		int requestId = checkInt(mi.getRequestId());
+		int fromId =  checkInt(mi.getFromId());
+		int toId = checkInt(mi.getToId());
+		String reason =  mi.getReason();
+				
+		Request r = es.addMoreInfo(requestId, fromId, toId, reason);
+		returnedContext(ctx, r);
 	}; 
 	
 	
