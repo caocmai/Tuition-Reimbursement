@@ -1,17 +1,16 @@
 package dev.mai.app;
 
-import org.hibernate.boot.jaxb.hbm.spi.Adapter4;
+import java.util.Timer;
+import java.util.TimerTask;
 
 //import org.apache.log4j.Logger;
 
 import dev.mai.controllers.DepartmentController;
 import dev.mai.controllers.EmployeeController;
-import dev.mai.models.Request;
 import dev.mai.repositories.DepartmentRepo;
 import dev.mai.repositories.DepartmentRepoImpl;
 import dev.mai.repositories.EmployeeRepo;
 import dev.mai.repositories.EmployeeRepoImpl;
-import dev.mai.repositories.RequestRepoImpl;
 import dev.mai.services.DepartmentService;
 import dev.mai.services.DepartmentServiceImpl;
 import dev.mai.services.EmployeeService;
@@ -40,16 +39,16 @@ public class App {
 		EmployeeService es = new EmployeeServiceImpl(er);
 		EmployeeController ec = new EmployeeController(es);
 		
-		DepartmentRepo dr = new DepartmentRepoImpl();
-		DepartmentService ds = new DepartmentServiceImpl(dr);
-		DepartmentController dc = new DepartmentController(ds);
+//		DepartmentRepo dr = new DepartmentRepoImpl();
+//		DepartmentService ds = new DepartmentServiceImpl(dr);
+//		DepartmentController dc = new DepartmentController(ds);
 		
-//		new Timer().scheduleAtFixedRate(new TimerTask(){
-//		    @Override
-//		    public void run(){
-//		    	ec.autoUpdateRequests();
-//		    }
-//		},0,3600000);
+		new Timer().scheduleAtFixedRate(new TimerTask(){
+		    @Override
+		    public void run(){
+		    	ec.autoUpdateRequests();
+		    }
+		},0,3600000);
 		
 		app.post("/employees/login", ec.employeeLogin);
 		app.post("/employees/requests/form", ec.addForm);
@@ -59,7 +58,7 @@ public class App {
 		app.get("/employees/requests/:id", ec.getRequestById);
 
 		app.post("/employees/requests/moreinfo", ec.addMoreInfo);
-//		
+//		approve a pending request
 		app.post("/employees/requests/pending/approve", ec.updatePendingRequest);
 		app.get("/employees/requests/pending/grade", ec.getPendingAppRequests);
 //		

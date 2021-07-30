@@ -62,7 +62,6 @@
                     if (this.responseText == "{}" || this.responseText == "[]") {
                         document.getElementById("success").innerHTML = "No pending requests to approve"
                     }
-                    // console.log(this.response)
                     let requests = JSON.parse(this.responseText)
                     console.log(requests);
 
@@ -70,15 +69,6 @@
                     const tableRow = document.getElementById("tableRow")
                     tableRow.innerHTML = "";
                     let count = 1;
-    
-                    // <th scope="col">Super Approval</th>
-                    // <th scope="col">Dept Approval</th>
-                    // <th scope="col">BenCo Approval</th>
-                    // <th scope="col">Location</th>
-                    // <th scope="col">Event Type</th>
-                    // <th scope="col">Amount Request</th>
-                    // <th scope="col">Amount Approve</th>
-    
                     requests.forEach(res => {
     
                         var content = `
@@ -124,7 +114,6 @@
                            
             
                             `
-
                             if (!res.needMoreInfo && emp != "Approver") {
                                 content += `
                                 <td>
@@ -154,13 +143,7 @@
         }
 
         function approveRequest(id) {
-
-            // if (!amount) {
-            //     amount = 0
-            // }
-
             let xhr = new XMLHttpRequest();
-
             xhr.onreadystatechange = function() {
                 if (this.readyState == 4 & this.status == 200) {
                     document.getElementById("success").innerHTML = "Request approved"
@@ -170,9 +153,7 @@
             let url = "http://localhost:7000/employees/requests/pending/approve"
 
             xhr.open("POST", url, true)
-
             xhr.setRequestHeader('Content-Type', "application/json");
-
             if (emp == "BenCo") {
                 let amount = document.getElementById("inputAmount"+id).value;
                 let reason = document.getElementById("inputReason"+id).value;
@@ -183,20 +164,17 @@
                     reason: reason
                 }
                 xhr.send(JSON.stringify(GetJsonId));
-
             } else {
                 let GetJsonId = {
                     id: id,
                 }
                 xhr.send(JSON.stringify(GetJsonId));
-
             }
 
         }
 
         function saveRequestId(id) {
             localStorage.setItem("requestId", id);
-            console.log(id)
         }
     
     </script>
