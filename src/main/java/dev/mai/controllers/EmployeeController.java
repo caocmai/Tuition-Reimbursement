@@ -61,21 +61,11 @@ public class EmployeeController {
 	public Handler addForm = (ctx) -> {
 		Form f = gson.fromJson(ctx.body(), Form.class);
 		es.addForm(f, this.loginEmp);
-		
-//		Request r = new Request(this.loginEmp,  );
-		
-//		if (employees != null) {
-//			ctx.result(gson.toJson(employees));
-//		} else {
-//			ctx.status(400);
-//		}
-		
 		returnedContext(ctx, f);
 	};
 
 	public Handler employeeLogin = (ctx) -> {
 		Login login = gson.fromJson(ctx.body(), Login.class);
-//		System.out.println("*****LOGIN" + login);
 
 		Employee e = es.getEmloyeeByLogin(login.getUsername(), login.getPassword());
 		System.out.println(e);
@@ -89,66 +79,25 @@ public class EmployeeController {
 	public Handler getRequests = (ctx) -> {
 //		Employee e = gson.fromJson(ctx.body(), Employee.class);
 		List<Request> requests = es.getAllRequests(this.loginEmp);
-		
-//		System.out.println(requests);
+	
 		returnedContext(ctx, requests);
 		
-//		for (Request r : requests) {
-//			System.out.println(r);
-//			System.out.println(r.getMoreInfoRequests());
-//		}
-//		
+
 		
 	};
 	
-//	Supervisor
-//	BenCo
-//	DeptHead
-
 	public Handler getPendingRequests = (ctx) -> {
-//		System.out.println("deptmartmetn head" + loginEmp.getDeptId());
 
 		List<Request> requests = es.getallPendingRequest(loginEmp);
 		
 		returnedContext(ctx, requests);
-//		if (loginEmp.getTitle().equalsIgnoreCase("Approver")) {
-//			System.out.println("aproving requests, with grades");
-//			
-//		} else if (loginEmp.isBenCo()) {
-//			requests = es.getallPendingRequest(loginEmp);
-//			returnedContext(ctx, requests);
-//			
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("Supervisor")) {
-////			List<Request> requests = es.getPendingRequestsFromSuper(this.loginEmp);
-//			System.out.println("super?");
-////			returnedContext(ctx, requests);
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("DeptHead")) {
-////			System.out.println("deptmartmetn head" + loginEmp.getDept());
-//			
-//			List<Request> requests = es.getPendingRequestsFromDept(this.loginEmp);
-//			returnedContext(ctx, requests);
-//
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("DeptHead/Super")) {
-////			System.out.println("deptmartmetn head" + loginEmp.getDept());
-//			
-//			List<Request> requests = es.getPendingRequestsFromDeptSup(this.loginEmp);
-//			returnedContext(ctx, requests);
-//
-//		} else {
-//			ctx.result("{}");
-//		}
 		
 	};
 
 	
 	public Handler updatePendingRequest = (ctx) -> {
 		GetJsonId jsonObject = gson.fromJson(ctx.body(), GetJsonId.class);
-//		
-//		System.out.println(jsonObject);
-//		System.out.println(jsonObject.getAmount());
-//		System.out.println(jsonObject.getReason());
 
-		
 		int requestId = checkInt(jsonObject.getId());
 		
 		if (jsonObject.getReason() != null && !jsonObject.getReason().equalsIgnoreCase("reason for increase")) {
@@ -159,28 +108,6 @@ public class EmployeeController {
 			es.approveRequest(requestId, this.loginEmp);
 		}
 		
-		
-		
-//		if (loginEmp.getTitle().equalsIgnoreCase("Approver")) {
-//			System.out.println("aproving requests, with grades");
-//		} else if (loginEmp.isBenCo()) {
-//			List<Request> requests = es.getallPendingRequest();
-//			System.out.println("benco?");
-//
-//			returnedContext(ctx, requests);
-//			
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("Supervisor")) {
-//			System.out.println("super?");
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("DeptHead")) {
-//			List<Request> requests = es.getPendingRequestsFromDept(this.loginEmp);
-//			returnedContext(ctx, requests);
-//
-//		} else if (loginEmp.getTitle().equalsIgnoreCase("DeptHead/Super")) {
-//			List<Request> requests = es.approveRequestDeptHeadSuper(this.loginEmp);
-//			returnedContext(ctx, requests);
-//		} else {
-//			ctx.result("{}");
-//		}
 		
 	};
 
@@ -203,7 +130,6 @@ public class EmployeeController {
 		String clientId = ctx.pathParam("id");
 		int id = checkInt(clientId);
 		Request r = es.getARequest(id);
-		System.out.println(r);
 		returnedContext(ctx, r);
 		
 	};
