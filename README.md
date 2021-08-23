@@ -13,6 +13,7 @@ TRMS, or Tuition Reimbursement Management System is a full-stack web application
 * Javalin - version 3.13.11
 * Selenium - verison 3.8.1
 * Cumcumber - version 1.2.4
+* Log4j - version 1.2.17
 * HTML/CSS
 * Javascript
 
@@ -36,7 +37,7 @@ To-do list:
 To clone the project:
 `git clone https://github.com/caocmai/Tuition-Reimbursement`
 
-Then to run the Java program, first compile the java project with maven and execute the project.
+Then to run the Java program, first build the Java project with Maven and execute the project.
 
 Here's a [link](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/Maven_SE/Maven.html) to guide you.
 
