@@ -49,4 +49,4 @@ Accounts are currently created only on the backend so create an account first to
 
 ## License
 
-This project uses the following license: [<license_name>](<link>).
+This project uses the following license: [Mit-License](LICENSE).
