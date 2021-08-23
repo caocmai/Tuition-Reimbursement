@@ -43,7 +43,7 @@ Here's a [link](https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/
 
 ## Usage
 
-Make sure to run the server first. Then navigate to the `frontend` folder and open the `Login.html` page to log in.
+Make sure to run the server first. Then navigate to the `frontend` folder and open the `Login.html` page to log in and start using the application.
 
 Accounts are currently created only on the backend so create an account first to use the application. 
 
