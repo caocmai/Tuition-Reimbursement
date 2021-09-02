@@ -17,16 +17,21 @@ public class TuitionFormFillStepImpl {
 	public static TuitionMain tuitionMain = TuitionRunner.tuitionMain;
 	
 	@Given("^The guest is on the form page$")
-	public void the_guest_is_on_the_form_page()  {
+	public void the_guest_is_on_the_form_page() throws InterruptedException  {
+		
+		Thread.sleep(1000);
+		
 	    // Write code here that turns the phrase above into concrete actions
 		String url = "file:///Users/caomai/dev/Revature/Projects/TuitionReimbursement/frontend/AddForm.html";
 		driver.get(url);
+		
 		
 	}
 
 
 	@When("^The guest fills out the form with their username and password$")
 	public void the_guest_fills_out_the_form_with_their_username_and_password() {
+		
 	    // Write code here that turns the phrase above into concrete actions
 		tuitionMain.location.sendKeys("Jackson");
 		tuitionMain.description.sendKeys("Learning AWS");
@@ -40,8 +45,8 @@ public class TuitionFormFillStepImpl {
 		tuitionMain.attachment.sendKeys("None");
 		
 		
-		tuitionMain.startTime.sendKeys("08/03/2021");
-		tuitionMain.endTime.sendKeys("08/06/2021");
+		tuitionMain.startTime.sendKeys("09/03/2021");
+		tuitionMain.endTime.sendKeys("09/06/2021");
 		
 		tuitionMain.sendFormBtn.click();
 		

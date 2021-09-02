@@ -31,17 +31,18 @@ public class TutionLoginStepImpl {
 		
 		tuitionMain.loginBtn.click();
 		try {
-			Thread.sleep(4000);
+			Thread.sleep(1000);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 		tuitionMain.myRequestBtn.click();
 		tuitionMain.getRequests.click();
 		try {
-			Thread.sleep(2000);
+			Thread.sleep(3500);
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+
 		
 		
 	}
@@ -52,6 +53,11 @@ public class TutionLoginStepImpl {
 		String expect = "View Requests";
 		assertEquals(expect, tuitionMain.getRequests.getText());
 		
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 
 	}
 

@@ -1,4 +1,7 @@
 function getRequests() {
+
+    const username = localStorage.getItem('username');
+    document.getElementById("myRequests").innerHTML = "My Request: " + username;
     let xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 & this.status == 200) {

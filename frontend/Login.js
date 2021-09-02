@@ -11,6 +11,7 @@ function login() {
                 emp = (JSON.parse(this.responseText))
                 localStorage.setItem("title", emp.title);
                 localStorage.setItem("userId", emp.id);
+                localStorage.setItem("username", emp.username);
 
             if (emp) {
                 document.getElementById("form").innerHTML = "";
