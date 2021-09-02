@@ -48,7 +48,7 @@ Make sure to run the server first. Then navigate to the `frontend` folder and op
 
 Accounts are currently created only on the backend so create an account first to use the application. 
 
-#### Selenium Test
+#### Selenium and Cucumber Test
 This tests filling out the tuition reimbursement form and the login functionality. 
 
 ![](additional_content/seleniumTest.gif)
