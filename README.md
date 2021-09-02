@@ -53,6 +53,11 @@ This tests filling out the tuition reimbursement form and the login functionalit
 
 ![](additional_content/seleniumTest.gif)
 
+
+## Author
+Was built by [Cao](https://github.com/caocmai). Checkout out my other [projects](https://caomai.live/).
+
 ## License
 
 This project uses the following license: [Mit-License](LICENSE).
+
