@@ -31,24 +31,26 @@ public class DepartmentRepoImplTest {
 	@Test
 	public void canGetDepartment() {
 		Department d = new Department("Finance");
-		dr.addDepartment(d);
-		assertEquals(1, dr.getDepartment(1).getId());
+		d = dr.addDepartment(d);
+		assertNotNull(dr.getDepartment(d.getId()));
 	}
 	
 	@Test 
 	public void canUpdateDepartment() {
 		Department dept = new Department("Finance");
-		dr.addDepartment(dept);
-		Department d = dr.getDepartment(2);
+		dept = dr.addDepartment(dept);
+		Department d = dr.getDepartment(dept.getId());
 		d.setTitle("UpdatedTitle");
 		dr.updateDepartment(d);
-		assertEquals("UpdatedTitle", dr.getDepartment(2).getTitle());
+		assertEquals("UpdatedTitle", dr.getDepartment(dept.getId()).getTitle());
 	}
 	
 	@Test
 	public void canDeleteDepartment() {
+		Department d = new Department("HR");
+		d = dr.addDepartment(d);
 		int originalSize = dr.getAllDepartment().size();
-		dr.deleteDepartment(1);
+		dr.deleteDepartment(d.getId());
 		assertNotEquals(originalSize, dr.getAllDepartment().size());
 
 	}
