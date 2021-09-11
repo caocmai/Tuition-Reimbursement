@@ -8,6 +8,5 @@ public interface FormRepo {
 	public Form addForm(Form f, Employee e);
 	public Form getForm(int id);
 	public Form updateForm(Form changeF);
-	public Form deleteForm(int id);
 
 }

@@ -10,8 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="forms")
 public class Form {
-//	private long date;
-//	private long time;
 	@Id
 	@Column(name="f_id", updatable=false)
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
@@ -25,8 +23,8 @@ public class Form {
 	@Column(name="grading_type")
 	private String gradingType;
 	
-//	University Courses 80%, Seminars 60%, Certification Preparation Classes 75%, 
-//	Certification 100%, Technical Training 90%, Other 30%. 
+    // University Courses 80%, Seminars 60%, Certification Preparation Classes 75%, 
+    // Certification 100%, Technical Training 90%, Other 30%. 
 	@Column(name="event_type")
 	private String eventType;
 	

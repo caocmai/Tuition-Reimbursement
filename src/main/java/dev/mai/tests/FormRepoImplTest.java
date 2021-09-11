@@ -3,6 +3,7 @@ package dev.mai.tests;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
@@ -47,22 +48,14 @@ public class FormRepoImplTest {
 		Employee e = er.getEmployee(13);
 		Form f = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
 		f = fr.addForm(f, e);
-		assertNotNull(fr.getForm(f.getId()));
-		assertEquals("Dallas", fr.getForm(f.getId()).getLocation());
+		f.setLocation("Austin");
+		fr.updateForm(f);
+		assertEquals("Austin", fr.getForm(f.getId()).getLocation());
 	}
 	
-	@Test
-	public void canDeleteForm() {
-		Employee e = er.getEmployee(13);
-		Form f = new Form("Dallas", "Learn React", 240, "Grade", "Class", "None", 1235);
-		f = fr.addForm(f, e);
-		assertNotNull(fr.getForm(f.getId()));
-		assertEquals("Dallas", fr.getForm(f.getId()).getLocation());
-	}
-
 	@AfterClass
 	public static void tearDownAftfrClass() throws Exception {
-		System.out.println("Tearing down test cases. Runs once");
+		System.out.println("Tearing down test cases.");
 		fr = null;
 	}
 

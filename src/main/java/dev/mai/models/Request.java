@@ -3,6 +3,7 @@ package dev.mai.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -24,7 +25,7 @@ public class Request {
 	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private int id;
 	
-	@ManyToOne(fetch=FetchType.EAGER)
+	@ManyToOne(fetch=FetchType.EAGER, cascade=CascadeType.DETACH)
 	private Employee employee;
 	
 	@Column(name="start_request")
@@ -57,7 +58,7 @@ public class Request {
 	@Column(name="denial_reason")
 	private String denialReason;
 	
-	@OneToOne(fetch=FetchType.EAGER)
+	@OneToOne(fetch=FetchType.EAGER, cascade=CascadeType.REMOVE)
 	private Form form;
 	
 	@Column(name="more_info_needed")
@@ -67,7 +68,7 @@ public class Request {
 	@Column(name="more_info_id")
 	private int moreInfoId;
 	
-	@OneToMany(fetch = FetchType.EAGER)
+	@OneToMany(fetch = FetchType.LAZY)
 	@JoinColumn(name="more_info_request")
 	private List<MoreInfoRequest> moreInfoRequests = new ArrayList<>();
 	

@@ -48,48 +48,43 @@ public class RequestRepoImplTest {
 
 		Form f = new Form("Chicago", "Learn React", 240, "Grade", "Class", "None", 1235);
 		fr.addForm(f,e);
+		
 		Request r = new Request(2344, false, f);
-		rr.addRequest(r);
+		r = rr.addRequest(r);
 		
-		Form f2 = new Form("Austin", "Learn React", 240, "Presentation", "Class", "None", 1235);
-		fr.addForm(f2, e);
-		Request r2 = new Request(2344, false, f);
-		rr.addRequest(r2);
-		
-		assertEquals(4, rr.getRequest(4).getId());
+		assertEquals("Chicago", rr.getRequest(r.getId()).getForm().getLocation());
 	}
 
 	@Test 
 	public void canUpdateRequest() {
 		Employee e = er.getEmployee(13);
-
-		Form f = new Form("Chicago", "Learn React", 240, "Grade", "Class", "None", 1235);
+		
+		Form f = new Form("Austin", "Learn React", 240, "Presentation", "Class", "None", 1235);
 		fr.addForm(f,e);
+		
 		Request r = new Request(2344, false, f);
-		rr.addRequest(r);
+		r = rr.addRequest(r);
 		
-		Form f2 = new Form("Austin", "Learn React", 240, "Presentation", "Class", "None", 1235);
-		fr.addForm(f2,e);
-		Request r2 = new Request(2344, false, f);
-		rr.addRequest(r2);
-		
-		r = rr.getRequest(4);
 		r.setDeptAppve(true);
-		rr.updateRequest(r);
-		assertEquals(true, rr.getRequest(4).isDeptAppve());
+		r = rr.updateRequest(r);
+		
+		assertEquals(true, rr.getRequest(r.getId()).isDeptAppve());
 	}
 	
 	@Test
 	public void canDeleteRequest() {
 		Employee e = er.getEmployee(13);
+		e = er.addEmployee(e);
 
 		Form f = new Form("Jackson", "Learn React", 240, "Grade", "Class", "None", 1235);
 		fr.addForm(f,e);
+	
 		Request r = new Request(6787, false, f);
-		rr.addRequest(r);
+		r.setEmployee(e);
+		r = rr.addRequest(r);
 		
 		int originalSize = rr.getAllRequest().size();
-		rr.deleteRequest(2);
+		rr.deleteRequest(r.getId());
 		assertNotEquals(originalSize, rr.getAllRequest().size());
 
 	}

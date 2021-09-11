@@ -92,7 +92,11 @@ public class RequestRepoImpl implements RequestRepo{
 		
 		try {
 			tx = sess.beginTransaction();
-			sess.delete(r);
+			Query q = sess.createQuery("DELETE FROM Request WHERE id=:id");
+			q.setParameter("id", id);
+
+			q.executeUpdate();
+			
 			tx.commit();
 		} catch (HibernateException e) {
 			e.printStackTrace();
@@ -112,7 +116,6 @@ public class RequestRepoImpl implements RequestRepo{
 		try {
 			Query q = sess.createQuery("FROM Request R WHERE R.employee.id=:emp AND R.benCoAppveFinal=false");
 			q.setParameter("emp", e.getId());
-
 			requests =  q.list();
 			
 	
