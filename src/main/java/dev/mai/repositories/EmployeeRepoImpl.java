@@ -39,56 +39,13 @@ public class EmployeeRepoImpl implements EmployeeRepo {
 		Session sess = HibernateUtil.getSession();
 		Transaction tx = null;
 		
-//		Employee manager = new Employee("Jon");
-//		Employee emp1 = new Employee("Emp1");
-//		Employee emp2 = new Employee("Emp2");
-//		
-//		emp1.setSupervisor(manager);
-//		emp2.setSupervisor(manager);
-		
-//		List<Employee> employees = new ArrayList<>(Arrays.asList(emp1, emp2));
-//		manager.setSubordinates(employees);
-		
-		// can set it one by one or as a list
-//		manager.getSubordinates().add(emp1);
-//		manager.getSubordinates().add(emp2);
-		
-		Employee e = new Employee("HR", "user", "pass", "John", "Doe", 343, 234234, false);
-		Employee man = new Employee("MA", "home", "pass", "John", "Doe", 343, 234234, false);
-		Employee e3 = new Employee("test", "many", "pass", "John", "Doe", 343, 234234, false);
-
-//		e.setSupervisorId(man.getId());
-//		e3.setSupervisorId(man.getId());
-		
-//		man.getSubordinates().add(e);
-//		man.getSubordinates().add(e3);
-		
-//		es.addEmployee(e);
-//		es.addEmployee(man);
-//		es.addEmployee(e3);
-
-		
-
 		try {
 			tx = sess.beginTransaction();
 			int id = (int)sess.save(emp);
 			emp.setId(id);
 			
-//			sess.save(man);
-//			sess.save(e);
-//			sess.save(e3);
-//		
-			
 			tx.commit();
 			
-//			Form f = new Form("Dalas", "learn react", 234, "Pass/fail", "Class", "None", 57676576);
-//			FormRepoImpl fr = new FormRepoImpl();
-//			fr.addForm(f);
-//			
-//			Request r = new Request(0, false, f, e);
-//			RequestRepoImpl rp = new RequestRepoImpl();
-//			rp.addRequest(r);
-		
 		} catch (HibernateException er) {
 			er.printStackTrace();
 			tx.rollback();

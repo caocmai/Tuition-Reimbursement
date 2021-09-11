@@ -129,4 +129,44 @@ public class FormRepoImpl implements FormRepo {
 		return eventReimbursement;
 	}
 
+	@Override
+	public Form updateForm(Form changeF) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.update(changeF);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		return changeF;
+		
+	}
+
+	@Override
+	public Form deleteForm(int id) {
+		Session sess = HibernateUtil.getSession();
+		Transaction tx = null;
+		Form form = sess.get(Form.class, id);
+		
+		try {
+			tx = sess.beginTransaction();
+			sess.delete(form);
+			tx.commit();
+		} catch (HibernateException e) {
+			e.printStackTrace();
+			tx.rollback();
+			return null;
+		} finally {
+			sess.close();
+		}
+		return form;
+	}
+
 }

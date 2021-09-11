@@ -47,9 +47,9 @@ public class EmployeeRepoImplTest {
 	@Test
 	public void canDeleteEmployee() {
 		Employee d = new Employee("Tester");
-		er.addEmployee(d);
+		d = er.addEmployee(d);
 		int originalSize = er.getAllEmployee().size();
-		er.deleteEmployee(2);
+		er.deleteEmployee(d.getId());
 		assertNotEquals(originalSize, er.getAllEmployee().size());
 
 	}
