@@ -19,15 +19,15 @@ function login() {
                 document.getElementById("message").innerHTML = "Welcome " + emp.firstName  + "<br> Role: " + emp.title;
 
                 var content = `
-                <a href="AddForm.html"> 
+                <a href="addForm.html"> 
                     <button id="startRequest" type="button" class="btn btn-primary">Start Request</button>
                 </a> 
 
-                <a href="Request.html"> 
+                <a href="request.html"> 
                     <button id="myRequestBtn" type="button" class="btn btn-primary">View My Request</button>
                 </a> 
 
-                <a href="NeedGradeRequest.html"> 
+                <a href="needGradeRequest.html"> 
                     <button type="button" class="btn btn-primary">Provide Grades</button>
                 </a> 
 

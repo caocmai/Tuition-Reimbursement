@@ -46,7 +46,7 @@ function getPendingRequests() {
 
                     if (!res.needMoreInfo && emp != "Approver") {
                         content += `
-                        <a href="RequestMoreInfo.html"> 
+                        <a href="requestMoreInfo.html"> 
                         <button onclick="saveRequestId(${res.id})"  type="button" class="btn btn-secondary">MoreInfo</button>
                     </a> 
                         `
@@ -64,7 +64,7 @@ function getPendingRequests() {
                     if (!res.needMoreInfo && emp != "Approver") {
                         content += `
                         <td>
-                        <a href="RequestMoreInfo.html"> 
+                        <a href="requestMoreInfo.html"> 
                         <button type="button" onclick="saveRequestId(${res.id})" class="btn btn-secondary">MoreInfo</button>
                         </a>     
                         </td>
